@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Settings -->
+	
+	<Bloodmoon_raidModifier>Multiplier for the number of werewolves that spawn during a raid.</Bloodmoon_raidModifier>
+	<Bloodmoon_minTicksPerEvent>Minimum ticks per werewolf raid during a bloodmoon.</Bloodmoon_minTicksPerEvent>
+	<Bloodmoon_maxTicksPerEvent>Maximum ticks per werewolf raid during a bloodmoon.</Bloodmoon_maxTicksPerEvent>
+	<Bloodmoon_extraAvatarChance>Chance of additional avatars of Hircine spawning when a bloodmoon raid occurs.</Bloodmoon_extraAvatarChance>
+	<Bloodmoon_infectionChance>Chance of a werewolf attack infecting the target.</Bloodmoon_infectionChance>
+	<Bloodmoon_minNumberOfLootDrops>Minimum number of loot drops that will spawn at the end of a bloodmoon.</Bloodmoon_minNumberOfLootDrops>
+	<Bloodmoon_maxNumberOfLootDrops>Maximum number of loot drops that will spawn at the end of a bloodmoon.</Bloodmoon_maxNumberOfLootDrops>
+	<Bloodmoon_enableBloodmoonForAll>Enable the rogue bloodmoon event for all storytellers. Note that it will not occur on a cycle.</Bloodmoon_enableBloodmoonForAll>
+	<Bloodmoon_enableMessages>Enable messages for werewolf raids during a bloodmoon.</Bloodmoon_enableMessages>
+	<Bloodmoon_chanceOfGiftedWerewolf>Chance a werewolf spawned during a bloodmoon will spawn with a gift of Hircine.</Bloodmoon_chanceOfGiftedWerewolf>
+	<Bloodmoon_enableLootDrops>Enable loot drops at the end of a bloodmoon, assuming anyone is left alive.</Bloodmoon_enableLootDrops>
+	<Bloodmoon_enableBloodmoonCycleForAll>Enable the bloodmoon cycle for all storytellers.</Bloodmoon_enableBloodmoonCycleForAll>
+	
+	<Bloodmoon_enableMarking>Enable wild animals becoming marked during the bloodmoon.</Bloodmoon_enableMarking>
+	<Bloodmoon_minTicksPerMark>Minimum ticks per marked animal during a bloodmoon.</Bloodmoon_minTicksPerMark>
+	<Bloodmoon_maxTicksPerMark>Maximum ticks per marked animal during a bloodmoon.</Bloodmoon_maxTicksPerMark>
+	
+	<Bloodmoon_elixirFailChance>Chance for consuming a lycanthropic elixir to fail.</Bloodmoon_elixirFailChance>
+	
+	<Bloodmoon_minWerewolfNum>The minimum number of werewolves that can spawn in a bloodmoon raid.</Bloodmoon_minWerewolfNum>
+	<Bloodmoon_maxWerewolfNum>The maximum number of werewolves that can spawn in a bloodmoon raid.</Bloodmoon_maxWerewolfNum>
+	
+	<Bloodmoon_werewolfStrength>Modifier for the strength of werewolves, a higher number means stronger werewolves.</Bloodmoon_werewolfStrength>
+	
+	<Bloodmoon_incidentIntervalCycle>Minimum number if days until the bloodmoon cycle event can occur again.</Bloodmoon_incidentIntervalCycle>
+	<Bloodmoon_incidentIntervalRogue>Minimum number if days until the rogue bloodmoon event can occur again.</Bloodmoon_incidentIntervalRogue>
+	
+	<Bloodmoon_default>Reset to default values</Bloodmoon_default>
+	
+	<!-- Pages -->
+	
+	<Bloodmoon_PageBasic>Basic Settings</Bloodmoon_PageBasic>
+	<Bloodmoon_PageBloodmoon>Bloodmoon Balance Settings</Bloodmoon_PageBloodmoon>
+	<Bloodmoon_PageLycanthropy>Lycanthropy Settings</Bloodmoon_PageLycanthropy>
+	
+	<!-- Messages -->
+	
+	<Bloodmoon_werewolvesAppear>Your colonists hear howling in the distance, Hircines hounds have been let loose.</Bloodmoon_werewolvesAppear>	
+	<Bloodmoon_animalMarked>Hircine has marked {0}, and wishes for you to hunt it.</Bloodmoon_animalMarked>	
+	<Bloodmoon_animalLostMarked>{0} is no longer marked for the hunt.</Bloodmoon_animalLostMarked>	
+	
+	<Bloodmoon_capacityMaxed>{0} has already fully upgraded {1}</Bloodmoon_capacityMaxed>
+	
+</LanguageData>

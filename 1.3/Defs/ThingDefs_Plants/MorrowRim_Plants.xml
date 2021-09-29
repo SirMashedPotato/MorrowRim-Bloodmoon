@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>MorrowRim_Wolfsbane</defName>
+		<label>wolfsbane plant</label>
+		<description>A strange flowering plant, only found to grow on the highest of mountains. The petals can be harvested and crushed, producing wolfsbane extract, which in turn can be used to create wolfsbane elixirs</description>
+		<statBases>
+		  <MaxHitPoints>45</MaxHitPoints>
+		  <Beauty>3</Beauty>
+		  <Nutrition>0.05</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plant/MorrowRim_Wolfsbane</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<ingestible />
+		<plant>
+		  <fertilitySensitivity>1.0</fertilitySensitivity>
+		  <fertilityMin>0.5</fertilityMin>
+		  <sowResearchPrerequisites>
+			<li>MorrowRim_LycanthropicElixirs</li>
+		  </sowResearchPrerequisites>
+		  <dieIfLeafless>true</dieIfLeafless>
+		  <harvestTag>Standard</harvestTag>
+		  <sowWork>1000</sowWork>
+		  <sowTags>
+			<li>Ground</li>
+			<li>Hydroponics</li>
+		  </sowTags>
+		  <topWindExposure>0.1</topWindExposure>
+		  <growDays>13</growDays>
+		  <visualSizeRange>0.5~1.2</visualSizeRange>
+		  <wildOrder>1</wildOrder>
+		  <wildClusterRadius>2</wildClusterRadius>
+		  <wildClusterWeight>4</wildClusterWeight>
+		  <immatureGraphicPath>Things/Plant/MorrowRim_Wolfsbane_Immature</immatureGraphicPath>
+		  <harvestedThingDef>MorrowRim_WolfsbaneExtract</harvestedThingDef>
+		  <harvestYield>6</harvestYield>
+		</plant>
+		<comps>
+		</comps>
+	</ThingDef>
+  
+</Defs>

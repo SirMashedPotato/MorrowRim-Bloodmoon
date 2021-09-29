@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DrugBase" Name="MorrowRim_WerewolflElixirBase" Abstract="True">
+		<statBases>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.7</Flammability>
+		</statBases>
+		<ingestible>
+		  <foodType>Fluid, Processed</foodType>
+		  <baseIngestTicks>100</baseIngestTicks>
+		  <chairSearchRadius>0</chairSearchRadius>
+		  <ingestSound>Ingest_Beer</ingestSound>
+		  <nurseable>true</nurseable>
+		  <ingestHoldUsesTable>false</ingestHoldUsesTable>
+		  <ingestCommandString>Drink {0}</ingestCommandString>
+		  <ingestReportString>Drinking {0}.</ingestReportString>
+		  <drugCategory>Medical</drugCategory>
+		</ingestible>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<techLevel>Medieval</techLevel>
+		<stackLimit>25</stackLimit>
+		<tradeTags>
+		  <li>TelvanniElixir</li>
+		</tradeTags>
+		<comps>
+			  <li Class="CompProperties_Drug">
+				<listOrder>999</listOrder>
+			  </li>
+		</comps>
+		<descriptionHyperlinks>
+		</descriptionHyperlinks>
+	</ThingDef>
+
+	<!--  -->
+
+	<ThingDef ParentName="MorrowRim_WerewolflElixirBase">
+		<defName>MorrowRim_ElixirLycanthropic_Separation</defName>
+		<label>elixir of lycanthropic separation</label>
+		<description>An elixir prepared using werewolf blood. When ingested by someone afflicted with dormant lycanthropy, they will be cured and a manifestation of the slumbering werewolf will be created.\n\nBe careful, even though the werewolf will be in a weakened state, it will still be able to inflict lycanthropy, and the consumer will not be immune to reinfection.</description>
+		<graphicData>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		  <texPath>Things/Item/Drug/PotionWerewolfSeperation</texPath>
+		</graphicData>
+		<ingestible>
+		  <outcomeDoers>
+			<li Class="MorrowRim_Bloodmoon.IngestionOutcomeDoer_LycanthropicSeparation">
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+	</ThingDef>
+	
+	<ThingDef ParentName="MorrowRim_WerewolflElixirBase">
+		<defName>MorrowRim_ElixirLycanthropic_Assimilation</defName>
+		<label>elixir of lycanthropic assimilation</label>
+		<description>An elixir prepared using werewolf blood. When ingested by someone afflicted with dormant lycanthropy, the disease is assimilated into the body, providing an increase to certain stats and capacities. Reinfection of Sanies Lupinus will cause the assimilated lycanthropy to return to its dormant state.\n\nThere is a 10% base chance that the elixir will fail, and the pawn will suddenly morph into one of Hircine's hounds. The chance of failiure will decrease by 10% of the base chance of failing for each quality level above awful, with a legendary elixir having no chance of failing.</description>
+		<graphicData>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		  <texPath>Things/Item/Drug/PotionWerewolfAssimilation</texPath>
+		</graphicData>
+		<ingestible>
+		  <outcomeDoers>
+			<li Class="MorrowRim_Bloodmoon.IngestionOutcomeDoer_LycanthropicAssimilation">
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_AssimilatedLycanthropy</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			  <li>
+				<compClass>CompQuality</compClass>
+			  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Wolfsbane Protection -->
+
+	<ThingDef ParentName="MorrowRim_WerewolflElixirBase">
+		<defName>MorrowRim_ElixirWolfsbaneProtection</defName>
+		<label>elixir of wolfsbane protection</label>
+		<description>An elixir prepared using wolfsbane extract. Prevents the ingestor from becoming infected with lycanthropy, though every time an infection is prevented the active elixir will weaken.\n\nThe stength of the effect depends on the quality of the elixir, with the strength increasing by 10% per quality level, or 100% for legendary.\nThe strength will decrease by 5% every time infection is prevented.</description>
+		<graphicData>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		  <texPath>Things/Item/Drug/PotionWerewolfBaneProtection</texPath>
+		</graphicData>
+		<ingestible>
+		  <outcomeDoers>
+			<li Class="MorrowRim_Bloodmoon.IngestionOutcomeDoer_GiveHediff">
+				<Hediff>MorrowRim_WolfsbaneProtectionActive</Hediff>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_WolfsbaneProtectionActive</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			  <li>
+				<compClass>CompQuality</compClass>
+			  </li>
+		</comps>
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>MorrowRim_WolfsbaneProtectionActive</defName>
+		<label>elixir of wolfsbane protection</label>
+		<description>Prevents the ingestor from becoming infected with lycanthropy, though every time an infection is prevented the active elixir will weaken by 5%.</description>
+		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<hediffClass>Hediff_High</hediffClass>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+			
+			</li>
+		</stages>
+		<comps>
+			 <li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			 </li>
+		</comps>
+	</HediffDef>
+	
+	<!-- Wolfsbane Retaliation -->
+
+	<ThingDef ParentName="MorrowRim_WerewolflElixirBase">
+		<defName>MorrowRim_ElixirWolfsbaneRetaliation</defName>
+		<label>elixir of wolfsbane retaliation</label>
+		<description>An elixir prepared using wolfsbane extract. Causes the ingestors blood to burn werewolves, though every time  werewolf is burnt the active elixir will weaken.\n\nThe stength of the effect depends on the quality of the elixir, with the strength increasing by 10% per quality level, or 100% for legendary.\nThe strength will decrease by 5% every time a werewolf is burnt.</description>
+		<graphicData>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		  <texPath>Things/Item/Drug/PotionWerewolfBaneRetaliation</texPath>
+		</graphicData>
+		<ingestible>
+		  <outcomeDoers>
+			<li Class="MorrowRim_Bloodmoon.IngestionOutcomeDoer_GiveHediff">
+				<Hediff>MorrowRim_WolfsbaneRetaliationActive</Hediff>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_WolfsbaneRetaliationActive</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			  <li>
+				<compClass>CompQuality</compClass>
+			  </li>
+		</comps>
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>MorrowRim_WolfsbaneRetaliationActive</defName>
+		<label>elixir of wolfsbane retaliation</label>
+		<description>Burns werewolves that attack the ingestor, though every time a werewolf is burnt the active elixir will weaken by 5%.</description>
+		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<hediffClass>Hediff_High</hediffClass>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+			
+			</li>
+		</stages>
+		<comps>
+			 <li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			 </li>
+		</comps>
+	</HediffDef>
+
+</Defs>

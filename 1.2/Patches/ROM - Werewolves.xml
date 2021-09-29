@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rim of Madness - Werewolves (Continued)</li>
+			<li>Rim of Madness - Werewolves</li>
+		</mods> 
+				
+		<match Class="PatchOperationSequence">
+			<operations>
+	
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						
+						<ThingDef ParentName="MorrowRim_WerewolflElixirBase">
+							<defName>MorrowRim_ElixirLycanthropic_Purification</defName>
+							<label>elixir of lycanthropic purification</label>
+							<description>An elixir prepared using werewolf blood. When ingested by someone afflicted with dormant lycanthropy, the disease may be purified into a strain of lycanthropy.\n\nThere is a 10% base chance that the elixir will fail, and the pawn will suddenly morph into one of Hircine's hounds. The chance of failiure will decrease by 10% of the base chance of failing for each quality level above awful, with a legendary elixir having no chance of failing.</description>
+							<graphicData>
+							  <graphicClass>Graphic_StackCount</graphicClass>
+							  <drawSize>0.85</drawSize>
+							  <texPath>Things/Item/Drug/PotionWerewolfPurification</texPath>
+							</graphicData>
+							<ingestible>
+							  <outcomeDoers>
+								<li Class="MorrowRim_Bloodmoon.IngestionOutcomeDoer_LycanthropicPurification">
+								</li>
+							  </outcomeDoers>
+							</ingestible>
+							<comps>
+								  <li>
+									<compClass>CompQuality</compClass>
+								  </li>
+							</comps>
+						</ThingDef>
+						
+						<!-- -->
+	
+						<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+							<defName>MorrowRim_CraftElixirWerewolf_Purification</defName>
+							<label>create elixir of lycanthropic purification</label>
+							<description>Create 5 elixir of lycanthropic purification from 10 werewolf blood.</description>
+							<ingredients>
+							  <li>
+								<filter>
+								  <thingDefs>
+									<li>MorrowRim_WerewolfBlood</li>
+								  </thingDefs>
+								</filter>
+								<count>10</count>
+							  </li>
+							</ingredients>
+							<fixedIngredientFilter>
+							  <thingDefs>
+								<li>MorrowRim_WerewolfBlood</li>
+							  </thingDefs>
+							</fixedIngredientFilter>
+							<products>
+							  <MorrowRim_ElixirLycanthropic_Purification>5</MorrowRim_ElixirLycanthropic_Purification>
+							</products>
+						</RecipeDef>
+						
+						<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+							<defName>MorrowRim_CraftElixirWerewolf_Purification_Bulk</defName>
+							<label>create elixir of lycanthropic purification x5</label>
+							<description>Create 25 elixir of lycanthropic purification from 50 werewolf blood.</description>
+							<workAmount>1500</workAmount>
+							<ingredients>
+							  <li>
+								<filter>
+								  <thingDefs>
+									<li>MorrowRim_WerewolfBlood</li>
+								  </thingDefs>
+								</filter>
+								<count>50</count>
+							  </li>
+							</ingredients>
+							<fixedIngredientFilter>
+							  <thingDefs>
+								<li>MorrowRim_WerewolfBlood</li>
+							  </thingDefs>
+							</fixedIngredientFilter>
+							<products>
+							  <MorrowRim_ElixirLycanthropic_Purification>25</MorrowRim_ElixirLycanthropic_Purification>
+							</products>
+						</RecipeDef>
+						
+					</value>
+				</li>	
+		
+
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
+

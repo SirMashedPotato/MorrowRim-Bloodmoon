@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+						<AchievementsExpanded.AchievementTabDef>
+							<defName>MorrowRim_AchievementsTab</defName>
+							<label>MorrowRim</label>
+						</AchievementsExpanded.AchievementTabDef>
+
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardBloodMoon</defName>
+							<label>Trigger Localised Bloodmoon</label>
+							<tab>MorrowRim_AchievementsTab</tab>
+							
+							<cost>25</cost>
+							<incident>MorrowRim_BloodmoonLocalised</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+						
+						<!-- Incidents -->
+
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonSurvive</defName>
+							<label>Bloodmoon survivor</label>
+							<description>Have a colonist survive their first bloodmoon</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.RecordEventTracker">
+								<def>MorrowRim_BloodmoonsSurvived</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonSurvive</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonSurviveMany</defName>
+							<label>Chosen of Hircine</label>
+							<description>Have a colonist survive their 25th bloodmoon</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.RecordEventTracker">
+								<def>MorrowRim_BloodmoonsSurvived</def>
+								<count>25</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonSurviveMany</texPath>
+							<points>75</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Kills -->
+						
+						<!--
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonAvatarHunterFirst</defName>
+							<label>Apprentice Hunter</label>
+							<description>Successfully hunt your first Avatar of Hircine</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>MorrowRim_AvatarOfHircine</raceDef>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonAvatarHunterFirst</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						
+						<!-- Needs custom code, death action worker overrides tracker
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonAvatarHunterMany</defName>
+							<label>Proven Hunter</label>
+							<description>Successfully hunt your 25th Avatar of Hircine</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<raceDef>MorrowRim_AvatarOfHircine</raceDef>
+								<count>25</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonAvatarHunterMany</texPath>
+							<points>50</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonWerewolfHunter</defName>
+							<label>Who Let the Hounds Out?</label>
+							<description>Slay 150 of Hircines Hounds</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KillTracker">
+								<factionDefs>
+									<li>MorrowRim_HoundsOfHircine</li>
+								</factionDefs>
+								<count>150</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonWerewolfHunter</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Hediff -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonDormant</defName>
+							<label>Is That... Fur? Coming Out of Your Ears?</label>
+							<description>Have a colonist become infected with dormant lycanthropy</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_DormantSaniesLupinus</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonDormant</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonAssimilated</defName>
+							<label>At Peace With The Inner Wolf</label>
+							<description>Have a colonist assimilate their dormant lycanthropy</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_AssimilatedLycanthropy</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonAssimilated</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Hediff Gifts -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonGiftSpeed</defName>
+							<label>Fast Hunter</label>
+							<description>Have a colonist gain the gift of speed</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_GiftOfSpeed</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonGiftSpeed</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonGiftStrong</defName>
+							<label>Strong Hunter</label>
+							<description>Have a colonist gain the gift of strength</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_GiftOfStrength</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonGiftStrong</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonGiftSmart</defName>
+							<label>Smart Hunter</label>
+							<description>Have a colonist gain the gift of guile</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_GiftOfGuile</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonGiftSmart</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonGiftSight</defName>
+							<label>Perceptive Hunter</label>
+							<description>Have a colonist gain the gift of sight</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>MorrowRim_GiftOfSight</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonGiftSight</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Item -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonShifter</defName>
+							<label>Is Using This a War-Crime?</label>
+							<description>Obtain a psychic shifter lance</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>MorrowRim_Apparel_PsychicShifter</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonShifter</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonBow</defName>
+							<label>Bow of the Hunter</label>
+							<description>Obtain a Hunters Bow</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>MorrowRim_Bow_Hunters</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonBow</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonSpear</defName>
+							<label>Spear of the Hunter</label>
+							<description>Obtain a Hunters Spear</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>MorrowRim_MeleeWeapon_HuntersSpear</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonSpear</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+					
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

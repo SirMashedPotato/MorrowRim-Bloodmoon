@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TaleDef>
+    <defName>MorrowRim_Bloodmoon</defName>
+    <label>bloodmoon</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <baseInterest>5</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun->a bloodmoon over [PAWN_nameDef]'s [Community]</li>
+        <li>image->an unnaturally red moon, [circumstance_phrase]</li>
+        <li>image->a crimson sky, [circumstance_phrase]</li>
+        <li>image->a crimson moon, [circumstance_phrase]</li>
+        <li>image->a moon, glowing the colour of blood, [circumstance_phrase]</li>
+        <li>image->[Quantity_adjphrase] [Animal]s milling around uncertainly, bathed in crimson light, [circumstance_phrase]</li>
+        <li>circumstance_phrase->an ominous wind</li>
+        <li>circumstance_phrase->howling in the distance</li>
+        <li>circumstance_phrase->crimson light blanketing a nearby [TerrainFeature]</li>
+        <li>circumstance_phrase->crimson light blanketing [Quantity_adjphrase] nearby [TerrainFeature]s</li>
+        <li>desc_sentence->[PAWN_nameDef] watches with fear on [PAWN_possessive] face.</li>
+        <li>desc_sentence->[Quantity_adjphrase] [PersonJob]s watch from below.</li>
+        <li>desc_sentence->[PAWN_nameDef] sits near a [TerrainFeature], gazing at the sky.</li>
+        <li>desc_sentence->A [Community] of spectators watches the sky with fear.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+  
+  <TaleDef>
+    <defName>MorrowRim_SaniesLupinusRevealed</defName>
+    <label>sanies lupinus revealed</label>
+    <taleClass>Tale_SinglePawnAndDef</taleClass>
+    <defSymbol>ILLNESS</defSymbol>
+    <type>Volatile</type>
+    <baseInterest>4</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun->[PAWN_nameDef]'s body aching</li>
+        <li>tale_noun->[PAWN_nameDef] being infected by lycanthropy</li>
+        <li>image->[PAWN_nameFull] staggering through a field [circumstance_group]</li>
+        <li>image->[PAWN_nameFull] lying on the ground [circumstance_group]</li>
+        <li>image->[PAWN_nameFull] lying in bed [circumstance_group]</li>
+        <li>image->[PAWN_nameFull] crouching next to a fire [circumstance_group]</li>
+        <li>image->[PAWN_nameFull] trying to light a fire [circumstance_group]</li>
+        <li>image->[PAWN_nameFull] mindlessly removing [PAWN_possessive] clothes [circumstance_group]</li>
+        <li>circumstance_phrase->and twitching uncontrollably</li>
+        <li>circumstance_phrase->and sweating uncontrollably</li>
+        <li>circumstance_phrase->and shivering uncontrollably</li>
+        <li>circumstance_phrase->while both sweating and shivering</li>
+        <li>circumstance_phrase->with cracked dry lips</li>
+        <li>circumstance_phrase->with a dry mouth</li>
+        <li>circumstance_phrase->while vomiting</li>
+        <li>circumstance_phrase->with a visible rash</li>
+        <li>circumstance_phrase->with a racing heart</li>
+        <li>circumstance_phrase->with a grumbling stomach</li>
+        <li>desc_sentence->[Quantity_adjphrase] twisted [Animal] corpses surround the area.</li>
+        <li>desc_sentence->[PAWN_nameDef]'s clothes are falling apart.</li>
+        <li>desc_sentence->The sky is a murky red.</li>
+        <li>desc_sentence->[Quantity_adjphrase] twisted red [TerrainFeature]s surround the scene.</li>
+        <li>desc_sentence->The scene takes place inside a twisted [TreeType] forest.</li>
+        <li>desc_sentence->[Quantity_adjphrase] dying [Animal]s lay on the ground.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+</Defs>

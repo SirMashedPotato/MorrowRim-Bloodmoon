@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Totems -->
+
+	  <ThingDef ParentName="ResourceBase" Name="MorrowRim_HircineTotemBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<description>An artifact earned during a bloodmoon, proof of a worthy hunter. Can be activated to permanently increase the corresponding gift of Hircine by 10%, up to the maximum of 100%</description>
+		<thingCategories>
+		  <li>Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>Artifact</li>
+		</tradeTags>
+		<statBases>
+		  <Beauty>8</Beauty>
+		  <MarketValue>600</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		  <Mass>0.5</Mass>
+		</statBases>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>Sellable</tradeability>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseArtifact</useJob>
+			<useLabel>Activate</useLabel>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		  <li>
+			<compClass>CompColorable</compClass>
+		  </li>
+		</comps>
+		<colorGenerator Class="ColorGenerator_Options">
+		  <options>
+			<li>
+			  <weight>10</weight>
+			  <only>(0.4,0.3,0.3)</only>
+			</li>
+			<li>
+			  <weight>15</weight>
+			  <only>(0.5,0.4,0.4)</only>
+			</li>
+			<li>
+			  <weight>20</weight>
+			  <only>(0.6,0.6,0.6)</only>
+			</li>
+			<li>
+			  <weight>5</weight>
+			  <only>(0.8,0.8,0.8)</only>
+			</li>
+		  </options>
+		</colorGenerator>
+	  </ThingDef>
+
+	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
+		<defName>MorrowRim_TotemGuile</defName>
+		<label>totem of the hunter (guile)</label>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/MorrowRim_TotemGuile</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="MorrowRim_Bloodmoon.CompProperties_UseEffect_Totem">
+				<hediffToApply>MorrowRim_GiftOfGuile</hediffToApply>
+			</li>
+		</comps>
+	  </ThingDef>
+	  
+	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
+		<defName>MorrowRim_TotemSight</defName>
+		<label>totem of the hunter (sight)</label>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/MorrowRim_TotemSight</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="MorrowRim_Bloodmoon.CompProperties_UseEffect_Totem">
+				<hediffToApply>MorrowRim_GiftOfSight</hediffToApply>
+			</li>
+		</comps>
+	  </ThingDef>
+	  
+	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
+		<defName>MorrowRim_TotemSpeed</defName>
+		<label>totem of the hunter (speed)</label>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/MorrowRim_TotemSpeed</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="MorrowRim_Bloodmoon.CompProperties_UseEffect_Totem">
+				<hediffToApply>MorrowRim_GiftOfSpeed</hediffToApply>
+			</li>
+		</comps>
+	  </ThingDef>
+	  
+	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
+		<defName>MorrowRim_TotemStrength</defName>
+		<label>totem of the hunter (strength)</label>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/MorrowRim_TotemStrength</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="MorrowRim_Bloodmoon.CompProperties_UseEffect_Totem">
+				<hediffToApply>MorrowRim_GiftOfStrength</hediffToApply>
+			</li>
+		</comps>
+	  </ThingDef>
+  
+</Defs>

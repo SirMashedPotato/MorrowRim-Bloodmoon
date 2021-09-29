@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	  <IncidentDef>
+		<defName>MorrowRim_Bloodmoon</defName>
+		<label>bloodmoon rising</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>MorrowRim_Bloodmoon.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>MorrowRim_Bloodmoon</gameCondition>
+		<letterLabel>Bloodmoon rising</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1.0</baseChance>
+		<minRefireDays>9</minRefireDays>
+		<earliestDay>10</earliestDay>
+		<durationDays>0.75~1.25</durationDays>
+		<tale>MorrowRim_Bloodmoon</tale>
+	  </IncidentDef>
+	  
+	  <IncidentDef>
+		<defName>MorrowRim_BloodmoonRogue</defName>
+		<label>ill met by moonlight</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>MorrowRim_Bloodmoon.IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>MorrowRim_Bloodmoon</gameCondition>
+		<letterLabel>Ill met by moonlight</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>1.2</baseChance>
+		<minRefireDays>15</minRefireDays>
+		<earliestDay>10</earliestDay>
+		<durationDays>0.5~1.0</durationDays>
+		<tale>MorrowRim_Bloodmoon</tale>
+	  </IncidentDef>
+	  
+	  <IncidentDef>
+		<defName>MorrowRim_BloodmoonLocalised</defName>
+		<label>localised bloodmoon</label>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_MakeGameCondition</workerClass>
+		<gameCondition>MorrowRim_Bloodmoon</gameCondition>
+		<letterLabel>Localised bloodmoon</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+		<durationDays>0.5~1.0</durationDays>
+		<tale>MorrowRim_Bloodmoon</tale>
+	  </IncidentDef>
+	
+</Defs>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>MorrowRim_LycanthropicElixirs</defName>
+		<label>lycanthropic elixir creation</label>
+		<description>Allows the creation of elixirs derived from werewolf blood. These can be used to remove dormant lycanthropy, or convert it into a more useful form.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>MorrowRim_Tab</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>MorrowRim_HuntersWeapons</defName>
+		<label>hunters weapons creation</label>
+		<description>Allows the creation of hunters weapons at the forge. These special weapons deal 50% increased damage against animals and werewolves.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>MorrowRim_Tab</tab>
+	</ResearchProjectDef>
+
+</Defs>

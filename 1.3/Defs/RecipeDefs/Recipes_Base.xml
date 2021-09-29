@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="MorrowRim_CraftElixirBase_Lycanthropic" Abstract="True">
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>500</workAmount>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<workSkill>Intellectual</workSkill>
+		<workSpeedStat>ResearchSpeed</workSpeedStat>
+		<jobString>Creating elixir.</jobString>
+		<researchPrerequisite>MorrowRim_LycanthropicElixirs</researchPrerequisite>
+	</RecipeDef>
+	
+	<!-- -->
+
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWerewolf_Separation</defName>
+		<label>create elixir of lycanthropic separation</label>
+		<description>Create 5 elixir of lycanthropic separation from 5 werewolf blood.</description>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WerewolfBlood</li>
+			  </thingDefs>
+			</filter>
+			<count>5</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WerewolfBlood</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirLycanthropic_Separation>5</MorrowRim_ElixirLycanthropic_Separation>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWerewolf_Separation_Bulk</defName>
+		<label>create elixir of lycanthropic separation x5</label>
+		<description>Create 25 elixir of lycanthropic separation from 25 werewolf blood.</description>
+		<workAmount>1500</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WerewolfBlood</li>
+			  </thingDefs>
+			</filter>
+			<count>25</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WerewolfBlood</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirLycanthropic_Separation>25</MorrowRim_ElixirLycanthropic_Separation>
+		</products>
+	</RecipeDef>
+	
+	<!-- -->
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWerewolf_Assimilation</defName>
+		<label>create elixir of lycanthropic assimilation</label>
+		<description>Create 5 elixir of lycanthropic assimilation from 10 werewolf blood.</description>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WerewolfBlood</li>
+			  </thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WerewolfBlood</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirLycanthropic_Assimilation>5</MorrowRim_ElixirLycanthropic_Assimilation>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWerewolf_Assimilation_Bulk</defName>
+		<label>create elixir of lycanthropic assimilation x5</label>
+		<description>Create 25 elixir of lycanthropic assimilation from 50 werewolf blood.</description>
+		<workAmount>1500</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WerewolfBlood</li>
+			  </thingDefs>
+			</filter>
+			<count>50</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WerewolfBlood</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirLycanthropic_Assimilation>25</MorrowRim_ElixirLycanthropic_Assimilation>
+		</products>
+	</RecipeDef>
+	
+	<!-- -->
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWolfsbaneProtection</defName>
+		<label>create elixir of wolfsbane protection</label>
+		<description>Create 5 elixir of wolfsbane protection from 10 wolfsbane extract.</description>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WolfsbaneExtract</li>
+			  </thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WolfsbaneExtract</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirWolfsbaneProtection>5</MorrowRim_ElixirWolfsbaneProtection>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWolfsbaneProtection_Bulk</defName>
+		<label>create elixir of wolfsbane protection x5</label>
+		<description>Create 25 elixir of wolfsbane protection from 50 wolfsbane extract.</description>
+		<workAmount>1500</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WolfsbaneExtract</li>
+			  </thingDefs>
+			</filter>
+			<count>50</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WolfsbaneExtract</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirWolfsbaneProtection>25</MorrowRim_ElixirWolfsbaneProtection>
+		</products>
+	</RecipeDef>
+	
+	<!-- -->
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWolfsbaneRetaliation</defName>
+		<label>create elixir of wolfsbane retaliation</label>
+		<description>Create 5 elixir of wolfsbane retaliation from 10 wolfsbane extract.</description>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WolfsbaneExtract</li>
+			  </thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WolfsbaneExtract</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirWolfsbaneRetaliation>5</MorrowRim_ElixirWolfsbaneRetaliation>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="MorrowRim_CraftElixirBase_Lycanthropic">
+		<defName>MorrowRim_CraftElixirWolfsbaneRetaliation_Bulk</defName>
+		<label>create elixir of wolfsbane retaliation x5</label>
+		<description>Create 25 elixir of wolfsbane retaliation from 50 wolfsbane extract.</description>
+		<workAmount>1500</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>MorrowRim_WolfsbaneExtract</li>
+			  </thingDefs>
+			</filter>
+			<count>50</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>MorrowRim_WolfsbaneExtract</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <MorrowRim_ElixirWolfsbaneRetaliation>25</MorrowRim_ElixirWolfsbaneRetaliation>
+		</products>
+	</RecipeDef>
+
+</Defs>

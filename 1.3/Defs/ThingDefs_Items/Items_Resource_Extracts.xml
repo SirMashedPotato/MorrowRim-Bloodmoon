@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MorrowRim_WerewolfBlood</defName>
+		<label>werewolf blood</label>
+		<description>Blood from a dead werewolf, it contains foreign bodies that appear to be mutagenic in nature. Can be used to make lycanthropic elixirs at a drug lab.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/WerewolfBloodExtract</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <MarketValue>10</MarketValue>
+		  <Mass>0.02</Mass>
+		  <Flammability>0.0</Flammability>
+		  <DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+		  <li>Manufactured</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>TelvanniCommon</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>MorrowRim_WolfsbaneExtract</defName>
+		<label>wolfsbane extract</label>
+		<description>Extract harvested from a wolsbane plant. Can be used to make elixirs of wolfsbane at a drug lab.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/WolfsBaneExtract</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <MarketValue>5</MarketValue>
+		  <Mass>0.02</Mass>
+		  <Flammability>0.0</Flammability>
+		  <DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+		  <li>Manufactured</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>TelvanniCommon</li>
+		</tradeTags>
+	</ThingDef>
+	
+</Defs>

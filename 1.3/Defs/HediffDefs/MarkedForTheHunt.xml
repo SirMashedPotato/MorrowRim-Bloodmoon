@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<HediffDef ParentName="MorrowRim_GiftsBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defName>MorrowRim_HircineMarked</defName>
+		<label>marked for the hunt</label>
+		<description>Hircine, lord of the hunt, has marked this animal, and wishes you to hunt it in his name. Hircine will bestow a gift upon you if this animal is successfully slain during the bloodmoon. Of course he has also granted some of his blood to the animal.</description>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-5</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		  </li>
+		  <li Class="MorrowRim_Bloodmoon.HediffCompProperties_HircineMarked">
+			
+		  </li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+				  <li>
+					<capacity>Sight</capacity>
+					<offset>0.25</offset>
+				  </li>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.25</offset>
+				  </li>
+				  <li>
+					<capacity>Manipulation</capacity>
+					<offset>0.25</offset>
+				  </li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+					<Flammability>-0.15</Flammability>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+ 
+</Defs>

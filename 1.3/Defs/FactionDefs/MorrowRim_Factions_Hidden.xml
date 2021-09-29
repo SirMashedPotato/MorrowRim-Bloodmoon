@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef>
+		<defName>MorrowRim_HoundsOfHircine</defName>
+		<label>hounds of Hircine</label>
+		<pawnSingular>hunter</pawnSingular>
+		<pawnsPlural>hunters</pawnsPlural>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<fixedName>hounds of Hircine</fixedName>
+		<factionIconPath>World/WorldObjects/Expanding/Sites/MorrowRim_HoundsOfHircine</factionIconPath>
+		<raidCommonalityFromPointsCurve>
+		  <points>
+			<li>(0, 0)</li>
+		  </points>
+		</raidCommonalityFromPointsCurve>
+		<raidLootValueFromPointsCurve>
+		  <points>
+			<li>(0,     0)</li>
+		  </points>
+		</raidLootValueFromPointsCurve>
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<techLevel>Animal</techLevel>
+		<permanentEnemy>true</permanentEnemy>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-100~100</allowedArrivalTemperatureRange>
+
+	</FactionDef>
+
+</Defs>
