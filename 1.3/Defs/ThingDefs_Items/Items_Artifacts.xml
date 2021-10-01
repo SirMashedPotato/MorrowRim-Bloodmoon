@@ -15,7 +15,7 @@
 		</tradeTags>
 		<statBases>
 		  <Beauty>8</Beauty>
-		  <MarketValue>600</MarketValue>
+		  <MarketValue>200</MarketValue>
 		  <MaxHitPoints>80</MaxHitPoints>
 		  <Mass>0.5</Mass>
 		</statBases>
@@ -62,6 +62,9 @@
 	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
 		<defName>MorrowRim_TotemGuile</defName>
 		<label>totem of the hunter (guile)</label>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_GiftOfGuile</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Artifact/MorrowRim_TotemGuile</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
@@ -76,6 +79,9 @@
 	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
 		<defName>MorrowRim_TotemSight</defName>
 		<label>totem of the hunter (sight)</label>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_GiftOfSight</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Artifact/MorrowRim_TotemSight</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
@@ -90,6 +96,9 @@
 	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
 		<defName>MorrowRim_TotemSpeed</defName>
 		<label>totem of the hunter (speed)</label>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_GiftOfSpeed</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Artifact/MorrowRim_TotemSpeed</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
@@ -104,6 +113,9 @@
 	  <ThingDef ParentName="MorrowRim_HircineTotemBase">
 		<defName>MorrowRim_TotemStrength</defName>
 		<label>totem of the hunter (strength)</label>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_GiftOfStrength</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Artifact/MorrowRim_TotemStrength</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>

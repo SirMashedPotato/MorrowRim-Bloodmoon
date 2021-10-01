@@ -18,6 +18,10 @@
 							<defName>MorrowRim_ElixirLycanthropic_Purification</defName>
 							<label>elixir of lycanthropic purification</label>
 							<description>An elixir prepared using werewolf blood. When ingested by someone afflicted with dormant lycanthropy, the disease may be purified into a strain of lycanthropy.\n\nThere is a 10% base chance that the elixir will fail, and the pawn will suddenly morph into one of Hircine's hounds. The chance of failiure will decrease by 10% of the base chance of failing for each quality level above awful, with a legendary elixir having no chance of failing.</description>
+							<descriptionHyperlinks>
+								<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
+								<TraitDef>ROM_Werewolf</TraitDef>
+							</descriptionHyperlinks>
 							<graphicData>
 							  <graphicClass>Graphic_StackCount</graphicClass>
 							  <drawSize>0.85</drawSize>

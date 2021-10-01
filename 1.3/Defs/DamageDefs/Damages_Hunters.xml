@@ -20,5 +20,20 @@
 		<stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
 		<overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
 	</DamageDef>
+	
+	<DamageDef>
+		<defName>MorrowRim_BulletHunters</defName>
+		<label>bullet</label>
+		<workerClass>MorrowRim_Bloodmoon.DamageWorker_HunterStab</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been shot to death.</deathMessage>
+		<hediff>Gunshot</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Bullet</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	</DamageDef>
 
 </Defs>

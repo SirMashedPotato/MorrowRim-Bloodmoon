@@ -44,8 +44,7 @@ namespace MorrowRim_Bloodmoon
                 return;
             }
 
-            int num = GenMath.RoundRandom(Mathf.Clamp((StorytellerUtility.DefaultThreatPointsNow(map) / 20) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
-
+            int num = GenMath.RoundRandom(Mathf.Clamp((StorytellerUtility.DefaultThreatPointsNow(map) / 30) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
             IntVec3 invalid = IntVec3.Invalid;
             if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, map, 10f, out invalid))
             {

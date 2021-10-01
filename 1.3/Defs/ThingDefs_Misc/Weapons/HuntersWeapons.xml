@@ -7,13 +7,16 @@
 	
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>MorrowRim_MeleeWeapon_HuntersSpear</defName>
-		<label>hunters spear</label>
-		<description>A special spear, awarded to only the most proficient of hunters. While at first glance it may seem to simply be an ornate spear, it has actually been specially designed for use in hunting.\n\Stabs from this spear will deal 50% more damage to animals and werewolves.</description>
+		<label>spear of the hunter</label>
+		<description>A special spear, awarded to only the most proficient of hunters. While at first glance it may seem to simply be an ornate spear, it has actually been specially designed for use in hunting.\n\nStabs from this spear will deal 50% more damage to animals and werewolves.</description>
 		<graphicData>
 		  <texPath>Things/Item/Equipment/WeaponMelee/MorrowRim_HircineSpear</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Neolithic</techLevel>
+		<weaponClasses>
+		  <li>Neolithic</li>
+		</weaponClasses>
 		<weaponTags>
 		</weaponTags>
 		<costList>
@@ -58,7 +61,7 @@
 	
 	<ThingDef ParentName="BaseWeaponNeolithic">
 		<defName>MorrowRim_Bow_Hunters</defName>
-		<label>hunters bow</label>
+		<label>bow of the hunter</label>
 		<description>A special recurve bow, awarded to only the most proficient of hunters. While at first glance it may seem to simply be an ornate recurve bow, it has actually been specially designed for use in hunting.\n\nArrows fired from this bow will deal 50% more damage to animals and werewolves.</description>
 		<equippedAngleOffset>-45</equippedAngleOffset>
 		<graphicData>
@@ -66,6 +69,10 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Bow_Recurve</soundInteract>
+		<weaponClasses>
+		  <li>Ranged</li>
+		  <li>RangedLight</li>
+		</weaponClasses>
 		<costList>
 		  <MorrowRim_TotemSpeed>1</MorrowRim_TotemSpeed>
 		  <MorrowRim_TotemSight>1</MorrowRim_TotemSight>
@@ -85,7 +92,7 @@
 		<recipeMaker>
 		  <researchPrerequisite>MorrowRim_HuntersWeapons</researchPrerequisite>
 		  <skillRequirements>
-			<Crafting>4</Crafting>
+			<Crafting>5</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
 		<verbs>
@@ -111,7 +118,7 @@
 		</tools>
 	</ThingDef>
   
-  <ThingDef ParentName="BaseProjectileNeolithic">
+	<ThingDef ParentName="BaseProjectileNeolithic">
 		<defName>MorrowRim_Arrow_Hunters</defName>
 		<label>hunters bow arrow</label>
 		<graphicData>
@@ -124,6 +131,92 @@
 		  <stoppingPower>1</stoppingPower>
 		  <speed>56</speed>
 		</projectile>
+	</ThingDef>
+	
+	<!-- Rifle -->
+	
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>MorrowRim_Gun_Hunters</defName>
+		<label>rifle of the hunter</label>
+		<description>A special bolt action rifle, awarded to only the most proficient of hunters. While at first glance it may seem to simply be an ornate, if not slightly oversized, rifle, it has actually been specially designed for use in hunting.\n\nShots fired from this rifle will deal 50% more damage to animals and werewolves.</description>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<graphicData>
+		  <texPath>Things/Item/Equipment/WeaponRanged/MorrowRim_HircineRifle</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponClasses>
+		  <li>LongShots</li>
+		</weaponClasses>
+		<statBases>
+		  <WorkToMake>12000</WorkToMake>
+		  <Mass>3.5</Mass>
+		  <AccuracyTouch>0.65</AccuracyTouch>
+		  <AccuracyShort>0.80</AccuracyShort>
+		  <AccuracyMedium>0.90</AccuracyMedium>
+		  <AccuracyLong>0.80</AccuracyLong>
+		  <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+		  <MorrowRim_TotemGuile>1</MorrowRim_TotemGuile>
+		  <MorrowRim_TotemSpeed>1</MorrowRim_TotemSpeed>
+		  <MorrowRim_TotemSight>1</MorrowRim_TotemSight>
+		  <MorrowRim_TotemStrength>1</MorrowRim_TotemStrength>
+		  <MorrowRim_WerewolfBlood>50</MorrowRim_WerewolfBlood>
+		  <ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+		  <researchPrerequisite>MorrowRim_HuntersWeapons</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>5</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>MorrowRim_Bullet_Hunters</defaultProjectile>
+			<warmupTime>1.7</warmupTime>
+			<range>36.9</range>
+			<soundCast>Shot_BoltActionRifle</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		  </li>
+		</verbs>
+		<tools>
+		  <li>
+			<label>stock</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+		  </li>
+		  <li>
+			<label>barrel</label>
+			<capacities>
+			  <li>Blunt</li>
+			  <li>Poke</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+		  </li>
+		</tools>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>MorrowRim_Bullet_Hunters</defName>
+		<label>hunters rifle bullet</label>
+		<projectile>
+		  <damageDef>MorrowRim_BulletHunters</damageDef>
+		  <damageAmountBase>26</damageAmountBase>
+		  <stoppingPower>2.5</stoppingPower>
+		  <speed>70</speed>
+		</projectile>
+		<graphicData>
+		  <texPath>Things/Projectile/Bullet_big</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
 	</ThingDef>
 
 </Defs>

@@ -41,6 +41,10 @@ namespace MorrowRim_Bloodmoon
             ticks++;
             if (ticks >= 150)
             {
+                if (!parent.pawn.Spawned)
+                {
+                    parent.pawn.health.RemoveHediff(this.parent);
+                }
                 FleckMaker.AttachedOverlay(parent.pawn, FleckDefOf.MicroSparks, Vector3.zero, 1f, -1f);
                 ticks = 0;
             }

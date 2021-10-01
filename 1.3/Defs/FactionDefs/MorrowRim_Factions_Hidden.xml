@@ -4,8 +4,8 @@
 	<FactionDef>
 		<defName>MorrowRim_HoundsOfHircine</defName>
 		<label>hounds of Hircine</label>
-		<pawnSingular>hunter</pawnSingular>
-		<pawnsPlural>hunters</pawnsPlural>
+		<pawnSingular>werewolf</pawnSingular>
+		<pawnsPlural>werewolves</pawnsPlural>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<fixedName>hounds of Hircine</fixedName>
 		<factionIconPath>World/WorldObjects/Expanding/Sites/MorrowRim_HoundsOfHircine</factionIconPath>

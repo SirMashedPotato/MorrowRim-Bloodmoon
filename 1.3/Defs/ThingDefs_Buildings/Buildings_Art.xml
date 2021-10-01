@@ -8,7 +8,7 @@
 		<graphicData>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <texPath>Things/Building/Art/MorrowRim_WerewolfTrophy</texPath>
-		  <drawSize>(3,3)</drawSize>
+		  <drawSize>(1.5,1.5)</drawSize>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<fillPercent>0.35</fillPercent>

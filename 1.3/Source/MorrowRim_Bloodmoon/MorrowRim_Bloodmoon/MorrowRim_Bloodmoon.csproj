@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\CompTargetEffect_Lycanthropy.cs" />
+    <Compile Include="QuestSites\GenStep_WerewolfPack.cs" />
     <Compile Include="HediffComps\HediffCompProperties_HircineMarked.cs" />
     <Compile Include="DamageWorkers\DamageWorker_HunterStab.cs" />
     <Compile Include="DefOf\DutyDefOf.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropicPurification.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropicAssimilation.cs" />
     <Compile Include="DefOf\RecordDefOf.cs" />
+    <Compile Include="QuestSites\SitePartWorker_WerewolfPack.cs" />
     <Compile Include="Workers\IncidentWorker_MakeGameConditionRogue.cs" />
     <Compile Include="Lord\LordJob_HuntColony.cs" />
     <Compile Include="Lord\LordToil_HuntColony.cs" />

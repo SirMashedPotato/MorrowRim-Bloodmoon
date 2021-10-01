@@ -179,5 +179,12 @@ namespace MorrowRim_Bloodmoon
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().incidentIntervalRogue;
         }
+
+        /* werewolf pack */
+
+        public static bool EnableWerewolfPack()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableWerewolfPack;
+        }
     }
 }

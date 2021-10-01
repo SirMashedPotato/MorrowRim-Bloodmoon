@@ -16,6 +16,7 @@ namespace MorrowRim_Bloodmoon
 
 			if (ValidTarget(pawn))
 			{
+				Log.Message("Pawn: " + pawn + " is a valid target");
 				damageResult.totalDamageDealt *= 1.5f;
 			}
 			return damageResult;
@@ -23,7 +24,8 @@ namespace MorrowRim_Bloodmoon
 
 		public static bool ValidTarget(Pawn victim)
 		{
-			return victim != null && ((victim.RaceProps.IsFlesh && victim.AnimalOrWildMan()) || victim.def == ThingDefOf.MorrowRim_Werewolf);
+			return victim != null && ((victim.RaceProps.IsFlesh && victim.AnimalOrWildMan()) || victim.def == ThingDefOf.MorrowRim_Werewolf || 
+				(Utility.ROMWerewolvesLoaded() && Utility.ROMWerewolves_CheckTrait(victim)));
 		}
 	}
 }

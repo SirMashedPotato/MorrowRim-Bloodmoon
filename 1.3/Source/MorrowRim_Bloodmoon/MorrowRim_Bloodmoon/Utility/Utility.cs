@@ -129,7 +129,7 @@ namespace MorrowRim_Bloodmoon
         public static bool ROMWerewolves_CheckTrait(Pawn pawn)
         {
             TraitDef trait = DefDatabase<TraitDef>.GetNamed("ROM_Werewolf");
-            return pawn.story.traits.HasTrait(trait);
+            return pawn.story != null && pawn.story.traits != null && pawn.story.traits.HasTrait(trait);
         }
 
         public static void ROMWerewolves_GiveTrait(Pawn pawn)

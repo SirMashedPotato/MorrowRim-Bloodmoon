@@ -5,6 +5,9 @@
 		<defName>MorrowRim_Apparel_PsychicShifter</defName>
 		<label>psychic shifter lance</label>
 		<description>A limited-use psychic effector. High tech nanites combined with a powerful psychic pulse cause the target to instantly morph into a werewolf and accept the orders of Hircine. It has a long range, but requires line of sight.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_Werewolf</ThingDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <texPath>Things/Item/Artifact/MorrowRim_PsychicShifter</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>

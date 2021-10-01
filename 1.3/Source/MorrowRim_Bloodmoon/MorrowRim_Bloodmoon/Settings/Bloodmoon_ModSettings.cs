@@ -26,13 +26,13 @@ namespace MorrowRim_Bloodmoon
         public bool animalMarking = animalMarking_def;
         public int minTicksPerMark = minTicksPerMark_def;
         public int maxTicksPerMark = maxTicksPerMark_def;
-
         public float incidentIntervalCycle = incidentIntervalCycle_def;
         public float incidentIntervalRogue = incidentIntervalRogue_def;
+        public bool enableWerewolfPack = enableWerewolfPack_def;
         //public int raidBalance = raidBalance_def;
 
         //default values
-        private static readonly float raidModifier_def = 1f;
+        private static readonly float raidModifier_def = 1.0f;
         private static readonly int minTicksPerEvent_def = 10000;
         private static readonly int maxTicksPerEvent_def = 20000;
         private static readonly int extraAvatarChance_def = 10;
@@ -45,15 +45,15 @@ namespace MorrowRim_Bloodmoon
         private static readonly bool enableBloodmoonCycleForAll_def = false;
         private static readonly bool enableLootDrops_def = true;
         private static readonly int elixirFailChance_def = 10;
-        private static readonly int maxWerewolfNum_def = 100;
+        private static readonly int maxWerewolfNum_def = 50;
         private static readonly int minWerewolfNum_def = 1;
         private static readonly int werewolfStrength_def = 0;
         private static readonly bool animalMarking_def = true;
-        private static readonly int minTicksPerMark_def = 15000;
-        private static readonly int maxTicksPerMark_def = 30000;
-
-        private static readonly float incidentIntervalCycle_def = 10f;
-        private static readonly float incidentIntervalRogue_def = 15f;
+        private static readonly int minTicksPerMark_def = 20000;
+        private static readonly int maxTicksPerMark_def = 50000;
+        private static readonly float incidentIntervalCycle_def = 30f;
+        private static readonly float incidentIntervalRogue_def = 60f;
+        private static readonly bool enableWerewolfPack_def = true;
         //private static readonly int raidBalance_def = 70;
 
         //save settings
@@ -80,6 +80,7 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref maxTicksPerMark, "Bloodmoon_maxTicksPerMark", maxTicksPerMark_def);
             Scribe_Values.Look(ref incidentIntervalCycle, "Bloodmoon_incidentIntervalCycle", incidentIntervalCycle_def);
             Scribe_Values.Look(ref incidentIntervalRogue, "Bloodmoon_incidentIntervalRogue", incidentIntervalRogue_def);
+            Scribe_Values.Look(ref enableWerewolfPack, "Bloodmoon_enableWerewolfPack", enableWerewolfPack_def);
             //Scribe_Values.Look(ref raidBalance, "Bloodmoon_raidBalance", raidBalance_def);
             base.ExposeData();
         }
@@ -106,6 +107,7 @@ namespace MorrowRim_Bloodmoon
             settings.maxTicksPerMark = maxTicksPerMark_def;
             settings.incidentIntervalCycle = incidentIntervalCycle_def;
             settings.incidentIntervalRogue = incidentIntervalRogue_def;
+            settings.enableWerewolfPack = enableWerewolfPack_def;
             //settings.raidBalance = raidBalance_def;
         }
     }

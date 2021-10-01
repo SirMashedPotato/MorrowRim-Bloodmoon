@@ -30,6 +30,8 @@
 	<Bloodmoon_incidentIntervalCycle>Minimum number if days until the bloodmoon cycle event can occur again.</Bloodmoon_incidentIntervalCycle>
 	<Bloodmoon_incidentIntervalRogue>Minimum number if days until the rogue bloodmoon event can occur again.</Bloodmoon_incidentIntervalRogue>
 	
+	<Bloodmoon_enableWerewolfPack>Enable the werewolf pack quest.</Bloodmoon_enableWerewolfPack>
+	
 	<Bloodmoon_default>Reset to default values</Bloodmoon_default>
 	
 	<!-- Pages -->

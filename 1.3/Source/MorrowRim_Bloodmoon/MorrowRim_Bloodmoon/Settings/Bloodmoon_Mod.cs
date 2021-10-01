@@ -34,6 +34,10 @@ namespace MorrowRim_Bloodmoon
 
             /* specific settings */
 
+            //enableWerewolfPack
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableWerewolfPack".Translate(), ref settings.enableWerewolfPack);
+            listing_Standard.Gap();
+
             //enableBloodmoonForAll
             listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonForAll".Translate(), ref settings.enableBloodmoonForAll);
             listing_Standard.Gap();

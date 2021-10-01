@@ -14,6 +14,9 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfSpeed</defName>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemSpeed</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
 			<li>
 				<label>speed</label>
@@ -120,6 +123,9 @@
 	
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfStrength</defName>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemStrength</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
 			<li>
 				<label>strength</label>
@@ -226,6 +232,9 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfGuile</defName>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemGuile</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
 			<li>
 				<label>guile</label>
@@ -372,6 +381,9 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfSight</defName>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemSight</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
 			<li>
 				<label>sight</label>

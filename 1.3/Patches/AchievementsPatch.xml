@@ -114,6 +114,22 @@
 							<points>25</points>
 						</AchievementsExpanded.AchievementDef>
 						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonWerewolfSlayer</defName>
+							<label>Wolf Slayer</label>
+							<description>Successfully complete 10 Werewolf Pack quests</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.QuestTracker">
+								<def>MorrowRim_WerewolfPackSite</def>
+								<outcome>Success</outcome>
+								<count>10</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonWerewolfSlayer</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
 						<!-- Hediff -->
 						
 						<AchievementsExpanded.AchievementDef>
@@ -228,7 +244,7 @@
 						<AchievementsExpanded.AchievementDef>
 							<defName>MorrowRim_AchievementBloodmoonBow</defName>
 							<label>Bow of the Hunter</label>
-							<description>Obtain a Hunters Bow</description>
+							<description>Obtain a Bow of the Hunter</description>
 							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
 							<tab>MorrowRim_AchievementsTab</tab>
 							<tracker Class="AchievementsExpanded.ItemTracker">
@@ -243,7 +259,7 @@
 						<AchievementsExpanded.AchievementDef>
 							<defName>MorrowRim_AchievementBloodmoonSpear</defName>
 							<label>Spear of the Hunter</label>
-							<description>Obtain a Hunters Spear</description>
+							<description>Obtain a Spear of the Hunter</description>
 							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
 							<tab>MorrowRim_AchievementsTab</tab>
 							<tracker Class="AchievementsExpanded.ItemTracker">
@@ -253,6 +269,21 @@
 
 							<texPath>Achievements/MorrowRim_AchievementBloodmoonSpear</texPath>
 							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonRifle</defName>
+							<label>Rifle of the Hunter</label>
+							<description>Obtain a Rifle of the Hunter</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>MorrowRim_Gun_Hunters</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonRifle</texPath>
+							<points>15</points>
 						</AchievementsExpanded.AchievementDef>
 					
 					</value>
