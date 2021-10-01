@@ -28,7 +28,7 @@ namespace MorrowRim_Bloodmoon
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             Rect rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 3)*3);
+            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 3)*4);
             Widgets.BeginScrollView(rect, ref scrollPosition, rect2);
             listing_Standard.Begin(rect2);
 
@@ -38,27 +38,40 @@ namespace MorrowRim_Bloodmoon
             listing_Standard.CheckboxLabeled("Bloodmoon_enableWerewolfPack".Translate(), ref settings.enableWerewolfPack);
             listing_Standard.Gap();
 
-            //enableBloodmoonForAll
-            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonForAll".Translate(), ref settings.enableBloodmoonForAll);
-            listing_Standard.Gap();
-
-            //incidentIntervalRogue
-            listing_Standard.Label("Bloodmoon_incidentIntervalRogue".Translate() + " (" + settings.incidentIntervalRogue + " days)");
-            settings.incidentIntervalRogue = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalRogue, 1, 180), 0);
-
-            //enableBloodmoonCycleForAll
-            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonCycleForAll".Translate(), ref settings.enableBloodmoonCycleForAll);
-            listing_Standard.Gap();
-
-            //incidentIntervalRogue
-            listing_Standard.Label("Bloodmoon_incidentIntervalCycle".Translate() + " (" + settings.incidentIntervalCycle + " days)");
-            settings.incidentIntervalCycle = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalCycle, 1, 180), 0);
-
             //enableMessages
             listing_Standard.CheckboxLabeled("Bloodmoon_enableMessages".Translate(), ref settings.enableMessages);
             listing_Standard.Gap();
 
             listing_Standard.GapLine();
+
+            //enableBloodmoonForAll
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonForAll".Translate(), ref settings.enableBloodmoonForAll);
+            listing_Standard.Gap();
+
+            //incidentMinimumDaysRogue
+            listing_Standard.Label("Bloodmoon_incidentMinimumDaysRogue".Translate() + " (" + settings.incidentMinimumDaysRogue + " days)");
+            settings.incidentIntervalRogue = listing_Standard.Slider(settings.incidentMinimumDaysRogue, 1, 180);
+
+            //incidentIntervalRogue
+            listing_Standard.Label("Bloodmoon_incidentIntervalRogue".Translate() + " (" + settings.incidentIntervalRogue + " days)");
+            settings.incidentIntervalRogue = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalRogue, 1, 180), 0);
+
+            listing_Standard.GapLine();
+
+            //enableBloodmoonCycleForAll
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonCycleForAll".Translate(), ref settings.enableBloodmoonCycleForAll);
+            listing_Standard.Gap();
+
+            //incidentMinimumDaysRogue
+            listing_Standard.Label("Bloodmoon_incidentMinimumDaysCycle".Translate() + " (" + settings.incidentMinimumDaysCycle + " days)");
+            settings.incidentIntervalRogue = listing_Standard.Slider(settings.incidentMinimumDaysCycle, 1, 180);
+
+            //incidentIntervalRogue
+            listing_Standard.Label("Bloodmoon_incidentIntervalCycle".Translate() + " (" + settings.incidentIntervalCycle + " days)");
+            settings.incidentIntervalCycle = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalCycle, 1, 180), 0);
+
+            listing_Standard.GapLine();
+
 
             //raidBalance
             //listing_Standard.Label("Bloodmoon_raidBalance".Translate() + " (" + (100-settings.raidBalance) + ":" + settings.raidBalance + ")");

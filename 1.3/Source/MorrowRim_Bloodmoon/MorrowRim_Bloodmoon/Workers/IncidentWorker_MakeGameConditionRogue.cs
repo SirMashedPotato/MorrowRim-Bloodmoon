@@ -10,7 +10,7 @@ namespace MorrowRim_Bloodmoon
 	{
 		protected override bool CanFireNowSub(IncidentParms parms)
 		{
-			if (!base.CanFireNowSub(parms) || !ModSettings_Utility.EnableRogueBloodMoon() | FiredTooRecently_Setting(parms.target))
+			if (!base.CanFireNowSub(parms) || !ModSettings_Utility.EnableRogueBloodMoon() || FiredTooRecently_Setting(parms.target) || FiredTooEarly_Setting())
 			{
 				return false;
 			}
@@ -56,6 +56,11 @@ namespace MorrowRim_Bloodmoon
 				}
 			}
 			return false;
+		}
+
+		public bool FiredTooEarly_Setting()
+		{
+			return GenDate.DaysPassedSinceSettle < ModSettings_Utility.MinimumDaysRogue();
 		}
 
 		protected override bool TryExecuteWorker(IncidentParms parms)

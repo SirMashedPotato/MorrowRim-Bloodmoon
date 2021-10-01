@@ -13,8 +13,9 @@
 		<letterLabel>Bloodmoon rising</letterLabel>
 		<letterDef>ThreatBig</letterDef>
 		<baseChance>1.0</baseChance>
+		<!-- both refire days and earliest days are handled by mod settings -->
 		<minRefireDays>1</minRefireDays>
-		<earliestDay>10</earliestDay>
+		<earliestDay>1</earliestDay>
 		<durationDays>0.75~1.25</durationDays>
 		<tale>MorrowRim_Bloodmoon</tale>
 	  </IncidentDef>
@@ -31,8 +32,9 @@
 		<letterLabel>Ill met by moonlight</letterLabel>
 		<letterDef>ThreatBig</letterDef>
 		<baseChance>0.8</baseChance>
+		<!-- both refire days and earliest days are handled by mod settings -->
 		<minRefireDays>1</minRefireDays>
-		<earliestDay>10</earliestDay>
+		<earliestDay>1</earliestDay>
 		<durationDays>0.5~1.0</durationDays>
 		<tale>MorrowRim_Bloodmoon</tale>
 	  </IncidentDef>

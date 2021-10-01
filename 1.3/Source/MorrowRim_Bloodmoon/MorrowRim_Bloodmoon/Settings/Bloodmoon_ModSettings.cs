@@ -29,6 +29,8 @@ namespace MorrowRim_Bloodmoon
         public float incidentIntervalCycle = incidentIntervalCycle_def;
         public float incidentIntervalRogue = incidentIntervalRogue_def;
         public bool enableWerewolfPack = enableWerewolfPack_def;
+        public int incidentMinimumDaysCycle = incidentMinimumDaysCycle_def;
+        public int incidentMinimumDaysRogue = incidentMinimumDaysRogue_def;
         //public int raidBalance = raidBalance_def;
 
         //default values
@@ -54,6 +56,8 @@ namespace MorrowRim_Bloodmoon
         private static readonly float incidentIntervalCycle_def = 30f;
         private static readonly float incidentIntervalRogue_def = 60f;
         private static readonly bool enableWerewolfPack_def = true;
+        private static readonly int incidentMinimumDaysCycle_def = 30;
+        private static readonly int incidentMinimumDaysRogue_def = 40;
         //private static readonly int raidBalance_def = 70;
 
         //save settings
@@ -81,6 +85,8 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref incidentIntervalCycle, "Bloodmoon_incidentIntervalCycle", incidentIntervalCycle_def);
             Scribe_Values.Look(ref incidentIntervalRogue, "Bloodmoon_incidentIntervalRogue", incidentIntervalRogue_def);
             Scribe_Values.Look(ref enableWerewolfPack, "Bloodmoon_enableWerewolfPack", enableWerewolfPack_def);
+            Scribe_Values.Look(ref incidentMinimumDaysCycle, "Bloodmoon_incidentMinimumDaysCycle", incidentMinimumDaysCycle_def);
+            Scribe_Values.Look(ref incidentMinimumDaysRogue, "Bloodmoon_incidentMinimumDaysRogue", incidentMinimumDaysRogue_def);
             //Scribe_Values.Look(ref raidBalance, "Bloodmoon_raidBalance", raidBalance_def);
             base.ExposeData();
         }
@@ -108,6 +114,8 @@ namespace MorrowRim_Bloodmoon
             settings.incidentIntervalCycle = incidentIntervalCycle_def;
             settings.incidentIntervalRogue = incidentIntervalRogue_def;
             settings.enableWerewolfPack = enableWerewolfPack_def;
+            settings.incidentMinimumDaysCycle = incidentMinimumDaysCycle_def;
+            settings.incidentMinimumDaysRogue = incidentMinimumDaysRogue_def;
             //settings.raidBalance = raidBalance_def;
         }
     }

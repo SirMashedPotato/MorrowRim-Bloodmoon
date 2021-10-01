@@ -27,8 +27,11 @@
 	
 	<Bloodmoon_werewolfStrength>Modifier for the strength of werewolves, a higher number means stronger werewolves.</Bloodmoon_werewolfStrength>
 	
-	<Bloodmoon_incidentIntervalCycle>Minimum number if days until the bloodmoon cycle event can occur again.</Bloodmoon_incidentIntervalCycle>
-	<Bloodmoon_incidentIntervalRogue>Minimum number if days until the rogue bloodmoon event can occur again.</Bloodmoon_incidentIntervalRogue>
+	<Bloodmoon_incidentIntervalCycle>Minimum number of days until the bloodmoon cycle event can occur again.</Bloodmoon_incidentIntervalCycle>
+	<Bloodmoon_incidentIntervalRogue>Minimum number of days until the rogue bloodmoon event can occur again.</Bloodmoon_incidentIntervalRogue>
+	
+	<Bloodmoon_incidentMinimumDaysCycle>Minimum number if days until the bloodmoon cycle event can occur.</Bloodmoon_incidentMinimumDaysCycle>
+	<Bloodmoon_incidentMinimumDaysRogue>Minimum number if days until the rogue bloodmoon event can occur.</Bloodmoon_incidentMinimumDaysRogue>
 	
 	<Bloodmoon_enableWerewolfPack>Enable the werewolf pack quest.</Bloodmoon_enableWerewolfPack>
 	
