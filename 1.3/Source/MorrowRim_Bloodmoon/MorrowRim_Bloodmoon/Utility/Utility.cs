@@ -119,6 +119,17 @@ namespace MorrowRim_Bloodmoon
             return p.RaceProps.body.AllPartsVulnerableToFrostbite.RandomElement();
         }
 
+        public static bool HoundsFactionFound(string str)
+        {
+            if(FactionUtility.DefaultFactionFrom(FactionDefOf.MorrowRim_HoundsOfHircine) == null)
+            {
+                Messages.Message("Bloodmoon_houndsFactionNotFound".Translate(str), null, MessageTypeDefOf.RejectInput, true);
+                return false;
+            }
+
+            return true;
+        }
+
         /* === ROM werewolves === */
        
         public static bool ROMWerewolvesLoaded()

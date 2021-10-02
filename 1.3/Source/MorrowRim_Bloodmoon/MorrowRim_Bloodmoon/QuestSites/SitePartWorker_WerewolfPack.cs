@@ -15,7 +15,7 @@ namespace MorrowRim_Bloodmoon
 
         public override bool IsAvailable()
         {
-            return base.IsAvailable() && ModSettings_Utility.EnableWerewolfPack();
+            return base.IsAvailable() && ModSettings_Utility.EnableWerewolfPack() && Utility.HoundsFactionFound(def.label);
         }
 
         public override void Init(Site site, SitePart sitePart)

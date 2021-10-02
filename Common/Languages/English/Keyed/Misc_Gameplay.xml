@@ -51,4 +51,6 @@
 	
 	<Bloodmoon_capacityMaxed>{0} has already fully upgraded {1}</Bloodmoon_capacityMaxed>
 	
+	<Bloodmoon_houndsFactionNotFound>The Hounds of Hircine faction was not found, preventing the {0}. Please generate the missing faction using the Vanilla Expanded Framework.</Bloodmoon_houndsFactionNotFound>
+	
 </LanguageData>

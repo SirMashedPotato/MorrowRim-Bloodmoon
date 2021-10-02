@@ -10,7 +10,7 @@ namespace MorrowRim_Bloodmoon
 	{
 		protected override bool CanFireNowSub(IncidentParms parms)
 		{
-			if (!base.CanFireNowSub(parms) || !ModSettings_Utility.EnableRogueBloodMoon() || FiredTooRecently_Setting(parms.target) || FiredTooEarly_Setting())
+			if (!base.CanFireNowSub(parms) || !ModSettings_Utility.EnableRogueBloodMoon() || FiredTooRecently_Setting(parms.target) || FiredTooEarly_Setting() || !Utility.HoundsFactionFound(def.label))
 			{
 				return false;
 			}
