@@ -3,7 +3,7 @@
 	
 	<HediffDef Name="MorrowRim_GiftsBase" Abstract="True">
 		<label>gift of Hircine</label>
-		<description>One of the gifts of Hircine, gained by hunting an aspect of Hircine during a bloodmoon.</description>
+		<description>One of the gifts of Hircine, gained by using a hutners totem earned from a bloodmoon.\n\nIncreases the corresponding capacity by 10%, for each 10% of buildup.</description>
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
 		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
@@ -18,6 +18,12 @@
 			<ThingDef>MorrowRim_TotemSpeed</ThingDef>
 		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>speed</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>speed</label>
 				<minSeverity>0.1</minSeverity>
@@ -129,6 +135,12 @@
 		<stages>
 			<li>
 				<label>strength</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
+			<li>
+				<label>strength</label>
 				<minSeverity>0.1</minSeverity>
 				<capMods>
 				  <li>
@@ -236,6 +248,12 @@
 			<ThingDef>MorrowRim_TotemGuile</ThingDef>
 		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>guile</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>guile</label>
 				<minSeverity>0.1</minSeverity>
@@ -385,6 +403,12 @@
 			<ThingDef>MorrowRim_TotemSight</ThingDef>
 		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>sight</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>sight</label>
 				<minSeverity>0.1</minSeverity>

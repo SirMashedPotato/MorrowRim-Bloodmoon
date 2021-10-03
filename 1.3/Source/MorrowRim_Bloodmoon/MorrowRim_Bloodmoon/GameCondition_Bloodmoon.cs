@@ -67,11 +67,7 @@ namespace MorrowRim_Bloodmoon
 			//do continuous events
 			if(currentTicks >= ticksPerEvent)
 			{
-				if (ModSettings_Utility.IsWerewolfRaid())
-				{
-					Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.RandomElement(), PawnKindDefOf.MorrowRim_Werewolf);
-				}
-				//else Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.RandomElement(), PawnKindDefOf.MorrowRim_Draugr);
+				Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.RandomElement(), PawnKindDefOf.MorrowRim_Werewolf);
 				if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.ExtraAvatarChance())))
 				{
 					Bloodmoon_Utility.SpawnAvatarOfHircine(this.AffectedMaps.RandomElement());

@@ -31,7 +31,9 @@ namespace MorrowRim_Bloodmoon
         public bool enableWerewolfPack = enableWerewolfPack_def;
         public int incidentMinimumDaysCycle = incidentMinimumDaysCycle_def;
         public int incidentMinimumDaysRogue = incidentMinimumDaysRogue_def;
-        //public int raidBalance = raidBalance_def;
+        public bool enableLetters = enableLetters_def;
+        public float huntersGiftMaximum = huntersGiftMaximum_def;
+        public float huntersGiftBuildup = huntersGiftBuildup_def;
 
         //default values
         private static readonly float raidModifier_def = 1.0f;
@@ -58,7 +60,9 @@ namespace MorrowRim_Bloodmoon
         private static readonly bool enableWerewolfPack_def = true;
         private static readonly int incidentMinimumDaysCycle_def = 30;
         private static readonly int incidentMinimumDaysRogue_def = 40;
-        //private static readonly int raidBalance_def = 70;
+        private static readonly bool enableLetters_def = false;
+        private static readonly float huntersGiftMaximum_def = 1f;
+        private static readonly float huntersGiftBuildup_def = 0.1f;
 
         //save settings
         public override void ExposeData()
@@ -87,7 +91,9 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref enableWerewolfPack, "Bloodmoon_enableWerewolfPack", enableWerewolfPack_def);
             Scribe_Values.Look(ref incidentMinimumDaysCycle, "Bloodmoon_incidentMinimumDaysCycle", incidentMinimumDaysCycle_def);
             Scribe_Values.Look(ref incidentMinimumDaysRogue, "Bloodmoon_incidentMinimumDaysRogue", incidentMinimumDaysRogue_def);
-            //Scribe_Values.Look(ref raidBalance, "Bloodmoon_raidBalance", raidBalance_def);
+            Scribe_Values.Look(ref enableLetters, "Bloodmoon_enableLetters", enableLetters_def);
+            Scribe_Values.Look(ref huntersGiftMaximum, "Bloodmoon_huntersGiftMaximum", huntersGiftMaximum_def);
+            Scribe_Values.Look(ref huntersGiftBuildup, "Bloodmoon_huntersGiftBuildup", huntersGiftBuildup_def);
             base.ExposeData();
         }
         public static void resetSettings(Bloodmoon_ModSettings settings)
@@ -116,7 +122,9 @@ namespace MorrowRim_Bloodmoon
             settings.enableWerewolfPack = enableWerewolfPack_def;
             settings.incidentMinimumDaysCycle = incidentMinimumDaysCycle_def;
             settings.incidentMinimumDaysRogue = incidentMinimumDaysRogue_def;
-            //settings.raidBalance = raidBalance_def;
+            settings.enableLetters = enableLetters_def;
+            settings.huntersGiftMaximum = huntersGiftMaximum_def;
+            settings.huntersGiftBuildup = huntersGiftBuildup_def;
         }
     }
 }

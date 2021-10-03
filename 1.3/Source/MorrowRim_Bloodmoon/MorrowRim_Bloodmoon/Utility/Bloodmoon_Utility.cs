@@ -81,15 +81,15 @@ namespace MorrowRim_Bloodmoon
                 LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, true, true), list.ElementAt(0).Map, list);
             }
 
-            //send letter
+            //send message
             if (ModSettings_Utility.EnableMessages())
             {
-                if (pawnKind == PawnKindDefOf.MorrowRim_Werewolf)
-                {
-                    Messages.Message("Bloodmoon_werewolvesAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
-                }
-                //else Messages.Message("Bloodmoon_draugrAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
-                
+                Messages.Message("Bloodmoon_werewolvesAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
+            }
+            //send letter
+            if (ModSettings_Utility.EnableLetters())
+            {
+                Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelwerewolvesAppear".Translate(), "Bloodmoon_werewolvesAppear".Translate(), LetterDefOf.ThreatBig, list);
             }
         }
 

@@ -10,6 +10,5 @@ namespace MorrowRim_Bloodmoon
             this.compClass = typeof(Comp_UseEffect_Totem);
         }
         public HediffDef hediffToApply = null;
-        public float increase = 0.1f;
     }
 }

@@ -30,28 +30,14 @@ namespace MorrowRim_Bloodmoon
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableMessages;
         }
 
+        public static bool EnableLetters()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableLetters;
+        }
+
         public static float RaidModifier()
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().raidModifier;
-        }
-
-        /* raid decider */
-
-        /*public static int RaidBalance()
-        {
-            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().raidBalance;
-        }
-
-        public static float RaidBalance_Float()
-        {
-            float f = RaidBalance();
-            return f / 100;
-        }*/
-
-        public static bool IsWerewolfRaid()
-        {
-            return true;
-            //return Rand.Chance(RaidBalance_Float());
         }
 
 
@@ -197,6 +183,18 @@ namespace MorrowRim_Bloodmoon
         public static int MinimumDaysRogue()
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().incidentMinimumDaysRogue;
+        }
+
+        /* totem settings */
+
+        public static float HuntersGiftMaximum()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().huntersGiftMaximum;
+        }
+
+        public static float HuntersGiftBuildup()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().huntersGiftBuildup;
         }
     }
 }

@@ -17,18 +17,27 @@ namespace MorrowRim_Bloodmoon
 		{
 			base.DoEffect(usedBy);
 			if (!usedBy.health.hediffSet.HasHediff(Props.hediffToApply)){
-				usedBy.health.AddHediff(Props.hediffToApply).Severity = Props.increase;
+				usedBy.health.AddHediff(Props.hediffToApply).Severity = ModSettings_Utility.HuntersGiftBuildup();
 			}
 			else
 			{
-				usedBy.health.hediffSet.GetFirstHediffOfDef(Props.hediffToApply).Severity += Props.increase;
+				Hediff hediff = usedBy.health.hediffSet.GetFirstHediffOfDef(Props.hediffToApply);
+
+				if (hediff.Severity + ModSettings_Utility.HuntersGiftBuildup() >= ModSettings_Utility.HuntersGiftMaximum())
+                {
+					hediff.Severity = ModSettings_Utility.HuntersGiftMaximum();
+				} 
+				else
+                {
+					hediff.Severity += ModSettings_Utility.HuntersGiftBuildup();
+				}
 			}
 		}
 
         public override bool CanBeUsedBy(Pawn p, out string failReason)
         {
 			Hediff h = p.health.hediffSet.GetFirstHediffOfDef(Props.hediffToApply);
-			if (h != null && h.Severity >= 1f)
+			if (h != null && h.Severity >= ModSettings_Utility.HuntersGiftMaximum())
             {
 				failReason = "Bloodmoon_capacityMaxed".Translate(p.Name, h.Label);
 				return false;
