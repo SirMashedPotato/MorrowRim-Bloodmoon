@@ -39,6 +39,9 @@
 	<Bloodmoon_huntersGiftMaximum>The maximum buildup for hunters gifts obtained through a totem.</Bloodmoon_huntersGiftMaximum>
 	<Bloodmoon_huntersGiftBuildup>The percentage buildup towards a hunters gift obtained from a single totem.</Bloodmoon_huntersGiftBuildup>
 	
+	<Bloodmoon_enableStrengthScaling>Enable the strength of werewolves increasing with each subsequent bloodmoon.</Bloodmoon_enableStrengthScaling>
+	<Bloodmoon_enableStrengthScalingTooltip>Each time a bloodmoon, from any source, ends, the strength of new werewolves will be permanently increased by 10%, up to a maximum of 100%.\n\nThe strength modifier setting sets the initial value if it is above 0%\n\nThis setting is not retroactive, enabling it after surviving several bloodmoons will start werewolves at the default value.</Bloodmoon_enableStrengthScalingTooltip>
+	
 	<Bloodmoon_default>Reset to default values</Bloodmoon_default>
 	
 	<!-- Pages -->
@@ -57,5 +60,9 @@
 	<Bloodmoon_capacityMaxed>{0} has already fully upgraded {1}</Bloodmoon_capacityMaxed>
 	
 	<Bloodmoon_houndsFactionNotFound>The Hounds of Hircine faction was not found, preventing the {0}. Please generate the missing faction using the Vanilla Expanded Framework.</Bloodmoon_houndsFactionNotFound>
+
+	<Bloodmoon_strengthScalingMessage>Hircine has strengthened his hounds to {0}%</Bloodmoon_strengthScalingMessage>
+
+	<Bloodmoon_bloodmoonDescription>During the bloodmoon avatars of Hircine may appear around the map. Hunting these can grant your colonists permanent buffs. Beware though, as during a bloodmoon you will not always be the hunter.\n\nThe bloodmoon rising will acticate any cases of dormant lycanthropy, permanently turning the victim into a rabid werewolf.\n\nThe current strength scaling for werewolves is {0}%</Bloodmoon_bloodmoonDescription>
 	
 </LanguageData>

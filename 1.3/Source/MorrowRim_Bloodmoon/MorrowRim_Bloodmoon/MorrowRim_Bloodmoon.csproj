@@ -88,6 +88,7 @@
     <Compile Include="DefOf\StorytellerDefOf.cs" />
     <Compile Include="Utility\ModSettings_Utility.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <Compile Include="WorldComponent_BloodmoonTracker.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

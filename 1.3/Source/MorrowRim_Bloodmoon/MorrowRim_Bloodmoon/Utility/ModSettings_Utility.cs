@@ -196,5 +196,22 @@ namespace MorrowRim_Bloodmoon
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().huntersGiftBuildup;
         }
+
+        /* strength scaling */
+
+        public static bool EnableStrengthScaling()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableStrengthScaling;
+        }
+
+        public static float GetBloodStrength()
+        {
+            if (EnableStrengthScaling())
+            {
+                float sev = SettingToFloat(WerewolfStrength_int() + WorldComponent_BloodmoonTracker.GetStrength());
+                return sev > 1f? 1f : sev;
+            }
+            return SettingToFloat(WerewolfStrength_int());
+        }
     }
 }

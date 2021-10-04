@@ -34,11 +34,12 @@ namespace MorrowRim_Bloodmoon
         public bool enableLetters = enableLetters_def;
         public float huntersGiftMaximum = huntersGiftMaximum_def;
         public float huntersGiftBuildup = huntersGiftBuildup_def;
+        public bool enableStrengthScaling = enableStrengthScaling_def;
 
         //default values
-        private static readonly float raidModifier_def = 1.0f;
-        private static readonly int minTicksPerEvent_def = 10000;
-        private static readonly int maxTicksPerEvent_def = 20000;
+        private static readonly float raidModifier_def = 0.5f;
+        private static readonly int minTicksPerEvent_def = 20000;
+        private static readonly int maxTicksPerEvent_def = 50000;
         private static readonly int extraAvatarChance_def = 10;
         private static readonly int minNumberOfLootDrops_def = 1;
         private static readonly int maxNumberOfLootDrops_def = 3;
@@ -53,8 +54,8 @@ namespace MorrowRim_Bloodmoon
         private static readonly int minWerewolfNum_def = 1;
         private static readonly int werewolfStrength_def = 0;
         private static readonly bool animalMarking_def = true;
-        private static readonly int minTicksPerMark_def = 20000;
-        private static readonly int maxTicksPerMark_def = 50000;
+        private static readonly int minTicksPerMark_def = 25000;
+        private static readonly int maxTicksPerMark_def = 45000;
         private static readonly float incidentIntervalCycle_def = 30f;
         private static readonly float incidentIntervalRogue_def = 60f;
         private static readonly bool enableWerewolfPack_def = true;
@@ -63,6 +64,7 @@ namespace MorrowRim_Bloodmoon
         private static readonly bool enableLetters_def = false;
         private static readonly float huntersGiftMaximum_def = 1f;
         private static readonly float huntersGiftBuildup_def = 0.1f;
+        private static readonly bool enableStrengthScaling_def = true;
 
         //save settings
         public override void ExposeData()
@@ -94,6 +96,7 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref enableLetters, "Bloodmoon_enableLetters", enableLetters_def);
             Scribe_Values.Look(ref huntersGiftMaximum, "Bloodmoon_huntersGiftMaximum", huntersGiftMaximum_def);
             Scribe_Values.Look(ref huntersGiftBuildup, "Bloodmoon_huntersGiftBuildup", huntersGiftBuildup_def);
+            Scribe_Values.Look(ref enableStrengthScaling, "Bloodmoon_enableStrengthScaling", enableStrengthScaling_def);
             base.ExposeData();
         }
         public static void resetSettings(Bloodmoon_ModSettings settings)
@@ -125,6 +128,7 @@ namespace MorrowRim_Bloodmoon
             settings.enableLetters = enableLetters_def;
             settings.huntersGiftMaximum = huntersGiftMaximum_def;
             settings.huntersGiftBuildup = huntersGiftBuildup_def;
+            settings.enableStrengthScaling = enableStrengthScaling_def;
         }
     }
 }

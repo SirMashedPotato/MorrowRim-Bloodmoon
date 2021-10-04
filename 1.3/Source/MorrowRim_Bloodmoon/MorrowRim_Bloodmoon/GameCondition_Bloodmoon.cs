@@ -21,7 +21,15 @@ namespace MorrowRim_Bloodmoon
 			}
 		}
 
-		public override float SkyTargetLerpFactor(Map map)
+        public override string Description
+        {
+			get
+            {
+				return "Bloodmoon_bloodmoonDescription".Translate(ModSettings_Utility.GetBloodStrength() * 10);
+			}
+        }
+
+        public override float SkyTargetLerpFactor(Map map)
 		{
 			return GameConditionUtility.LerpInOutValue(this, (float)this.TransitionTicks, 1f);
 		}
@@ -106,6 +114,12 @@ namespace MorrowRim_Bloodmoon
 					}
 				}
 			}
+            if (ModSettings_Utility.EnableStrengthScaling())
+            {
+				WorldComponent_BloodmoonTracker.IncrementStrength();
+			}
+
+
 			base.End();
 		}
 

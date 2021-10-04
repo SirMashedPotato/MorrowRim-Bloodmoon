@@ -12,5 +12,7 @@ namespace MorrowRim_Bloodmoon
             DefOfHelper.EnsureInitializedInCtor(typeof(IncidentDefOf));
         }
         public static IncidentDef ResourcePodCrash;
+
+        public static IncidentDef MorrowRim_Bloodmoon;
     }
 }

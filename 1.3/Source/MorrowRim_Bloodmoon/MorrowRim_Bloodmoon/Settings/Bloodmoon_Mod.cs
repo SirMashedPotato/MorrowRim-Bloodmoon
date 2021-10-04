@@ -28,7 +28,7 @@ namespace MorrowRim_Bloodmoon
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             Rect rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 3)*4);
+            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 3)*5);
             Widgets.BeginScrollView(rect, ref scrollPosition, rect2);
             listing_Standard.Begin(rect2);
 
@@ -76,7 +76,11 @@ namespace MorrowRim_Bloodmoon
 
             listing_Standard.GapLine();
 
-            //raidModifier
+            //enableStrengthScaling
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableStrengthScaling".Translate(), ref settings.enableStrengthScaling, "Bloodmoon_enableStrengthScalingTooltip".Translate());
+            listing_Standard.Gap();
+
+            //werewolfStrength
             listing_Standard.Label("Bloodmoon_werewolfStrength".Translate() + " (" + settings.werewolfStrength + "%)");
             settings.werewolfStrength = (int)Math.Round(listing_Standard.Slider(settings.werewolfStrength, 0.0f, 100) / 10) * 10;
 
