@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	  <IncidentDef>
+	<!-- Bloodmoons -->
+
+	<IncidentDef>
 		<defName>MorrowRim_Bloodmoon</defName>
 		<label>bloodmoon rising</label>
 		<category>Misc</category>
@@ -18,9 +20,9 @@
 		<earliestDay>1</earliestDay>
 		<durationDays>0.75~1.25</durationDays>
 		<tale>MorrowRim_Bloodmoon</tale>
-	  </IncidentDef>
+	</IncidentDef>
 	  
-	  <IncidentDef>
+	<IncidentDef>
 		<defName>MorrowRim_BloodmoonRogue</defName>
 		<label>ill met by moonlight</label>
 		<category>Misc</category>
@@ -37,9 +39,11 @@
 		<earliestDay>1</earliestDay>
 		<durationDays>0.5~1.0</durationDays>
 		<tale>MorrowRim_Bloodmoon</tale>
-	  </IncidentDef>
+	</IncidentDef>
+	
+	<!-- Reward only bloodmoon, only affects a single map -->
 	  
-	  <IncidentDef>
+	<IncidentDef>
 		<defName>MorrowRim_BloodmoonLocalised</defName>
 		<label>localised bloodmoon</label>
 		<category>Misc</category>
@@ -55,6 +59,42 @@
 		<earliestDay>0</earliestDay>
 		<durationDays>0.5~1.0</durationDays>
 		<tale>MorrowRim_Bloodmoon</tale>
-	  </IncidentDef>
+	</IncidentDef>
+	  
+	<!-- Caravan ambush -->
+	
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonCaravanAmbush</defName>
+		<label>werewolf ambush</label>
+		<category>ThreatBig</category>
+		<targetTags>
+		  <li>Caravan</li>
+		  <li>Map_TempIncident</li>
+		</targetTags>
+		<workerClass>MorrowRim_Bloodmoon.IncidentWorker_Ambush_Bloodmoon</workerClass>
+		<pointsScaleable>true</pointsScaleable>
+		<baseChance>1.5</baseChance>
+		<minRefireDays>0.17</minRefireDays>
+		<letterText>{0} has been ambushed by werewolves!</letterText>
+		<letterLabel>Caravan ambushed (werewolves)</letterLabel>
+		<letterDef>ThreatBig</letterDef>
+		<tale>CaravanAmbushedByManhunter</tale>
+		<!--
+		<mtbDaysByBiome>
+		  <TemperateForest>20</TemperateForest>
+		  <BorealForest>20</BorealForest>
+		  <TropicalRainforest>20</TropicalRainforest>
+		  <AridShrubland>20</AridShrubland>
+		  <Desert>30</Desert>
+		  <Tundra>30</Tundra>
+		  <TropicalSwamp>30</TropicalSwamp>
+		  <TemperateSwamp>30</TemperateSwamp>
+		  <ColdBog>35</ColdBog>
+		  <ExtremeDesert>35</ExtremeDesert>
+		  <IceSheet>40</IceSheet>
+		  <SeaIce>60</SeaIce>
+		</mtbDaysByBiome>
+		-->
+	</IncidentDef>
 	
 </Defs>

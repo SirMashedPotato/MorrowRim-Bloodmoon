@@ -173,6 +173,11 @@ namespace MorrowRim_Bloodmoon
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableWerewolfPack;
         }
 
+        public static bool EnableBloodmoonAmbushes()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableBloodmoonAmbushes;
+        }
+
         /* minimum days */
 
         public static int MinimumDaysCycle()

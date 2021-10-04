@@ -53,7 +53,7 @@ namespace MorrowRim_Bloodmoon
 
 		protected int GetEnemiesCount(SitePartParams parms)
 		{
-			return GenMath.RoundRandom(Mathf.Clamp((parms.threatPoints / 30) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
+			return GenMath.RoundRandom(Mathf.Clamp((parms.threatPoints / 20) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
 		}
 
 		protected string GetEnemiesLabel(Site site, int enemiesCount)

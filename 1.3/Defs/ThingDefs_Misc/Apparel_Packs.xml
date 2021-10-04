@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="ApparelNoQualityBase">
+		<defName>MorrowRim_Apparel_WolfsbaneBelt</defName>
+		<label>wolfsbane vessel belt</label>
+		<description>Glass vessels filled with a potent mixture of wolfsbane extract. Shatters upon impact, releasing a short lived cloud of gas that burns any werewolves within. Can be refueled with wolfsbane extract.</description>
+		<techLevel>Medieval</techLevel>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>5</maxCharges>
+			<ammoDef>MorrowRim_WolfsbaneExtract</ammoDef>
+			<ammoCountToRefill>15</ammoCountToRefill>
+			<baseReloadTicks>60</baseReloadTicks>
+			<soundReload>Interact_MolotovCocktail</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>vessel</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+		<verbs>
+		  <li>
+			<label>throw vessel</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>12.9</range>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<warmupTime>1.5</warmupTime>
+			<noiseRadius>4</noiseRadius>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>MorrowRim_Proj_GrenadeWolfsbane</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+		<recipeMaker>
+		  <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		  <useIngredientsForColor>false</useIngredientsForColor>
+		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		  <workSkill>Intellectual</workSkill>
+		  <effectWorking>Smith</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <skillRequirements>
+		  </skillRequirements>
+		  <researchPrerequisite>MorrowRim_LycanthropicElixirs</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+		  <MorrowRim_WolfsbaneExtract>60</MorrowRim_WolfsbaneExtract>
+		  <Steel>15</Steel>
+		</costList>
+		<graphicData>
+		  <texPath>Things/Item/BeltGrenades/MorrowRim_WolfsBaneBombBelt</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <Mass>3</Mass>
+		  <Flammability>0.4</Flammability>
+		  <EquipDelay>2</EquipDelay>
+		</statBases>
+		<thingCategories>
+		  <li>ApparelUtility</li>
+		</thingCategories>
+		<generateAllowChance>0.15</generateAllowChance>
+		<apparel>
+		  <careIfWornByCorpse>false</careIfWornByCorpse>
+		  <careIfDamaged>false</careIfDamaged>
+		  <wearPerDay>0</wearPerDay>
+		  <bodyPartGroups>
+			<li>Waist</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Belt</li>
+		  </layers>
+		  <tags>
+			<li>MorrowRim_WolfsbaneBelt</li>
+		  </tags>
+		</apparel>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>MorrowRim_Proj_GrenadeWolfsbane</defName>
+		<label>wolfsbane vessel</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+		  <texPath>Things/Projectile/MorrowRim_WolfsBaneBombThrown</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+		  <explosionRadius>3.5</explosionRadius>
+		  <damageDef>Burn</damageDef>
+		  <damageAmountBase>0</damageAmountBase>
+		  <explosionDelay>0</explosionDelay>
+		  <postExplosionSpawnThingDef>MorrowRim_Gas_Wolfsbane</postExplosionSpawnThingDef>
+		  <postExplosionSpawnChance>1</postExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+ 
+</Defs>

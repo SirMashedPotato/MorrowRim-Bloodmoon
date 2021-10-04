@@ -111,7 +111,7 @@ namespace MorrowRim_Bloodmoon
 
         public static void BurnWerewolf(Pawn pawn)
         {
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.Burn, 3, 0, -1, null, GetBurnPart(pawn));
+            DamageInfo dinfo = new DamageInfo(DamageDefOf.Burn, 5, 0, -1, null, GetBurnPart(pawn));
             pawn.TakeDamage(dinfo);
         }
 

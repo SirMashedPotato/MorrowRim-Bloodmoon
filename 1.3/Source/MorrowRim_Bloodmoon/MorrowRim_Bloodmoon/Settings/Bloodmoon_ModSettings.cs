@@ -35,6 +35,7 @@ namespace MorrowRim_Bloodmoon
         public float huntersGiftMaximum = huntersGiftMaximum_def;
         public float huntersGiftBuildup = huntersGiftBuildup_def;
         public bool enableStrengthScaling = enableStrengthScaling_def;
+        public bool enableBloodmoonAmbushes = enableBloodmoonAmbushes_def;
 
         //default values
         private static readonly float raidModifier_def = 0.5f;
@@ -45,7 +46,7 @@ namespace MorrowRim_Bloodmoon
         private static readonly int maxNumberOfLootDrops_def = 3;
         private static readonly bool enableBloodmoonForAll_def = false;
         private static readonly bool enableMessages_def = true;
-        private static readonly int chanceOfGiftedWerewolf_def = 5;
+        private static readonly int chanceOfGiftedWerewolf_def = 1;
         private static readonly int infectionChance_def = 50;
         private static readonly bool enableBloodmoonCycleForAll_def = false;
         private static readonly bool enableLootDrops_def = true;
@@ -65,6 +66,7 @@ namespace MorrowRim_Bloodmoon
         private static readonly float huntersGiftMaximum_def = 1f;
         private static readonly float huntersGiftBuildup_def = 0.1f;
         private static readonly bool enableStrengthScaling_def = true;
+        private static readonly bool enableBloodmoonAmbushes_def = true;
 
         //save settings
         public override void ExposeData()
@@ -97,6 +99,7 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref huntersGiftMaximum, "Bloodmoon_huntersGiftMaximum", huntersGiftMaximum_def);
             Scribe_Values.Look(ref huntersGiftBuildup, "Bloodmoon_huntersGiftBuildup", huntersGiftBuildup_def);
             Scribe_Values.Look(ref enableStrengthScaling, "Bloodmoon_enableStrengthScaling", enableStrengthScaling_def);
+            Scribe_Values.Look(ref enableBloodmoonAmbushes, "Bloodmoon_enableBloodmoonAmbushes", enableBloodmoonAmbushes_def);
             base.ExposeData();
         }
         public static void resetSettings(Bloodmoon_ModSettings settings)
@@ -129,6 +132,7 @@ namespace MorrowRim_Bloodmoon
             settings.huntersGiftMaximum = huntersGiftMaximum_def;
             settings.huntersGiftBuildup = huntersGiftBuildup_def;
             settings.enableStrengthScaling = enableStrengthScaling_def;
+            settings.enableBloodmoonAmbushes = enableBloodmoonAmbushes_def;
         }
     }
 }

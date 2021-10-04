@@ -14,5 +14,7 @@ namespace MorrowRim_Bloodmoon
         public static IncidentDef ResourcePodCrash;
 
         public static IncidentDef MorrowRim_Bloodmoon;
+
+        public static IncidentDef MorrowRim_BloodmoonCaravanAmbush;
     }
 }

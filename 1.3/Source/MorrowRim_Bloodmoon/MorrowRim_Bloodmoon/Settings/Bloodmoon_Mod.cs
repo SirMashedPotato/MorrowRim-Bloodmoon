@@ -38,6 +38,10 @@ namespace MorrowRim_Bloodmoon
             listing_Standard.CheckboxLabeled("Bloodmoon_enableWerewolfPack".Translate(), ref settings.enableWerewolfPack);
             listing_Standard.Gap();
 
+            //enableWerewolfPack
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonAmbushes".Translate(), ref settings.enableBloodmoonAmbushes);
+            listing_Standard.Gap();
+
             //enableMessages
             listing_Standard.CheckboxLabeled("Bloodmoon_enableMessages".Translate(), ref settings.enableMessages);
             listing_Standard.Gap();
@@ -168,6 +172,16 @@ namespace MorrowRim_Bloodmoon
             if(Widgets.ButtonText(rectDefault, "Bloodmoon_default".Translate(), true, true, true))
             {
                 Bloodmoon_ModSettings.resetSettings(settings);
+            }
+
+            listing_Standard.Gap();
+
+            //reset
+            Rect rectPresetClassic = listing_Standard.GetRect(30f);
+            TooltipHandler.TipRegion(rectPresetClassic, "Bloodmoon_classicTooltip".Translate());
+            if (Widgets.ButtonText(rectPresetClassic, "Bloodmoon_classic".Translate(), true, true, true))
+            {
+                PresetSettings.Preset_Classic(settings);
             }
 
             listing_Standard.End();
