@@ -140,6 +140,8 @@
 					<HungerRateMultiplier>0.05</HungerRateMultiplier>
 					<MentalBreakThreshold>0.05</MentalBreakThreshold>
 					<PsychicSensitivity>0.05</PsychicSensitivity>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+					<ToxicSensitivity>-0.25</ToxicSensitivity>
 				</statOffsets>
 				<capMods>
 					<li>

@@ -3,7 +3,7 @@
 
 	<StorytellerDef ParentName="BaseStoryteller">
 		<!-- overrides for base -->
-		<populationIntentFactorFromPopCurve>
+		<populationIntentFactorFromPopCurve Inherit="false">
 		  <points>
 			<li>0,  8.0</li>
 			<li>1,  2.0</li>

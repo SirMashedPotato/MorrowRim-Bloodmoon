@@ -33,6 +33,9 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -43,6 +46,9 @@
 					<offset>0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -53,6 +59,9 @@
 					<offset>0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -63,6 +72,9 @@
 					<offset>0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -73,6 +85,9 @@
 					<offset>0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -83,6 +98,9 @@
 					<offset>0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -93,6 +111,9 @@
 					<offset>0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -103,6 +124,9 @@
 					<offset>0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -113,6 +137,9 @@
 					<offset>0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -123,6 +150,9 @@
 					<offset>1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -148,6 +178,9 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -158,6 +191,9 @@
 					<offset>0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -168,6 +204,9 @@
 					<offset>0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -178,6 +217,9 @@
 					<offset>0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -188,6 +230,9 @@
 					<offset>0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -198,6 +243,9 @@
 					<offset>0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -208,6 +256,9 @@
 					<offset>0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -218,6 +269,9 @@
 					<offset>0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -228,6 +282,9 @@
 					<offset>0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -238,6 +295,9 @@
 					<offset>1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -267,6 +327,9 @@
 					<offset>-0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -281,6 +344,9 @@
 					<offset>-0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -295,6 +361,9 @@
 					<offset>-0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -309,6 +378,9 @@
 					<offset>-0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -323,6 +395,9 @@
 					<offset>-0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -337,6 +412,9 @@
 					<offset>-0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -351,6 +429,9 @@
 					<offset>-0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -365,6 +446,9 @@
 					<offset>-0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -379,6 +463,9 @@
 					<offset>-0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -393,6 +480,9 @@
 					<offset>-1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -418,6 +508,9 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -428,6 +521,9 @@
 					<offset>0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -438,6 +534,9 @@
 					<offset>0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -448,6 +547,9 @@
 					<offset>0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -458,6 +560,9 @@
 					<offset>0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -468,6 +573,9 @@
 					<offset>0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -478,6 +586,9 @@
 					<offset>0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -488,6 +599,9 @@
 					<offset>0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -498,6 +612,9 @@
 					<offset>0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -508,6 +625,9 @@
 					<offset>1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
