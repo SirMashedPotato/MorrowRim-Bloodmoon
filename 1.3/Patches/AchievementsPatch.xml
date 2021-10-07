@@ -30,6 +30,21 @@
 						</AchievementsExpanded.Reward_MapIncident>
 						
 						<!-- Incidents -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonAmbush</defName>
+							<label>You Can't Run From Hircine</label>
+							<description>Experience your first bloodmoon caravan ambush</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.IncidentTracker">
+								<def>MorrowRim_BloodmoonCaravanAmbush</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonAmbush</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
 
 						<AchievementsExpanded.AchievementDef>
 							<defName>MorrowRim_AchievementBloodmoonSurvive</defName>
