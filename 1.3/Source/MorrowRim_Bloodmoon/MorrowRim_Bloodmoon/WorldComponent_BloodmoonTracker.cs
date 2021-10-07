@@ -30,8 +30,8 @@ namespace MorrowRim_Bloodmoon
 
         public static void IncrementStrength()
         {
-            currentStrength += 10;
-            Messages.Message("Bloodmoon_strengthScalingMessage".Translate(currentStrength), null, MessageTypeDefOf.CautionInput, true);
+            currentStrength += 5;
+            Messages.Message("Bloodmoon_strengthScalingMessage".Translate(ModSettings_Utility.GetBloodStrength()), null, MessageTypeDefOf.CautionInput, true);
         }
 
         public static int GetStrength()

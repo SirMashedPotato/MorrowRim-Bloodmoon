@@ -55,6 +55,7 @@
     <Compile Include="Comps\CompTargetEffect_Lycanthropy.cs" />
     <Compile Include="DamageWorkers\Gas_Wolfsbane.cs" />
     <Compile Include="DefOf\GameConditionDefOf.cs" />
+    <Compile Include="Lord\Trigger_BloodmoonEnds.cs" />
     <Compile Include="QuestSites\GenStep_WerewolfPack.cs" />
     <Compile Include="HediffComps\HediffCompProperties_HircineMarked.cs" />
     <Compile Include="DamageWorkers\DamageWorker_HunterStab.cs" />

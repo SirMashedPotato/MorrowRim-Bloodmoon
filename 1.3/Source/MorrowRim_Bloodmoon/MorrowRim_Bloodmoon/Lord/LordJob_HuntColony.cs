@@ -51,7 +51,7 @@ namespace MorrowRim_Bloodmoon
 				lordToil2.useAvoidGrid = true;
 			}
 			stateGraph.AddToil(lordToil2);
-			LordToil_ExitMap lordToil_ExitMap = new LordToil_ExitMap(LocomotionUrgency.Sprint, false, true);
+			LordToil_ExitMap lordToil_ExitMap = new LordToil_ExitMap(LocomotionUrgency.Sprint, true, true);
 			lordToil_ExitMap.useAvoidGrid = true;
 			stateGraph.AddToil(lordToil_ExitMap);
 			if (true)
@@ -84,9 +84,9 @@ namespace MorrowRim_Bloodmoon
 				transition7.AddSource(lordToil);
 			}
 			transition7.AddTrigger(new Trigger_BecameNonHostileToPlayer());
+			transition7.AddTrigger(new Trigger_BloodmoonEnds());
 			transition7.AddPreAction(new TransitionAction_Message("MessageRaidersLeaving".Translate(this.assaulterFaction.def.pawnsPlural.CapitalizeFirst(), this.assaulterFaction.Name), null, 1f));
 			stateGraph.AddTransition(transition7, false);
-
 			return stateGraph;
 		}
 

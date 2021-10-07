@@ -10,7 +10,7 @@
 		<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
 	</descriptionHyperlinks>
 	<statBases>
-      <MoveSpeed>5.0</MoveSpeed>
+      <MoveSpeed>4.8</MoveSpeed>
       <Flammability>1.4</Flammability>
       <MarketValue>500</MarketValue>
 	  <LeatherAmount>50</LeatherAmount>

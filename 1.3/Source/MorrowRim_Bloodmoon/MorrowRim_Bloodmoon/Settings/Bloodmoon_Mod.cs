@@ -86,7 +86,7 @@ namespace MorrowRim_Bloodmoon
 
             //werewolfStrength
             listing_Standard.Label("Bloodmoon_werewolfStrength".Translate() + " (" + settings.werewolfStrength + "%)");
-            settings.werewolfStrength = (int)Math.Round(listing_Standard.Slider(settings.werewolfStrength, 0.0f, 100) / 10) * 10;
+            settings.werewolfStrength = (int)Math.Round(listing_Standard.Slider(settings.werewolfStrength, 0.0f, 100) / 5) * 5;
 
             //raidModifier
             listing_Standard.Label("Bloodmoon_raidModifier".Translate() + " (" + settings.raidModifier + "x)");

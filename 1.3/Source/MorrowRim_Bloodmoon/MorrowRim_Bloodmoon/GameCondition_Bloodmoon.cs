@@ -28,7 +28,7 @@ namespace MorrowRim_Bloodmoon
             {
                 if (ModSettings_Utility.EnableStrengthScaling())
                 {
-					return "Bloodmoon_bloodmoonDescription".Translate(ModSettings_Utility.GetBloodStrength() * 100);
+					return "Bloodmoon_bloodmoonDescription".Translate(ModSettings_Utility.GetBloodStrength() * 100f);
 				}
 				return def.description;
 			}
@@ -138,6 +138,8 @@ namespace MorrowRim_Bloodmoon
             {
 				WorldComponent_BloodmoonTracker.IncrementStrength();
 			}
+
+			//send trigger
 
 
 			base.End();
