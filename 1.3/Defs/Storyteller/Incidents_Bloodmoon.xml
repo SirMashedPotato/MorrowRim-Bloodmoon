@@ -6,7 +6,7 @@
 	<IncidentDef>
 		<defName>MorrowRim_Bloodmoon</defName>
 		<label>bloodmoon rising</label>
-		<category>Misc</category>
+		<category>Hircine_Bloodmoon</category>
 		<targetTags>
 		  <li>World</li>
 		</targetTags>
