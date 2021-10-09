@@ -31,7 +31,7 @@ namespace MorrowRim_Bloodmoon
         public static void IncrementStrength()
         {
             currentStrength += 5;
-            Messages.Message("Bloodmoon_strengthScalingMessage".Translate(ModSettings_Utility.GetBloodStrength()), null, MessageTypeDefOf.CautionInput, true);
+            Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelstrengthScaling".Translate(), "Bloodmoon_strengthScalingMessage".Translate(ModSettings_Utility.GetBloodStrength() * 100), LetterDefOf.NegativeEvent);
         }
 
         public static int GetStrength()

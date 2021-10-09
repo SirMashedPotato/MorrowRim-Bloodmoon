@@ -3,7 +3,6 @@
 	
 	<HediffDef Name="MorrowRim_GiftsBase" Abstract="True">
 		<label>gift of Hircine</label>
-		<description>One of the gifts of Hircine, gained by using a hutners totem earned from a bloodmoon.\n\nIncreases the corresponding capacity by 10%, for each 10% of buildup.</description>
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
 		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
@@ -14,6 +13,7 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfSpeed</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases speed by 10%, for each 10% of buildup.</description>
 		<descriptionHyperlinks>
 			<ThingDef>MorrowRim_TotemSpeed</ThingDef>
 		</descriptionHyperlinks>
@@ -159,6 +159,7 @@
 	
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfStrength</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases manipulation by 10%, for each 10% of buildup.</description>
 		<descriptionHyperlinks>
 			<ThingDef>MorrowRim_TotemStrength</ThingDef>
 		</descriptionHyperlinks>
@@ -304,6 +305,7 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfGuile</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases consciousness by 10%, for each 10% of buildup.</description>
 		<descriptionHyperlinks>
 			<ThingDef>MorrowRim_TotemGuile</ThingDef>
 		</descriptionHyperlinks>
@@ -489,6 +491,7 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfSight</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases sight by 10%, for each 10% of buildup.</description>
 		<descriptionHyperlinks>
 			<ThingDef>MorrowRim_TotemSight</ThingDef>
 		</descriptionHyperlinks>
