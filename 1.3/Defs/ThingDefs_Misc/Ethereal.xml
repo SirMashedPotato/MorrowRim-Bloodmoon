@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base -->
+
+	<ThingDef ParentName="BaseGas">
+		<defName>MorrowRim_Gas_Wolfsbane</defName>
+		<thingClass>MorrowRim_Bloodmoon.Gas_Wolfsbane</thingClass>
+		<label>wolfsbane cloud</label>
+		<graphicData>
+		  <texPath>Things/Gas/Puff</texPath>
+		  <drawSize>2.2</drawSize>
+		  <color>(111,80,151,50)</color>
+		</graphicData>
+		<gas>
+		  <expireSeconds>10~16</expireSeconds>
+		  <blockTurretTracking>true</blockTurretTracking>
+		  <accuracyPenalty>0.7</accuracyPenalty>
+		  <rotationSpeed>10</rotationSpeed>
+		</gas>
+	</ThingDef>
+  
+</Defs>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SitePartDef>
+		<defName>MorrowRim_BloodmoonWerewolfPack</defName>
+		<label>werewolf pack</label>
+		<description>A werewolf pack has been terrorising nearby settlements, and has been tracked to this location. It will eventually move on.</description>
+		<workerClass>MorrowRim_Bloodmoon.SitePartWorker_WerewolfPack</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/MorrowRim_WerewolfPack</expandingIconTexture>
+		<handlesWorldObjectTimeoutInspectString>false</handlesWorldObjectTimeoutInspectString>
+		<tags>
+		  <li>MorrowRim_BloodmoonWerewolfPack</li>
+		</tags>
+		<approachOrderString>Attack {0}</approachOrderString>
+		<approachingReportString>Attacking {0}</approachingReportString>
+		<arrivedLetter>The werewolf pack has sensed your pawns, and is beginning a counter-attack.</arrivedLetter>
+		<arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<minThreatPoints>300</minThreatPoints>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>MorrowRim_BloodmoonWerewolfPack</defName>
+		<linkWithSite>MorrowRim_BloodmoonWerewolfPack</linkWithSite>
+		<order>500</order>
+		<genStep Class="MorrowRim_Bloodmoon.GenStep_WerewolfPack">
+		</genStep>
+	</GenStepDef>
+
+</Defs>

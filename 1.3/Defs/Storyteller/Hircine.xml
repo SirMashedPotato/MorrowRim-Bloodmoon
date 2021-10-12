@@ -3,7 +3,7 @@
 
 	<StorytellerDef ParentName="BaseStoryteller">
 		<!-- overrides for base -->
-		<populationIntentFactorFromPopCurve>
+		<populationIntentFactorFromPopCurve Inherit="false">
 		  <points>
 			<li>0,  8.0</li>
 			<li>1,  2.0</li>
@@ -14,8 +14,8 @@
 		  </points>
 		</populationIntentFactorFromPopCurve>
 		<defName>MorrowRim_Hircine</defName>
-		<label>Hircine</label>
-		<description>Hircine will isolate you from all help, no one will come to your aid in times of need. Constant danger will slowly wear down your small group, weakening and tiring them for the coming hunt. Roughly every 10 days the bloodmoon will rise, and the hounds will be released.</description>
+		<label>Hircine Lord of the Hunt</label>
+		<description>Hircine will isolate you from all help, no one will come to your aid in times of need. Constant danger will slowly wear down your small group, weakening and tiring them for the coming hunt. The looming bloodmoon is a constant threat, for the hounds will be released.</description>
 		<portraitLarge>UI/Hircine</portraitLarge>
 		<portraitTiny>UI/HircineTiny</portraitTiny>
 		<listOrder>51</listOrder>

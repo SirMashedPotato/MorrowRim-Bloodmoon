@@ -26,7 +26,7 @@ namespace MorrowRim_Bloodmoon
 
         public static bool CheckStoryteller()
         {
-            return Current.Game.storyteller.def == StorytellerDefOf.MorrowRim_Hircine || ModSettings_Utility.EnableBloodMoonForAll(); ;
+            return Current.Game.storyteller.def == StorytellerDefOf.MorrowRim_Hircine || ModSettings_Utility.EnableBloodMoonForAll();
         }
 
         public static bool HircineIncidentCheck()
@@ -100,6 +100,7 @@ namespace MorrowRim_Bloodmoon
             {
                 return true;
             }
+            var qual = ingested.TryGetComp<CompQuality>();
             float q = (float)qc;
             if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.ElixirFailChance()) - (q * (ModSettings_Utility.SettingToFloat(ModSettings_Utility.ElixirFailChance() / 10)))))
             {
@@ -110,13 +111,24 @@ namespace MorrowRim_Bloodmoon
 
         public static void BurnWerewolf(Pawn pawn)
         {
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.Burn, 3, 0, -1, null, GetBurnPart(pawn));
+            DamageInfo dinfo = new DamageInfo(DamageDefOf.Burn, 5, 0, -1, null, GetBurnPart(pawn));
             pawn.TakeDamage(dinfo);
         }
 
         public static BodyPartRecord GetBurnPart(Pawn p)
         {
             return p.RaceProps.body.AllPartsVulnerableToFrostbite.RandomElement();
+        }
+
+        public static bool HoundsFactionFound(string str)
+        {
+            if(FactionUtility.DefaultFactionFrom(FactionDefOf.MorrowRim_HoundsOfHircine) == null)
+            {
+                Messages.Message("Bloodmoon_houndsFactionNotFound".Translate(str), null, MessageTypeDefOf.RejectInput, true);
+                return false;
+            }
+
+            return true;
         }
 
         /* === ROM werewolves === */
@@ -129,7 +141,7 @@ namespace MorrowRim_Bloodmoon
         public static bool ROMWerewolves_CheckTrait(Pawn pawn)
         {
             TraitDef trait = DefDatabase<TraitDef>.GetNamed("ROM_Werewolf");
-            return pawn.story.traits.HasTrait(trait);
+            return pawn.story != null && pawn.story.traits != null && pawn.story.traits.HasTrait(trait);
         }
 
         public static void ROMWerewolves_GiveTrait(Pawn pawn)

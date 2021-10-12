@@ -4,6 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 using RimWorld;
+using RimWorld.Planet;
 using Verse.AI.Group;
 using System.Linq;
 
@@ -21,7 +22,19 @@ namespace MorrowRim_Bloodmoon
 			}
 		}
 
-		public override float SkyTargetLerpFactor(Map map)
+        public override string Description
+        {
+			get
+            {
+                if (ModSettings_Utility.EnableStrengthScaling())
+                {
+					return "Bloodmoon_bloodmoonDescription".Translate(ModSettings_Utility.GetBloodStrength() * 100f);
+				}
+				return def.description;
+			}
+        }
+
+        public override float SkyTargetLerpFactor(Map map)
 		{
 			return GameConditionUtility.LerpInOutValue(this, (float)this.TransitionTicks, 1f);
 		}
@@ -67,11 +80,22 @@ namespace MorrowRim_Bloodmoon
 			//do continuous events
 			if(currentTicks >= ticksPerEvent)
 			{
-				if (ModSettings_Utility.IsWerewolfRaid())
-				{
-					Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.RandomElement(), PawnKindDefOf.MorrowRim_Werewolf);
+                if (this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).Any())
+                {
+					Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).RandomElement(), PawnKindDefOf.MorrowRim_Werewolf);
 				}
-				//else Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.RandomElement(), PawnKindDefOf.MorrowRim_Draugr);
+				else if(CaravanUtility.PlayerHasAnyCaravan() && ModSettings_Utility.EnableBloodmoonAmbushes())
+                {
+					Caravan caravan = Find.WorldObjects.Caravans.RandomElement();
+					if (caravan != null)
+					{
+						IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.MorrowRim_BloodmoonCaravanAmbush.category, caravan);
+						IncidentDef incidentDef = IncidentDefOf.MorrowRim_BloodmoonCaravanAmbush;
+						incidentDef.Worker.TryExecute(incidentParms);
+					}
+				}
+				
+
 				if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.ExtraAvatarChance())))
 				{
 					Bloodmoon_Utility.SpawnAvatarOfHircine(this.AffectedMaps.RandomElement());
@@ -110,6 +134,14 @@ namespace MorrowRim_Bloodmoon
 					}
 				}
 			}
+            if (ModSettings_Utility.EnableStrengthScaling() && this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).Any())
+            {
+				WorldComponent_BloodmoonTracker.IncrementStrength();
+			}
+
+			//send trigger
+
+
 			base.End();
 		}
 

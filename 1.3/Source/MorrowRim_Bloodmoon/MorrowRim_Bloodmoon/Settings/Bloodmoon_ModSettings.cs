@@ -26,35 +26,47 @@ namespace MorrowRim_Bloodmoon
         public bool animalMarking = animalMarking_def;
         public int minTicksPerMark = minTicksPerMark_def;
         public int maxTicksPerMark = maxTicksPerMark_def;
-
         public float incidentIntervalCycle = incidentIntervalCycle_def;
         public float incidentIntervalRogue = incidentIntervalRogue_def;
-        //public int raidBalance = raidBalance_def;
+        public bool enableWerewolfPack = enableWerewolfPack_def;
+        public int incidentMinimumDaysCycle = incidentMinimumDaysCycle_def;
+        public int incidentMinimumDaysRogue = incidentMinimumDaysRogue_def;
+        public bool enableLetters = enableLetters_def;
+        public float huntersGiftMaximum = huntersGiftMaximum_def;
+        public float huntersGiftBuildup = huntersGiftBuildup_def;
+        public bool enableStrengthScaling = enableStrengthScaling_def;
+        public bool enableBloodmoonAmbushes = enableBloodmoonAmbushes_def;
 
         //default values
-        private static readonly float raidModifier_def = 1f;
-        private static readonly int minTicksPerEvent_def = 10000;
-        private static readonly int maxTicksPerEvent_def = 20000;
+        private static readonly float raidModifier_def = 0.5f;
+        private static readonly int minTicksPerEvent_def = 20000;
+        private static readonly int maxTicksPerEvent_def = 50000;
         private static readonly int extraAvatarChance_def = 10;
         private static readonly int minNumberOfLootDrops_def = 1;
         private static readonly int maxNumberOfLootDrops_def = 3;
         private static readonly bool enableBloodmoonForAll_def = false;
         private static readonly bool enableMessages_def = true;
-        private static readonly int chanceOfGiftedWerewolf_def = 5;
+        private static readonly int chanceOfGiftedWerewolf_def = 1;
         private static readonly int infectionChance_def = 50;
         private static readonly bool enableBloodmoonCycleForAll_def = false;
         private static readonly bool enableLootDrops_def = true;
         private static readonly int elixirFailChance_def = 10;
-        private static readonly int maxWerewolfNum_def = 100;
+        private static readonly int maxWerewolfNum_def = 50;
         private static readonly int minWerewolfNum_def = 1;
         private static readonly int werewolfStrength_def = 0;
         private static readonly bool animalMarking_def = true;
-        private static readonly int minTicksPerMark_def = 15000;
-        private static readonly int maxTicksPerMark_def = 30000;
-
-        private static readonly float incidentIntervalCycle_def = 10f;
-        private static readonly float incidentIntervalRogue_def = 15f;
-        //private static readonly int raidBalance_def = 70;
+        private static readonly int minTicksPerMark_def = 25000;
+        private static readonly int maxTicksPerMark_def = 45000;
+        private static readonly float incidentIntervalCycle_def = 30f;
+        private static readonly float incidentIntervalRogue_def = 60f;
+        private static readonly bool enableWerewolfPack_def = true;
+        private static readonly int incidentMinimumDaysCycle_def = 30;
+        private static readonly int incidentMinimumDaysRogue_def = 40;
+        private static readonly bool enableLetters_def = false;
+        private static readonly float huntersGiftMaximum_def = 1f;
+        private static readonly float huntersGiftBuildup_def = 0.1f;
+        private static readonly bool enableStrengthScaling_def = true;
+        private static readonly bool enableBloodmoonAmbushes_def = true;
 
         //save settings
         public override void ExposeData()
@@ -80,7 +92,14 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref maxTicksPerMark, "Bloodmoon_maxTicksPerMark", maxTicksPerMark_def);
             Scribe_Values.Look(ref incidentIntervalCycle, "Bloodmoon_incidentIntervalCycle", incidentIntervalCycle_def);
             Scribe_Values.Look(ref incidentIntervalRogue, "Bloodmoon_incidentIntervalRogue", incidentIntervalRogue_def);
-            //Scribe_Values.Look(ref raidBalance, "Bloodmoon_raidBalance", raidBalance_def);
+            Scribe_Values.Look(ref enableWerewolfPack, "Bloodmoon_enableWerewolfPack", enableWerewolfPack_def);
+            Scribe_Values.Look(ref incidentMinimumDaysCycle, "Bloodmoon_incidentMinimumDaysCycle", incidentMinimumDaysCycle_def);
+            Scribe_Values.Look(ref incidentMinimumDaysRogue, "Bloodmoon_incidentMinimumDaysRogue", incidentMinimumDaysRogue_def);
+            Scribe_Values.Look(ref enableLetters, "Bloodmoon_enableLetters", enableLetters_def);
+            Scribe_Values.Look(ref huntersGiftMaximum, "Bloodmoon_huntersGiftMaximum", huntersGiftMaximum_def);
+            Scribe_Values.Look(ref huntersGiftBuildup, "Bloodmoon_huntersGiftBuildup", huntersGiftBuildup_def);
+            Scribe_Values.Look(ref enableStrengthScaling, "Bloodmoon_enableStrengthScaling", enableStrengthScaling_def);
+            Scribe_Values.Look(ref enableBloodmoonAmbushes, "Bloodmoon_enableBloodmoonAmbushes", enableBloodmoonAmbushes_def);
             base.ExposeData();
         }
         public static void resetSettings(Bloodmoon_ModSettings settings)
@@ -106,7 +125,14 @@ namespace MorrowRim_Bloodmoon
             settings.maxTicksPerMark = maxTicksPerMark_def;
             settings.incidentIntervalCycle = incidentIntervalCycle_def;
             settings.incidentIntervalRogue = incidentIntervalRogue_def;
-            //settings.raidBalance = raidBalance_def;
+            settings.enableWerewolfPack = enableWerewolfPack_def;
+            settings.incidentMinimumDaysCycle = incidentMinimumDaysCycle_def;
+            settings.incidentMinimumDaysRogue = incidentMinimumDaysRogue_def;
+            settings.enableLetters = enableLetters_def;
+            settings.huntersGiftMaximum = huntersGiftMaximum_def;
+            settings.huntersGiftBuildup = huntersGiftBuildup_def;
+            settings.enableStrengthScaling = enableStrengthScaling_def;
+            settings.enableBloodmoonAmbushes = enableBloodmoonAmbushes_def;
         }
     }
 }

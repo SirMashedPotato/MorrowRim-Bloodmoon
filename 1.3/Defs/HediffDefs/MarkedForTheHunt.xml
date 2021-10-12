@@ -8,7 +8,7 @@
 		<description>Hircine, lord of the hunt, has marked this animal, and wishes you to hunt it in his name. Hircine will bestow a gift upon you if this animal is successfully slain during the bloodmoon. Of course he has also granted some of his blood to the animal.</description>
 		<comps>
 		  <li Class="HediffCompProperties_SeverityPerDay">
-			<severityPerDay>-5</severityPerDay>
+			<severityPerDay>-2.5</severityPerDay>
 			<showHoursToRecover>true</showHoursToRecover>
 		  </li>
 		  <li Class="MorrowRim_Bloodmoon.HediffCompProperties_HircineMarked">

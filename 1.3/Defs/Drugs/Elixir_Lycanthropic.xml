@@ -40,6 +40,11 @@
 		<defName>MorrowRim_ElixirLycanthropic_Separation</defName>
 		<label>elixir of lycanthropic separation</label>
 		<description>An elixir prepared using werewolf blood. When ingested by someone afflicted with dormant lycanthropy, they will be cured and a manifestation of the slumbering werewolf will be created.\n\nBe careful, even though the werewolf will be in a weakened state, it will still be able to inflict lycanthropy, and the consumer will not be immune to reinfection.</description>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
+			<ThingDef>MorrowRim_Werewolf</ThingDef>
+			<HediffDef>MorrowRim_LycanthropicUnbinding</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <graphicClass>Graphic_StackCount</graphicClass>
 		  <drawSize>0.85</drawSize>
@@ -57,6 +62,10 @@
 		<defName>MorrowRim_ElixirLycanthropic_Assimilation</defName>
 		<label>elixir of lycanthropic assimilation</label>
 		<description>An elixir prepared using werewolf blood. When ingested by someone afflicted with dormant lycanthropy, the disease is assimilated into the body, providing an increase to certain stats and capacities. Reinfection of Sanies Lupinus will cause the assimilated lycanthropy to return to its dormant state.\n\nThere is a 10% base chance that the elixir will fail, and the pawn will suddenly morph into one of Hircine's hounds. The chance of failiure will decrease by 10% of the base chance of failing for each quality level above awful, with a legendary elixir having no chance of failing.</description>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
+			<HediffDef>MorrowRim_AssimilatedLycanthropy</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 		  <graphicClass>Graphic_StackCount</graphicClass>
 		  <drawSize>0.85</drawSize>
@@ -68,9 +77,6 @@
 			</li>
 		  </outcomeDoers>
 		</ingestible>
-		<descriptionHyperlinks>
-			<HediffDef>MorrowRim_AssimilatedLycanthropy</HediffDef>
-		</descriptionHyperlinks>
 		<comps>
 			  <li>
 				<compClass>CompQuality</compClass>

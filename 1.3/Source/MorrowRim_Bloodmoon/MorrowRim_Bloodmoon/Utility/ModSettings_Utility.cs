@@ -30,28 +30,14 @@ namespace MorrowRim_Bloodmoon
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableMessages;
         }
 
+        public static bool EnableLetters()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableLetters;
+        }
+
         public static float RaidModifier()
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().raidModifier;
-        }
-
-        /* raid decider */
-
-        /*public static int RaidBalance()
-        {
-            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().raidBalance;
-        }
-
-        public static float RaidBalance_Float()
-        {
-            float f = RaidBalance();
-            return f / 100;
-        }*/
-
-        public static bool IsWerewolfRaid()
-        {
-            return true;
-            //return Rand.Chance(RaidBalance_Float());
         }
 
 
@@ -178,6 +164,59 @@ namespace MorrowRim_Bloodmoon
         public static float IntervalRogue()
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().incidentIntervalRogue;
+        }
+
+        /* werewolf pack */
+
+        public static bool EnableWerewolfPack()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableWerewolfPack;
+        }
+
+        public static bool EnableBloodmoonAmbushes()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableBloodmoonAmbushes;
+        }
+
+        /* minimum days */
+
+        public static int MinimumDaysCycle()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().incidentMinimumDaysCycle;
+        }
+
+        public static int MinimumDaysRogue()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().incidentMinimumDaysRogue;
+        }
+
+        /* totem settings */
+
+        public static float HuntersGiftMaximum()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().huntersGiftMaximum;
+        }
+
+        public static float HuntersGiftBuildup()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().huntersGiftBuildup;
+        }
+
+        /* strength scaling */
+
+        public static bool EnableStrengthScaling()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableStrengthScaling;
+        }
+
+        public static float GetBloodStrength()
+        {
+            if (EnableStrengthScaling())
+            {
+                float sev = SettingToFloat(WerewolfStrength_int() + WorldComponent_BloodmoonTracker.GetStrength());
+                return sev > 1f? 1f : sev;
+            }
+            return SettingToFloat(WerewolfStrength_int());
         }
     }
 }

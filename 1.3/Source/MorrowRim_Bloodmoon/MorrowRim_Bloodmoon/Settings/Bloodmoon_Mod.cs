@@ -28,41 +28,65 @@ namespace MorrowRim_Bloodmoon
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             Rect rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 3)*3);
+            Rect rect2 = new Rect(0f, 0f, inRect.width - 30, inRect.height + (inRect.height / 3)*5);
             Widgets.BeginScrollView(rect, ref scrollPosition, rect2);
             listing_Standard.Begin(rect2);
 
             /* specific settings */
 
-            //enableBloodmoonForAll
-            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonForAll".Translate(), ref settings.enableBloodmoonForAll);
+            //enableWerewolfPack
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableWerewolfPack".Translate(), ref settings.enableWerewolfPack);
             listing_Standard.Gap();
 
-            //incidentIntervalRogue
-            listing_Standard.Label("Bloodmoon_incidentIntervalRogue".Translate() + " (" + settings.incidentIntervalRogue + " days)");
-            settings.incidentIntervalRogue = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalRogue, 1, 180), 0);
-
-            //enableBloodmoonCycleForAll
-            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonCycleForAll".Translate(), ref settings.enableBloodmoonCycleForAll);
+            //enableWerewolfPack
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonAmbushes".Translate(), ref settings.enableBloodmoonAmbushes);
             listing_Standard.Gap();
-
-            //incidentIntervalRogue
-            listing_Standard.Label("Bloodmoon_incidentIntervalCycle".Translate() + " (" + settings.incidentIntervalCycle + " days)");
-            settings.incidentIntervalCycle = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalCycle, 1, 180), 0);
 
             //enableMessages
             listing_Standard.CheckboxLabeled("Bloodmoon_enableMessages".Translate(), ref settings.enableMessages);
             listing_Standard.Gap();
 
+            //enableLetters
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableLetters".Translate(), ref settings.enableLetters);
+            listing_Standard.Gap();
+
             listing_Standard.GapLine();
 
-            //raidBalance
-            //listing_Standard.Label("Bloodmoon_raidBalance".Translate() + " (" + (100-settings.raidBalance) + ":" + settings.raidBalance + ")");
-            //settings.raidBalance = (int)listing_Standard.Slider(settings.raidBalance, 0, 100);
+            //enableBloodmoonForAll
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonForAll".Translate(), ref settings.enableBloodmoonForAll);
+            listing_Standard.Gap();
 
-            //raidModifier
+            //incidentMinimumDaysRogue
+            listing_Standard.Label("Bloodmoon_incidentMinimumDaysRogue".Translate() + " (" + settings.incidentMinimumDaysRogue + " days)");
+            settings.incidentMinimumDaysRogue = (int)listing_Standard.Slider(settings.incidentMinimumDaysRogue, 1, 180);
+
+            //incidentIntervalRogue
+            listing_Standard.Label("Bloodmoon_incidentIntervalRogue".Translate() + " (" + settings.incidentIntervalRogue + " days)");
+            settings.incidentIntervalRogue = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalRogue, 1, 180), 0);
+
+            listing_Standard.GapLine();
+
+            //enableBloodmoonCycleForAll
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonCycleForAll".Translate(), ref settings.enableBloodmoonCycleForAll);
+            listing_Standard.Gap();
+
+            //incidentMinimumDaysRogue
+            listing_Standard.Label("Bloodmoon_incidentMinimumDaysCycle".Translate() + " (" + settings.incidentMinimumDaysCycle + " days)");
+            settings.incidentMinimumDaysCycle = (int)listing_Standard.Slider(settings.incidentMinimumDaysCycle, 1, 180);
+
+            //incidentIntervalRogue
+            listing_Standard.Label("Bloodmoon_incidentIntervalCycle".Translate() + " (" + settings.incidentIntervalCycle + " days)");
+            settings.incidentIntervalCycle = (float)Math.Round(listing_Standard.Slider(settings.incidentIntervalCycle, 1, 180), 0);
+
+            listing_Standard.GapLine();
+
+            //enableStrengthScaling
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableStrengthScaling".Translate(), ref settings.enableStrengthScaling, "Bloodmoon_enableStrengthScalingTooltip".Translate());
+            listing_Standard.Gap();
+
+            //werewolfStrength
             listing_Standard.Label("Bloodmoon_werewolfStrength".Translate() + " (" + settings.werewolfStrength + "%)");
-            settings.werewolfStrength = (int)Math.Round(listing_Standard.Slider(settings.werewolfStrength, 0.0f, 100) / 10) * 10;
+            settings.werewolfStrength = (int)Math.Round(listing_Standard.Slider(settings.werewolfStrength, 0.0f, 100) / 5) * 5;
 
             //raidModifier
             listing_Standard.Label("Bloodmoon_raidModifier".Translate() + " (" + settings.raidModifier + "x)");
@@ -124,6 +148,12 @@ namespace MorrowRim_Bloodmoon
             listing_Standard.Label("Bloodmoon_chanceOfGiftedWerewolf".Translate() + " (" + (settings.chanceOfGiftedWerewolf) + "%)");
             settings.chanceOfGiftedWerewolf = (int)listing_Standard.Slider(settings.chanceOfGiftedWerewolf, 0, 100);
 
+            listing_Standard.Label("Bloodmoon_huntersGiftBuildup".Translate() + " (" + (settings.huntersGiftBuildup * 100) + "%)");
+            settings.huntersGiftBuildup = (float)Math.Round(listing_Standard.Slider(settings.huntersGiftBuildup, 0.05f, 1f) * 20) / 20;
+
+            listing_Standard.Label("Bloodmoon_huntersGiftMaximum".Translate() + " (" + (settings.huntersGiftMaximum * 100 ) + "%)");
+            settings.huntersGiftMaximum = (float)Math.Round(listing_Standard.Slider(settings.huntersGiftMaximum, 0.05f, 1f) * 10) / 10;
+
             listing_Standard.GapLine();
 
             //infectionChance
@@ -142,6 +172,16 @@ namespace MorrowRim_Bloodmoon
             if(Widgets.ButtonText(rectDefault, "Bloodmoon_default".Translate(), true, true, true))
             {
                 Bloodmoon_ModSettings.resetSettings(settings);
+            }
+
+            listing_Standard.Gap();
+
+            //reset
+            Rect rectPresetClassic = listing_Standard.GetRect(30f);
+            TooltipHandler.TipRegion(rectPresetClassic, "Bloodmoon_classicTooltip".Translate());
+            if (Widgets.ButtonText(rectPresetClassic, "Bloodmoon_classic".Translate(), true, true, true))
+            {
+                PresetSettings.Preset_Classic(settings);
             }
 
             listing_Standard.End();

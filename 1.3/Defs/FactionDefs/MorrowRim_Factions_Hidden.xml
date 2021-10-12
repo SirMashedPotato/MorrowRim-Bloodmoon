@@ -4,11 +4,12 @@
 	<FactionDef>
 		<defName>MorrowRim_HoundsOfHircine</defName>
 		<label>hounds of Hircine</label>
-		<pawnSingular>hunter</pawnSingular>
-		<pawnsPlural>hunters</pawnsPlural>
-		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<pawnSingular>werewolf</pawnSingular>
+		<pawnsPlural>werewolves</pawnsPlural>
 		<fixedName>hounds of Hircine</fixedName>
 		<factionIconPath>World/WorldObjects/Expanding/Sites/MorrowRim_HoundsOfHircine</factionIconPath>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
 		<raidCommonalityFromPointsCurve>
 		  <points>
 			<li>(0, 0)</li>

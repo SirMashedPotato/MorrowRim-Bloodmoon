@@ -44,8 +44,7 @@ namespace MorrowRim_Bloodmoon
                 return;
             }
 
-            int num = GenMath.RoundRandom(Mathf.Clamp((StorytellerUtility.DefaultThreatPointsNow(map) / 20) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
-
+            int num = GenMath.RoundRandom(Mathf.Clamp((StorytellerUtility.DefaultThreatPointsNow(map) / 30) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
             IntVec3 invalid = IntVec3.Invalid;
             if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, map, 10f, out invalid))
             {
@@ -66,9 +65,9 @@ namespace MorrowRim_Bloodmoon
                 if (pawnKind == PawnKindDefOf.MorrowRim_Werewolf)
                 {
                     //settings checks
-                    if (ModSettings_Utility.SettingToFloat(ModSettings_Utility.WerewolfStrength_int()) != 0f)
+                    if (ModSettings_Utility.GetBloodStrength() != 0f)
                     {
-                        pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = ModSettings_Utility.SettingToFloat(ModSettings_Utility.WerewolfStrength_int());
+                        pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = ModSettings_Utility.GetBloodStrength();
                     }
                     if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.GiftedWerewolfChance())))
                     {
@@ -82,15 +81,15 @@ namespace MorrowRim_Bloodmoon
                 LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, true, true), list.ElementAt(0).Map, list);
             }
 
-            //send letter
+            //send message
             if (ModSettings_Utility.EnableMessages())
             {
-                if (pawnKind == PawnKindDefOf.MorrowRim_Werewolf)
-                {
-                    Messages.Message("Bloodmoon_werewolvesAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
-                }
-                //else Messages.Message("Bloodmoon_draugrAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
-                
+                Messages.Message("Bloodmoon_werewolvesAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
+            }
+            //send letter
+            if (ModSettings_Utility.EnableLetters())
+            {
+                Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelwerewolvesAppear".Translate(), "Bloodmoon_werewolvesAppear".Translate(), LetterDefOf.ThreatBig, list);
             }
         }
 

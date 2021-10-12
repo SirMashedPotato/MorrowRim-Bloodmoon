@@ -5,6 +5,10 @@
 		<defName>MorrowRim_SaniesLupinus</defName>
 		<label>sanies lupinus</label>
 		<description>An infectious disease solely contracted from a werewolf. The disease causes nearly imperceptible changes in behaviour as it takes hold. If left untreated it will eventually transition into dormant lycanthropy, until the next blood moon.</description>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
+			<ThingDef>MorrowRim_Werewolf</ThingDef>
+		</descriptionHyperlinks>
 		<makesSickThought>true</makesSickThought>
 		<taleOnVisible>MorrowRim_SaniesLupinusRevealed</taleOnVisible>
 		<maxSeverity>1.0</maxSeverity>
@@ -53,6 +57,10 @@
 		<defName>MorrowRim_DormantSaniesLupinus</defName>
 		<label>dormant lycanthropy</label>
 		<description>Lycanthropy is a condition caused by untreated Sanies Lupinus. During the next blood moon the victim will violently transform into a werewolf, becoming a servant of Hircine.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_Werewolf</ThingDef>
+			<GameConditionDef>MorrowRim_Bloodmoon</GameConditionDef>
+		</descriptionHyperlinks>
 		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
 		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
@@ -132,6 +140,8 @@
 					<HungerRateMultiplier>0.05</HungerRateMultiplier>
 					<MentalBreakThreshold>0.05</MentalBreakThreshold>
 					<PsychicSensitivity>0.05</PsychicSensitivity>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+					<ToxicSensitivity>-0.25</ToxicSensitivity>
 				</statOffsets>
 				<capMods>
 					<li>

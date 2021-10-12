@@ -3,7 +3,6 @@
 	
 	<HediffDef Name="MorrowRim_GiftsBase" Abstract="True">
 		<label>gift of Hircine</label>
-		<description>One of the gifts of Hircine, gained by hunting an aspect of Hircine during a bloodmoon.</description>
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
 		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
@@ -14,7 +13,17 @@
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfSpeed</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases speed by 10%, for each 10% of buildup.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemSpeed</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>speed</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>speed</label>
 				<minSeverity>0.1</minSeverity>
@@ -24,6 +33,9 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -34,6 +46,9 @@
 					<offset>0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -44,6 +59,9 @@
 					<offset>0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -54,6 +72,9 @@
 					<offset>0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -64,6 +85,9 @@
 					<offset>0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -74,6 +98,9 @@
 					<offset>0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -84,6 +111,9 @@
 					<offset>0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -94,6 +124,9 @@
 					<offset>0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -104,6 +137,9 @@
 					<offset>0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>speed</label>
@@ -114,13 +150,26 @@
 					<offset>1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
 	
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfStrength</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases manipulation by 10%, for each 10% of buildup.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemStrength</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>strength</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>strength</label>
 				<minSeverity>0.1</minSeverity>
@@ -130,6 +179,9 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -140,6 +192,9 @@
 					<offset>0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -150,6 +205,9 @@
 					<offset>0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -160,6 +218,9 @@
 					<offset>0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -170,6 +231,9 @@
 					<offset>0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -180,6 +244,9 @@
 					<offset>0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -190,6 +257,9 @@
 					<offset>0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -200,6 +270,9 @@
 					<offset>0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -210,6 +283,9 @@
 					<offset>0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>strength</label>
@@ -220,13 +296,26 @@
 					<offset>1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfGuile</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases consciousness by 10%, for each 10% of buildup.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemGuile</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>guile</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>guile</label>
 				<minSeverity>0.1</minSeverity>
@@ -240,6 +329,9 @@
 					<offset>-0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -254,6 +346,9 @@
 					<offset>-0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -268,6 +363,9 @@
 					<offset>-0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -282,6 +380,9 @@
 					<offset>-0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -296,6 +397,9 @@
 					<offset>-0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -310,6 +414,9 @@
 					<offset>-0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -324,6 +431,9 @@
 					<offset>-0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -338,6 +448,9 @@
 					<offset>-0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -352,6 +465,9 @@
 					<offset>-0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>guile</label>
@@ -366,13 +482,26 @@
 					<offset>-1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
 
 	<HediffDef ParentName="MorrowRim_GiftsBase">
 		<defName>MorrowRim_GiftOfSight</defName>
+		<description>One of the gifts of Hircine, gained by using a hunters totem earned from a bloodmoon.\n\nIncreases sight by 10%, for each 10% of buildup.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_TotemSight</ThingDef>
+		</descriptionHyperlinks>
 		<stages>
+			<li>
+				<label>sight</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+				</capMods>
+			</li>
 			<li>
 				<label>sight</label>
 				<minSeverity>0.1</minSeverity>
@@ -382,6 +511,9 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+100</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -392,6 +524,9 @@
 					<offset>0.2</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+200</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -402,6 +537,9 @@
 					<offset>0.3</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+300</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -412,6 +550,9 @@
 					<offset>0.4</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+400</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -422,6 +563,9 @@
 					<offset>0.5</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+500</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -432,6 +576,9 @@
 					<offset>0.6</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+600</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -442,6 +589,9 @@
 					<offset>0.7</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+700</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -452,6 +602,9 @@
 					<offset>0.8</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+800</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -462,6 +615,9 @@
 					<offset>0.9</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+900</MarketValue>
+				</statOffsets>
 			</li>
 			<li>
 				<label>sight</label>
@@ -472,6 +628,9 @@
 					<offset>1.0</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<MarketValue>+1000</MarketValue>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>

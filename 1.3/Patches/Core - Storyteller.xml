@@ -6,7 +6,7 @@
 		<value>
 			<li Class="StorytellerCompProperties_OnOffCycle">
 				<incident>MorrowRim_Bloodmoon</incident>
-				<minDaysPassed>10.0</minDaysPassed>
+				<minDaysPassed>1</minDaysPassed>
 				<onDays>1</onDays>
 				<offDays>1</offDays>
 				<minSpacingDays>0.1</minSpacingDays>
