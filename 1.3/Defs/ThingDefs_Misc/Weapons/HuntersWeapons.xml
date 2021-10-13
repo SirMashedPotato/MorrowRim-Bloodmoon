@@ -55,6 +55,7 @@
 			<Crafting>4</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
+		<tradeability>Sellable</tradeability>
 	</ThingDef>
 
 	<!-- Bow -->
@@ -116,6 +117,7 @@
 			<cooldownTime>2</cooldownTime>
 		  </li>
 		</tools>
+		<tradeability>Sellable</tradeability>
 	</ThingDef>
   
 	<ThingDef ParentName="BaseProjectileNeolithic">
@@ -146,6 +148,7 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponClasses>
+		  <li>Ranged</li>
 		  <li>LongShots</li>
 		</weaponClasses>
 		<statBases>
@@ -202,6 +205,7 @@
 			<cooldownTime>2</cooldownTime>
 		  </li>
 		</tools>
+		<tradeability>Sellable</tradeability>
 	</ThingDef>
   
 	<ThingDef ParentName="BaseBullet">
