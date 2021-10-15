@@ -183,11 +183,13 @@ namespace MorrowRim_Bloodmoon
                 return;
             }
             Pawn target = map.mapPawns.AllPawnsSpawned.Where(x => x.AnimalOrWildMan() && x.kindDef.combatPower >= 50 && x.Faction == null && !x.Position.Fogged(map) && x.def != ThingDefOf.MorrowRim_AvatarOfHircine).RandomElement();
-            FleckMaker.AttachedOverlay(target, FleckDefOf.PsycastAreaEffect, Vector3.zero, 1f, -1f);
-            target.health.RemoveAllHediffs();
-            target.health.AddHediff(HediffDefOf.MorrowRim_HircineMarked);
-            Messages.Message("Bloodmoon_animalMarked".Translate(target), target, MessageTypeDefOf.NeutralEvent, true);
-
+            if(target != null)
+            {
+                FleckMaker.AttachedOverlay(target, FleckDefOf.PsycastAreaEffect, Vector3.zero, 1f, -1f);
+                target.health.RemoveAllHediffs();
+                target.health.AddHediff(HediffDefOf.MorrowRim_HircineMarked);
+                Messages.Message("Bloodmoon_animalMarked".Translate(target), target, MessageTypeDefOf.NeutralEvent, true);
+            }
         }
 
         public static void ClearMarksOnMap(Map map)
