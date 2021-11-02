@@ -134,6 +134,7 @@
 	  <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
+	  <herdMigrationAllowed>false</herdMigrationAllowed>
     </race>
 	<butcherProducts>
 		<MorrowRim_WerewolfBlood>3</MorrowRim_WerewolfBlood>
