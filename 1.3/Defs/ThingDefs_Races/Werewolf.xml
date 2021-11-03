@@ -151,6 +151,7 @@
 		<race>MorrowRim_Werewolf</race>
 		<defaultFactionType>MorrowRim_HoundsOfHircine</defaultFactionType>
 		<aiAvoidCover>true</aiAvoidCover>
+		<canArriveManhunter>false</canArriveManhunter>
 		<alternateGraphicChance>0.50</alternateGraphicChance>
 		<alternateGraphics>
 			<li>
