@@ -3,6 +3,17 @@
 
 	<!-- Base -->
 	
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>MorrowRim_UnfinishedHuntersWeapon</defName>
+		<label>unfinished hunters weapon</label>
+		<description>An unfinished hunters weapon.</description>
+		<graphicData>
+		  <texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="false" />
+	</ThingDef>
+	
 	<!-- Spear -->
 	
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
@@ -54,6 +65,7 @@
 		  <skillRequirements>
 			<Crafting>4</Crafting>
 		  </skillRequirements>
+		  <unfinishedThingDef>MorrowRim_UnfinishedHuntersWeapon</unfinishedThingDef>
 		</recipeMaker>
 		<tradeability>Sellable</tradeability>
 	</ThingDef>
@@ -95,6 +107,7 @@
 		  <skillRequirements>
 			<Crafting>5</Crafting>
 		  </skillRequirements>
+		  <unfinishedThingDef>MorrowRim_UnfinishedHuntersWeapon</unfinishedThingDef>
 		</recipeMaker>
 		<verbs>
 		  <li>
