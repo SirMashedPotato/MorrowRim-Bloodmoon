@@ -15,10 +15,9 @@
 		</prerequisites>
 		<!-- techprints -->
 		<techprintCount>2</techprintCount>
-		<techprintCommonality>2</techprintCommonality>
+		<techprintCommonality>1</techprintCommonality>
 		<techprintMarketValue>1000</techprintMarketValue>
 		<heldByFactionCategoryTags>
-		  <li>Empire</li>
 		  <li>Outlander</li>
 		  <li>Tribal</li>
 		</heldByFactionCategoryTags>
