@@ -35,6 +35,10 @@ namespace MorrowRim_Bloodmoon
 
         public static void DoBloodmoonRaid(Map map, PawnKindDef pawnKind)
         {
+            if (!Utility.HoundsFactionFound("Werewolf attack"))
+            {
+                return;
+            }
             if (!map.mapPawns.AnyColonistSpawned)
             {
                 return;
