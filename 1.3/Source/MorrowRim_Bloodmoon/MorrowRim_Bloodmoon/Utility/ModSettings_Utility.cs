@@ -213,7 +213,7 @@ namespace MorrowRim_Bloodmoon
         {
             if (EnableStrengthScaling())
             {
-                float sev = SettingToFloat(WerewolfStrength_int() + WorldComponent_BloodmoonTracker.GetStrength());
+                float sev = SettingToFloat(WerewolfStrength_int() + BloodmoonWorldComp.GetStrength());
                 return sev > 1f? 1f : sev;
             }
             return SettingToFloat(WerewolfStrength_int());

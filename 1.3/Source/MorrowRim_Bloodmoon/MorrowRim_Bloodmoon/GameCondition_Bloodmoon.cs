@@ -136,7 +136,7 @@ namespace MorrowRim_Bloodmoon
 			}
             if (ModSettings_Utility.EnableStrengthScaling() && this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).Any())
             {
-				WorldComponent_BloodmoonTracker.IncrementStrength();
+				BloodmoonWorldComp.IncrementStrength();
 			}
 
 			//send trigger

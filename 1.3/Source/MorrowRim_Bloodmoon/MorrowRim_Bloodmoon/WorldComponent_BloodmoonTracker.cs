@@ -5,6 +5,28 @@ using RimWorld.Planet;
 
 namespace MorrowRim_Bloodmoon
 {
+    public static class BloodmoonWorldComp
+    {
+        public static void IncrementStrength()
+        {
+            World world = Find.World;
+            if (world != null)
+            {
+                world.GetComponent<WorldComponent_BloodmoonTracker>().IncrementStrength();
+            }
+        }
+
+        public static int GetStrength()
+        {
+            World world = Find.World;
+            if (world != null)
+            {
+                return world.GetComponent<WorldComponent_BloodmoonTracker>().GetStrength();
+            }
+            return 0;
+        }
+    }
+
     class WorldComponent_BloodmoonTracker : WorldComponent
     {
         public WorldComponent_BloodmoonTracker(World world) : base(world)
@@ -28,17 +50,17 @@ namespace MorrowRim_Bloodmoon
             base.WorldComponentUpdate();
         }
 
-        public static void IncrementStrength()
+        public void IncrementStrength()
         {
             currentStrength += 5;
             Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelstrengthScaling".Translate(), "Bloodmoon_strengthScalingMessage".Translate(ModSettings_Utility.GetBloodStrength() * 100), LetterDefOf.NegativeEvent);
         }
 
-        public static int GetStrength()
+        public int GetStrength()
         {
             return currentStrength;
         }
 
-        public static int currentStrength = 0;
+        public int currentStrength = 0;
     }
 }

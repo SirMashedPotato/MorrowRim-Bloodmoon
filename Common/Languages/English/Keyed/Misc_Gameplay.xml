@@ -68,6 +68,6 @@
 	<Bloodmoon_LetterLabelstrengthScaling>Hounds strengthened</Bloodmoon_LetterLabelstrengthScaling>
 	<Bloodmoon_strengthScalingMessage>Hircine has strengthened his hounds to {0}%. They will now be a greater threat when next encountered.</Bloodmoon_strengthScalingMessage>
 
-	<Bloodmoon_bloodmoonDescription>During the bloodmoon avatars of Hircine may appear around the map. Hunting these can grant your colonists permanent buffs. Beware though, as during a bloodmoon you will not always be the hunter.\n\nThe bloodmoon rising will acticate any cases of dormant lycanthropy, permanently turning the victim into a rabid werewolf.\n\nThe current strength scaling for werewolves is {0}%</Bloodmoon_bloodmoonDescription>
+	<Bloodmoon_bloodmoonDescription>During the bloodmoon avatars of Hircine may appear around the map. Hunting these can grant your colonists permanent buffs. Beware though, as during a bloodmoon you will not always be the hunter.\n\nThe bloodmoon rising will activate any cases of dormant lycanthropy, permanently turning the victim into a rabid werewolf.\n\nThe current strength scaling for werewolves is {0}%</Bloodmoon_bloodmoonDescription>
 	
 </LanguageData>
