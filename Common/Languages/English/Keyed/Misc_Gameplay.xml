@@ -70,4 +70,10 @@
 
 	<Bloodmoon_bloodmoonDescription>During the bloodmoon avatars of Hircine may appear around the map. Hunting these can grant your colonists permanent buffs. Beware though, as during a bloodmoon you will not always be the hunter.\n\nThe bloodmoon rising will activate any cases of dormant lycanthropy, permanently turning the victim into a rabid werewolf.\n\nThe current strength scaling for werewolves is {0}%</Bloodmoon_bloodmoonDescription>
 	
+	<!-- Alerts -->
+
+	<Bloodmoon_Alert_TrackerLabel>Bloodmoon tracker</Bloodmoon_Alert_TrackerLabel>
+	<Bloodmoon_Alert_BloodmoonTrackerDescription>Next bloodmoon expected in {0} days.</Bloodmoon_Alert_BloodmoonTrackerDescription>
+	<Bloodmoon_Alert_WerewolfTrackerDescription>Hircine's Hounds will grow stronger with each bloodmoon you survive, gaining increased resistances and capacities.\n\nThis strength increase not only affects the werewolves encountered during bloodmoon, but also the werewolves encountered in pack hunt quests.\n\nCurrent strength is {0}%</Bloodmoon_Alert_WerewolfTrackerDescription>
+	
 </LanguageData>

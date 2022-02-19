@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alerts\Alert_BloodmoonTracker.cs" />
     <Compile Include="Comps\CompTargetEffect_Lycanthropy.cs" />
     <Compile Include="DamageWorkers\Gas_Wolfsbane.cs" />
     <Compile Include="DefOf\GameConditionDefOf.cs" />
