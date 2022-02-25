@@ -35,6 +35,11 @@ namespace MorrowRim_Bloodmoon
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableLetters;
         }
 
+        public static bool enableBloodmoonTracker()
+        {
+            return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().enableBloodmoonTracker;
+        }
+
         public static float RaidModifier()
         {
             return LoadedModManager.GetMod<Bloodmoon_Mod>().GetSettings<Bloodmoon_ModSettings>().raidModifier;

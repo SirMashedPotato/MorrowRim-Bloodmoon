@@ -36,6 +36,7 @@ namespace MorrowRim_Bloodmoon
         public float huntersGiftBuildup = huntersGiftBuildup_def;
         public bool enableStrengthScaling = enableStrengthScaling_def;
         public bool enableBloodmoonAmbushes = enableBloodmoonAmbushes_def;
+        public bool enableBloodmoonTracker = enableBloodmoonTracker_def;
 
         //default values
         private static readonly float raidModifier_def = 0.5f;
@@ -67,6 +68,7 @@ namespace MorrowRim_Bloodmoon
         private static readonly float huntersGiftBuildup_def = 0.1f;
         private static readonly bool enableStrengthScaling_def = true;
         private static readonly bool enableBloodmoonAmbushes_def = true;
+        private static readonly bool enableBloodmoonTracker_def = true;
 
         //save settings
         public override void ExposeData()
@@ -100,6 +102,7 @@ namespace MorrowRim_Bloodmoon
             Scribe_Values.Look(ref huntersGiftBuildup, "Bloodmoon_huntersGiftBuildup", huntersGiftBuildup_def);
             Scribe_Values.Look(ref enableStrengthScaling, "Bloodmoon_enableStrengthScaling", enableStrengthScaling_def);
             Scribe_Values.Look(ref enableBloodmoonAmbushes, "Bloodmoon_enableBloodmoonAmbushes", enableBloodmoonAmbushes_def);
+            Scribe_Values.Look(ref enableBloodmoonTracker, "Bloodmoon_enableBloodmoonTracker", enableBloodmoonTracker_def);
             base.ExposeData();
         }
         public static void resetSettings(Bloodmoon_ModSettings settings)
@@ -133,6 +136,7 @@ namespace MorrowRim_Bloodmoon
             settings.huntersGiftBuildup = huntersGiftBuildup_def;
             settings.enableStrengthScaling = enableStrengthScaling_def;
             settings.enableBloodmoonAmbushes = enableBloodmoonAmbushes_def;
+            settings.enableBloodmoonTracker = enableBloodmoonTracker_def;
         }
     }
 }

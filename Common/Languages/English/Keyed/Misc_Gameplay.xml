@@ -44,6 +44,8 @@
 	
 	<Bloodmoon_enableBloodmoonAmbushes>Enable werewolf caravan ambushes during a bloodmoon.</Bloodmoon_enableBloodmoonAmbushes>
 	
+	<Bloodmoon_enableBloodmoonTracker>Enable the bloodmoon tracker alert.</Bloodmoon_enableBloodmoonTracker>
+	
 	<Bloodmoon_default>Reset to default values</Bloodmoon_default>
 	<Bloodmoon_classic>Use classic settings</Bloodmoon_classic>
 	<Bloodmoon_classicTooltip>Change the current settings to something closer to the classic MorrowRim - Bloodmoon experience.\n\nBloodmoon are frequent, and Hircine's hounds are endless.</Bloodmoon_classicTooltip>

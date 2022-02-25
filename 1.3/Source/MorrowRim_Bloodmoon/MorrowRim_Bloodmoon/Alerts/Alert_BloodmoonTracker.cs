@@ -17,7 +17,7 @@ namespace MorrowRim_Bloodmoon
 
         public override AlertReport GetReport()
         {
-            return ModSettings_Utility.EnableStrengthScaling() ? AlertReport.Active : AlertReport.Inactive;
+            return ModSettings_Utility.EnableStrengthScaling() && ModSettings_Utility.enableBloodmoonTracker() ? AlertReport.Active : AlertReport.Inactive;
         }
 
         public override TaggedString GetExplanation()

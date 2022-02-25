@@ -50,6 +50,10 @@ namespace MorrowRim_Bloodmoon
             listing_Standard.CheckboxLabeled("Bloodmoon_enableLetters".Translate(), ref settings.enableLetters);
             listing_Standard.Gap();
 
+            //enableBloodmoonTracker
+            listing_Standard.CheckboxLabeled("Bloodmoon_enableBloodmoonTracker".Translate(), ref settings.enableBloodmoonTracker);
+            listing_Standard.Gap();
+
             listing_Standard.GapLine();
 
             //enableBloodmoonForAll
