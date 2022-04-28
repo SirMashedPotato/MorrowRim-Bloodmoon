@@ -53,7 +53,7 @@ namespace MorrowRim_Bloodmoon
 
 				if (list.Any<Pawn>())
 				{
-					LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, true, true), list.ElementAt(0).Map, list);
+					LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, false, true), list.ElementAt(0).Map, list);
 				}
 
 			}

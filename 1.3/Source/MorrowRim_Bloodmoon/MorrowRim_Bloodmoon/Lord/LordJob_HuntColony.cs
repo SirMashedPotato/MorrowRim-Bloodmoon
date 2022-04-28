@@ -44,7 +44,7 @@ namespace MorrowRim_Bloodmoon
 		{
 			StateGraph stateGraph = new StateGraph();
 			LordToil lordToil = null;
-			
+
 			LordToil lordToil2 = new LordToil_HuntColony(true);
 			if (this.useAvoidGridSmart)
 			{
@@ -84,7 +84,10 @@ namespace MorrowRim_Bloodmoon
 				transition7.AddSource(lordToil);
 			}
 			transition7.AddTrigger(new Trigger_BecameNonHostileToPlayer());
-			transition7.AddTrigger(new Trigger_BloodmoonEnds());
+            if (this.canTimeoutOrFlee)
+            {
+				transition7.AddTrigger(new Trigger_BloodmoonEnds());
+			}
 			transition7.AddPreAction(new TransitionAction_Message("MessageRaidersLeaving".Translate(this.assaulterFaction.def.pawnsPlural.CapitalizeFirst(), this.assaulterFaction.Name), null, 1f));
 			stateGraph.AddTransition(transition7, false);
 			return stateGraph;
