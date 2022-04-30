@@ -66,6 +66,7 @@
 			<soundCast>PsychicInsanityLanceCast</soundCast>
 		  </li>
 		</verbs>
+		<relicChance>3</relicChance>
 		<comps>
 		  <li Class="CompProperties_Reloadable">
 			<maxCharges>5</maxCharges>
@@ -88,7 +89,9 @@
 		  <li Class="CompProperties_TargetEffect_GoodwillImpact">
 			<goodwillImpact>-400</goodwillImpact>
 		  </li>
+		  <li Class="CompProperties_Styleable"></li>
 		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
 	</ThingDef>
 
 </Defs>
