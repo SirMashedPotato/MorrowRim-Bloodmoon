@@ -4,7 +4,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>MorrowRim_AvatarOfHircine</defName>
     <label>avatar of Hircine</label>
-    <description>A rare albino deer. Many believe these particular deer to be avatars of Hircine, lord of the hunt.\n\nIt is said that succesfully hunting one during a bloodmoon will reward the hunter with a gift. Curiously, they are almost solely sighted during bloodmoons, and seem to disappear into thin air once one ends.</description>
+    <description>A rare albino deer. Many believe these particular deer to be avatars of Hircine, lord of the hunt.\n\nIt is said that successfully hunting one during a bloodmoon will reward the hunter with a gift. Curiously, they are almost solely sighted during bloodmoons, and seem to disappear into thin air once one ends.</description>
     <statBases>
       <MoveSpeed>5</MoveSpeed>
       <MarketValue>300</MarketValue>
