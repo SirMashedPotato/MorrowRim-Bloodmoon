@@ -14,8 +14,8 @@
 		  </points>
 		</populationIntentFactorFromPopCurve>
 		<defName>MorrowRim_Hircine</defName>
-		<label>Hircine Lord of the Hunt</label>
-		<description>Hircine will isolate you from all help, no one will come to your aid in times of need. Constant danger will slowly wear down your small group, weakening and tiring them for the coming hunt. The looming bloodmoon is a constant threat, for the hounds will be released.</description>
+		<label>Hircine Huntsman</label>
+		<description>Hircine will isolate you from all help, no one will come to your aid in times of need. Constant danger will slowly wear down your small group, as they struggle to complete the constant hunting quests given to them by the Lord of the Hunt. The looming bloodmoon is a constant threat, for the hounds will be released.</description>
 		<portraitLarge>UI/Hircine</portraitLarge>
 		<portraitTiny>UI/HircineTiny</portraitTiny>
 		<listOrder>51</listOrder>
@@ -23,16 +23,16 @@
 		  <!-- Intro -->
 		  <li Class="StorytellerCompProperties_ClassicIntro"/>
 		  <!-- Hircine Special -->
-		  <!--
+
 		  <li Class="StorytellerCompProperties_OnOffCycle">
-			<incident>MorrowRim_Bloodmoon</incident>
-			<minDaysPassed>10.0</minDaysPassed>
-			<onDays>1</onDays>
-			<offDays>1</offDays>
-			<minSpacingDays>0.1</minSpacingDays>
-			<numIncidentsRange>1~1</numIncidentsRange>
+			<category>Hircine_Hunt</category>
+			<minDaysPassed>1</minDaysPassed>
+			<onDays>1.0</onDays>
+			<offDays>0.5</offDays>
+			<minSpacingDays>0.04</minSpacingDays>
+			<numIncidentsRange>1~2</numIncidentsRange>
 		  </li>
-		  -->
+
 		  <!-- /Hircine Special -->
 		  <!-- Home threats -->
 		  <li Class="StorytellerCompProperties_OnOffCycle">

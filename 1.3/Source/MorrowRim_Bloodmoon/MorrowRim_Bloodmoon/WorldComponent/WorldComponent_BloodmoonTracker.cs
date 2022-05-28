@@ -2,6 +2,7 @@
 using Verse;
 using RimWorld;
 using RimWorld.Planet;
+using UnityEngine;
 
 namespace MorrowRim_Bloodmoon
 {
@@ -16,6 +17,15 @@ namespace MorrowRim_Bloodmoon
             }
         }
 
+        public static void DecreaseStrength()
+        {
+            World world = Find.World;
+            if (world != null)
+            {
+                world.GetComponent<WorldComponent_BloodmoonTracker>().DecreaseStrength();
+            }
+        }
+
         public static int GetStrength()
         {
             World world = Find.World;
@@ -24,6 +34,16 @@ namespace MorrowRim_Bloodmoon
                 return world.GetComponent<WorldComponent_BloodmoonTracker>().GetStrength();
             }
             return 0;
+        }
+
+        public static float GetBloodStrength()
+        {
+            if (Bloodmoon_ModSettings.EnableStrengthScaling)
+            {
+                float sev = Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.WerewolfStrength + GetStrength());
+                return sev > 1f ? 1f : sev;
+            }
+            return Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.WerewolfStrength);
         }
     }
 
@@ -53,7 +73,17 @@ namespace MorrowRim_Bloodmoon
         public void IncrementStrength()
         {
             currentStrength += 5;
-            Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelstrengthScaling".Translate(), "Bloodmoon_strengthScalingMessage".Translate(ModSettings_Utility.GetBloodStrength() * 100), LetterDefOf.NegativeEvent);
+            Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelstrengthScaling".Translate(), "Bloodmoon_strengthScalingMessage".Translate(BloodmoonWorldComp.GetBloodStrength() * 100), LetterDefOf.NegativeEvent);
+        }
+
+        public void DecreaseStrength()
+        {
+            int original = currentStrength;
+            currentStrength = Mathf.Clamp(currentStrength - 10, 0, 100);
+            if (original != currentStrength)
+            {
+                Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelstrengthWeakened".Translate(), "Bloodmoon_strengthWeakenedMessage".Translate(BloodmoonWorldComp.GetBloodStrength() * 100), LetterDefOf.PositiveEvent);
+            }
         }
 
         public int GetStrength()

@@ -12,12 +12,14 @@
 					<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesCanine"]/ingredients/li/filter/thingDefs</xpath>
 					<value>
 						<li>Corpse_MorrowRim_Werewolf</li>
+						<li>Corpse_MorrowRim_WerewolfLord</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesCanine"]/fixedIngredientFilter/thingDefs</xpath>
 					<value>
 						<li>Corpse_MorrowRim_Werewolf</li>
+						<li>Corpse_MorrowRim_WerewolfLord</li>
 					</value>
 				</li>
 
@@ -30,6 +32,7 @@
 							<itemProduced>GR_CanineGenetic</itemProduced>
 							<extractableAnimals>
 								<li>MorrowRim_Werewolf</li>
+								<li>MorrowRim_WerewolfLord</li>
 							</extractableAnimals>
 						</GeneticRim.ExtractableAnimalsList>
 					</value>

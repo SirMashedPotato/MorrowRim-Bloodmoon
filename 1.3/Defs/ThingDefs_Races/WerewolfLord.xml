@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BasePawn">
+    <defName>MorrowRim_WerewolfLord</defName>
+    <description>Many believe werewolves to simply be mutated wolves. The truth is they are victims of Sanies Lupinus, A strange disease that slowly warps the mind and body, completing the transformation during the next Blood Moon.\n\nOne should exercise extreme caution when engaging a werewolf in melee combat, even a single scratch can infect one with Sanies Lupinus. Of course this is easier said than done, as werewolves are exceptionally fast, and very difficult to hit with ranged weapons.</description>
+	<label>werewolf lord</label>
+	<descriptionHyperlinks>
+		<HediffDef>MorrowRim_SaniesLupinus</HediffDef>
+		<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
+	</descriptionHyperlinks>
+	<statBases>
+      <MoveSpeed>5.4</MoveSpeed>
+      <Flammability>1.4</Flammability>
+      <MarketValue>500</MarketValue>
+	  <LeatherAmount>75</LeatherAmount>
+	  <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+	  <ComfyTemperatureMax>100</ComfyTemperatureMax>
+	  <PsychicSensitivity>3.0</PsychicSensitivity>
+	  <ToxicSensitivity>0.6</ToxicSensitivity>
+    </statBases>
+    <uiIconScale>1.15</uiIconScale>
+    <tools>
+	  <!-- hands -->
+	  <li>
+        <label>left claw</label>
+        <capacities>
+          <li>MorrowRim_WerewolfScratch</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>MorrowRim_WerewolfScratch</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>1</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+	  <!-- head -->
+      <li>
+        <capacities>
+          <li>MorrowRim_WerewolfBite</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>1.6</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.6</chanceFactor>
+      </li>
+    </tools>
+	<comps>
+
+	</comps>
+    <race>
+      <body>MorrowRim_Werewolf</body>
+      <predator>true</predator>
+	  <bloodDef>Filth_Blood</bloodDef>
+	  <deathActionWorkerClass>MorrowRim_Bloodmoon.DeathActionWorker_AvatarOfHircine</deathActionWorkerClass>
+      <maxPreyBodySize>3.0</maxPreyBodySize>
+      <baseBodySize>2.8</baseBodySize>
+      <baseHungerRate>0.3</baseHungerRate>
+      <baseHealthScale>2.4</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef>Leather_Wolf</leatherDef>
+      <wildness>1</wildness>
+      <trainability>None</trainability>
+      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <gestationPeriodDays>26</gestationPeriodDays>
+      <lifeExpectancy>40</lifeExpectancy>
+	  <thinkTreeMain>MorrowRim_Werewolf</thinkTreeMain>
+	  <makesFootprints>true</makesFootprints>
+	  <useMeatFrom>Wolf_Timber</useMeatFrom>
+	  <needsRest>false</needsRest>
+	  <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(1.01, 0.02)</li>
+			  <li>(3.5, 0)</li>
+			</points>
+	  </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.0</minAge>
+          <soundWounded>Pawn_Dog_Injured</soundWounded>
+          <soundDeath>Pawn_Dog_Death</soundDeath>
+          <soundCall>Pawn_Dog_Call</soundCall>
+          <soundAngry>Pawn_Dog_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+	  <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+	  <herdMigrationAllowed>false</herdMigrationAllowed>
+    </race>
+	<butcherProducts>
+		<MorrowRim_WerewolfBlood>9</MorrowRim_WerewolfBlood>
+	</butcherProducts>
+	<recipes>
+		  <li>Euthanize</li>
+	</recipes>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase" Name="MorrowRim_WerewolfLord">
+    <combatPower>150</combatPower>
+		<defName>MorrowRim_WerewolfLord</defName>
+		<label>werewolf lord</label>
+		<race>MorrowRim_WerewolfLord</race>
+		<defaultFactionType>MorrowRim_HoundsOfHircine</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<canArriveManhunter>false</canArriveManhunter>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Animal/MorrowRim_Werewolf/WerewolfLord</texPath>
+			  <drawSize>3.0</drawSize>
+			  <shadowData>
+				<volume>(0.4, 0.4, 0.4)</volume>
+				<offset>(0,0,-0.1)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/MorrowRim_Werewolf/Dessicated_Werewolf</texPath>
+			  <drawSize>3.0</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+ 
+</Defs>

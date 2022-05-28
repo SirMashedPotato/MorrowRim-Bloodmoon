@@ -23,5 +23,8 @@ namespace MorrowRim_Bloodmoon
         public static HediffDef MorrowRim_WolfsbaneRetaliationActive;
         public static HediffDef MorrowRim_BloodOfHircine;
         public static HediffDef MorrowRim_HircineMarked;
+        public static HediffDef MorrowRim_WerewolfLordPassive;
+        public static HediffDef MorrowRim_HircineGreatBeast;
+        public static HediffDef MorrowRim_HircineBattleScar;
     }
 }

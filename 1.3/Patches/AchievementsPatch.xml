@@ -29,6 +29,35 @@
 							<incident>MorrowRim_BloodmoonLocalised</incident>
 						</AchievementsExpanded.Reward_MapIncident>
 						
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardHircineHunt</defName>
+							<label>Locate Great Beast</label>
+							<tab>MorrowRim_AchievementsTab</tab>
+							
+							<cost>25</cost>
+							<incident>MorrowRim_BloodmoonQuest_HuntingSite_Reward</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+						
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardWerewolfPack</defName>
+							<label>Locate Werewolf Pack</label>
+							<tab>MorrowRim_AchievementsTab</tab>
+							
+							<cost>25</cost>
+							<incident>MorrowRim_BloodmoonQuest_WerewolfPack_Reward</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+						
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardWerewolfLord</defName>
+							<label>Locate Werewolf Lord</label>
+							<tab>MorrowRim_AchievementsTab</tab>
+							
+							<cost>75</cost>
+							<incident>MorrowRim_BloodmoonQuest_WerewolfLord_Reward</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+						
+						<!-- generate random hunting quest -->
+
 						<!-- Incidents -->
 						
 						<AchievementsExpanded.AchievementDef>
@@ -77,41 +106,7 @@
 						</AchievementsExpanded.AchievementDef>
 						
 						<!-- Kills -->
-						
-						<!--
-						<AchievementsExpanded.AchievementDef>
-							<defName>MorrowRim_AchievementBloodmoonAvatarHunterFirst</defName>
-							<label>Apprentice Hunter</label>
-							<description>Successfully hunt your first Avatar of Hircine</description>
-							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
-							<tab>MorrowRim_AchievementsTab</tab>
-							<tracker Class="AchievementsExpanded.KillTracker">
-								<raceDef>MorrowRim_AvatarOfHircine</raceDef>
-								<count>1</count>
-							</tracker>
 
-							<texPath>Achievements/MorrowRim_AchievementBloodmoonAvatarHunterFirst</texPath>
-							<points>15</points>
-						</AchievementsExpanded.AchievementDef>
-						-->
-						
-						<!-- Needs custom code, death action worker overrides tracker
-						<AchievementsExpanded.AchievementDef>
-							<defName>MorrowRim_AchievementBloodmoonAvatarHunterMany</defName>
-							<label>Proven Hunter</label>
-							<description>Successfully hunt your 25th Avatar of Hircine</description>
-							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
-							<tab>MorrowRim_AchievementsTab</tab>
-							<tracker Class="AchievementsExpanded.KillTracker">
-								<raceDef>MorrowRim_AvatarOfHircine</raceDef>
-								<count>25</count>
-							</tracker>
-
-							<texPath>Achievements/MorrowRim_AchievementBloodmoonAvatarHunterMany</texPath>
-							<points>50</points>
-						</AchievementsExpanded.AchievementDef>
-						-->
-						
 						<AchievementsExpanded.AchievementDef>
 							<defName>MorrowRim_AchievementBloodmoonWerewolfHunter</defName>
 							<label>Who Let the Hounds Out?</label>
@@ -129,6 +124,8 @@
 							<points>25</points>
 						</AchievementsExpanded.AchievementDef>
 						
+						<!-- Quests -->
+						
 						<AchievementsExpanded.AchievementDef>
 							<defName>MorrowRim_AchievementBloodmoonWerewolfSlayer</defName>
 							<label>Wolf Slayer</label>
@@ -142,6 +139,38 @@
 							</tracker>
 
 							<texPath>Achievements/MorrowRim_AchievementBloodmoonWerewolfSlayer</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonWerewolfLordSlayer</defName>
+							<label>Lord Slayer</label>
+							<description>Successfully complete a Werewolf Lord quest</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.QuestTracker">
+								<def>MorrowRim_WerewolfLordSite</def>
+								<outcome>Success</outcome>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonWerewolfLordSlayer</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementBloodmoonHunter</defName>
+							<label>Proven Hunter</label>
+							<description>Successfully complete 25 Great Beast quests</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundBloodmoon</bgtexPath>
+							<tab>MorrowRim_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.QuestTracker">
+								<def>MorrowRim_BloodmoonHuntingSite</def>
+								<outcome>Success</outcome>
+								<count>25</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementBloodmoonHunter</texPath>
 							<points>25</points>
 						</AchievementsExpanded.AchievementDef>
 						

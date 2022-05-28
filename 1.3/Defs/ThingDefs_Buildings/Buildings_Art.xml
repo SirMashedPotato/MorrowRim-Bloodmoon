@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="SculptureBase">
+	<ThingDef ParentName="SculptureBase" Name="MorrwoRim_WerewolfTrophyBase">
 		<defName>MorrowRim_WerewolfTrophy</defName>
 		<label>werewolf trophy</label>
 		<description>The head of a werewolf, mounted on a pole. Proof of a victorious hunt.</description>
@@ -63,6 +63,7 @@
 			  <li Class="FocusStrengthOffset_BuildingDefsWithQuality">
 				<defs>
 				  <li>MorrowRim_WerewolfTrophy</li>
+				  <li>MorrowRim_WerewolfLordTrophy</li>
 				</defs>
 				<radius>9.9</radius>
 				<maxBuildings>8</maxBuildings>
@@ -83,6 +84,21 @@
 			</offsets>
 		  </li>
 		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MorrwoRim_WerewolfTrophyBase">
+		<defName>MorrowRim_WerewolfLordTrophy</defName>
+		<label>werewolf lord trophy</label>
+		<description>The head of a werewolf lord, mounted on a pole. Proof of an accomplished hunter.</description>
+		<graphicData>
+		  <texPath>Things/Building/Art/MorrowRim_WerewolfLordTrophy</texPath>
+		</graphicData>
+		<statBases>
+		  <Beauty>100</Beauty>
+		</statBases>
+		<costList Inherit="False">
+			  <MorrowRim_TotemWerewolfLord>1</MorrowRim_TotemWerewolfLord>
+		</costList>
 	</ThingDef>
 
 </Defs>

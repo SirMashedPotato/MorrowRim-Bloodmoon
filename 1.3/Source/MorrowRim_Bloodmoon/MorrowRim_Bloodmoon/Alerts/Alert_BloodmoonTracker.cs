@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using RimWorld;
-using RimWorld.Planet;
-using UnityEngine;
+﻿using RimWorld;
 using Verse;
 
 namespace MorrowRim_Bloodmoon
@@ -17,12 +13,12 @@ namespace MorrowRim_Bloodmoon
 
         public override AlertReport GetReport()
         {
-            return ModSettings_Utility.EnableStrengthScaling() && ModSettings_Utility.enableBloodmoonTracker() ? AlertReport.Active : AlertReport.Inactive;
+            return Bloodmoon_ModSettings.EnableBloodmoonTracker ? AlertReport.Active : AlertReport.Inactive;
         }
 
         public override TaggedString GetExplanation()
         {
-            return "Bloodmoon_Alert_WerewolfTrackerDescription".Translate(ModSettings_Utility.GetBloodStrength() * 100);
+            return "Bloodmoon_Alert_WerewolfTrackerDescription".Translate(BloodmoonWorldComp.GetBloodStrength() * 100);
         }
     }
 }

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentCategoryDef>
+		<defName>Hircine_Hunt</defName>
+	</IncidentCategoryDef>
+	
+	<!-- Hunt Target -->
+	
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonQuest_HuntingSite</defName>
+		<label>great beast located</label>
+		<letterDef>NewQuest</letterDef>
+		<category>Hircine_Hunt</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest</workerClass>
+		<baseChance>1</baseChance>
+		<minRefireDays>4</minRefireDays>
+		<questScriptDef>MorrowRim_BloodmoonHuntingSite</questScriptDef>
+	</IncidentDef>
+	  
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonQuest_HuntingSite_Reward</defName>
+		<label>great beast located</label>
+		<letterDef>NewQuest</letterDef>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_Bloodmoon.IncidentWorker_GiveQuest</workerClass>
+		<baseChance>0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+		<questScriptDef>MorrowRim_BloodmoonHuntingSite</questScriptDef>
+	</IncidentDef>
+
+	<!-- Werewolf Pack -->
+	
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonQuest_WerewolfPack</defName>
+		<label>werewolf pack found</label>
+		<letterDef>NewQuest</letterDef>
+		<category>Hircine_Hunt</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest</workerClass>
+		<baseChance>0.5</baseChance>
+		<minRefireDays>10</minRefireDays>
+		<earliestDay>12</earliestDay>
+		<questScriptDef>MorrowRim_WerewolfPackSite</questScriptDef>
+	</IncidentDef>
+	  
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonQuest_WerewolfPack_Reward</defName>
+		<label>werewolf pack found</label>
+		<letterDef>NewQuest</letterDef>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_Bloodmoon.IncidentWorker_GiveQuest</workerClass>
+		<baseChance>0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+		<questScriptDef>MorrowRim_WerewolfPackSite</questScriptDef>
+	</IncidentDef>
+
+	<!-- Werewolf Lord -->
+	
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonQuest_WerewolfLord</defName>
+		<label>werewolf lord found</label>
+		<letterDef>NewQuest</letterDef>
+		<category>Hircine_Hunt</category>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest</workerClass>
+		<baseChance>0.5</baseChance>
+		<minRefireDays>18</minRefireDays>
+		<earliestDay>34</earliestDay>
+		<questScriptDef>MorrowRim_WerewolfLordSite</questScriptDef>
+	</IncidentDef>
+	  
+	<IncidentDef>
+		<defName>MorrowRim_BloodmoonQuest_WerewolfLord_Reward</defName>
+		<label>werewolf lord found</label>
+		<letterDef>NewQuest</letterDef>
+		<category>Misc</category>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_Bloodmoon.IncidentWorker_GiveQuest</workerClass>
+		<baseChance>0</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<earliestDay>0</earliestDay>
+		<questScriptDef>MorrowRim_WerewolfLordSite</questScriptDef>
+	</IncidentDef>
+
+</Defs>

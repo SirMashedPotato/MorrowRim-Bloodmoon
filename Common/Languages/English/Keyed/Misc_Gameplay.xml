@@ -3,14 +3,16 @@
 
 	<!-- Settings -->
 	
-	<Bloodmoon_raidModifier>Multiplier for the number of werewolves that spawn during a raid.</Bloodmoon_raidModifier>
+	<Bloodmoon_ModName>MorrowRim - Bloodmoon</Bloodmoon_ModName>
+	
+	<Bloodmoon_raidModifier>Multiplier for the number of werewolves that spawn in a pack.</Bloodmoon_raidModifier>
 	<Bloodmoon_minTicksPerEvent>Minimum ticks per werewolf raid during a bloodmoon.</Bloodmoon_minTicksPerEvent>
 	<Bloodmoon_maxTicksPerEvent>Maximum ticks per werewolf raid during a bloodmoon.</Bloodmoon_maxTicksPerEvent>
 	<Bloodmoon_extraAvatarChance>Chance of additional avatars of Hircine spawning when a bloodmoon raid occurs.</Bloodmoon_extraAvatarChance>
 	<Bloodmoon_infectionChance>Chance of a werewolf attack infecting the target.</Bloodmoon_infectionChance>
 	<Bloodmoon_minNumberOfLootDrops>Minimum number of loot drops that will spawn at the end of a bloodmoon.</Bloodmoon_minNumberOfLootDrops>
 	<Bloodmoon_maxNumberOfLootDrops>Maximum number of loot drops that will spawn at the end of a bloodmoon.</Bloodmoon_maxNumberOfLootDrops>
-	<Bloodmoon_enableBloodmoonForAll>Enable the rogue bloodmoon event for all storytellers. Note that it will not occur on a cycle.</Bloodmoon_enableBloodmoonForAll>
+	<Bloodmoon_enableBloodmoonForAll>Enable the rogue bloodmoon event for all storytellers.</Bloodmoon_enableBloodmoonForAll>
 	<Bloodmoon_enableMessages>Enable messages for werewolf raids during a bloodmoon.</Bloodmoon_enableMessages>
 	<Bloodmoon_chanceOfGiftedWerewolf>Chance a werewolf spawned during a bloodmoon will spawn with a gift of Hircine.</Bloodmoon_chanceOfGiftedWerewolf>
 	<Bloodmoon_enableLootDrops>Enable loot drops at the end of a bloodmoon, assuming anyone is left alive.</Bloodmoon_enableLootDrops>
@@ -22,18 +24,20 @@
 	
 	<Bloodmoon_elixirFailChance>Chance for consuming a lycanthropic elixir to fail.</Bloodmoon_elixirFailChance>
 	
-	<Bloodmoon_minWerewolfNum>The minimum number of werewolves that can spawn in a bloodmoon raid.</Bloodmoon_minWerewolfNum>
-	<Bloodmoon_maxWerewolfNum>The maximum number of werewolves that can spawn in a bloodmoon raid.</Bloodmoon_maxWerewolfNum>
+	<Bloodmoon_minWerewolfNum>The minimum number of werewolves that can spawn in a pack.</Bloodmoon_minWerewolfNum>
+	<Bloodmoon_maxWerewolfNum>The maximum number of werewolves that can spawn in a pack.</Bloodmoon_maxWerewolfNum>
 	
-	<Bloodmoon_werewolfStrength>Modifier for the strength of werewolves, a higher number means stronger werewolves.</Bloodmoon_werewolfStrength>
+	<Bloodmoon_werewolfStrength>Base additional strength of werewolves.</Bloodmoon_werewolfStrength>
 	
 	<Bloodmoon_incidentIntervalCycle>Minimum number of days until the bloodmoon cycle event can occur again.</Bloodmoon_incidentIntervalCycle>
 	<Bloodmoon_incidentIntervalRogue>Minimum number of days until the rogue bloodmoon event can occur again.</Bloodmoon_incidentIntervalRogue>
 	
-	<Bloodmoon_incidentMinimumDaysCycle>Minimum number if days until the bloodmoon cycle event can occur.</Bloodmoon_incidentMinimumDaysCycle>
-	<Bloodmoon_incidentMinimumDaysRogue>Minimum number if days until the rogue bloodmoon event can occur.</Bloodmoon_incidentMinimumDaysRogue>
+	<Bloodmoon_incidentMinimumDaysCycle>Minimum number of days until the bloodmoon cycle event can occur.</Bloodmoon_incidentMinimumDaysCycle>
+	<Bloodmoon_incidentMinimumDaysRogue>Minimum number of days until the rogue bloodmoon event can occur.</Bloodmoon_incidentMinimumDaysRogue>
 	
-	<Bloodmoon_enableWerewolfPack>Enable the werewolf pack quest.</Bloodmoon_enableWerewolfPack>
+	<Bloodmoon_enableWerewolfPack>Enable werewolf pack quests.</Bloodmoon_enableWerewolfPack>
+	<Bloodmoon_enableWerewolfLord>Enable werewolf lord quests.</Bloodmoon_enableWerewolfLord>
+	<Bloodmoon_enableHircineHunts>Enable hunting target quests.</Bloodmoon_enableHircineHunts>
 	
 	<Bloodmoon_enableLetters>Enable letters for werewolf raids during a bloodmoon.</Bloodmoon_enableLetters>
 	<Bloodmoon_huntersGiftMaximum>The maximum buildup for hunters gifts obtained through a totem.</Bloodmoon_huntersGiftMaximum>
@@ -45,16 +49,26 @@
 	<Bloodmoon_enableBloodmoonAmbushes>Enable werewolf caravan ambushes during a bloodmoon.</Bloodmoon_enableBloodmoonAmbushes>
 	
 	<Bloodmoon_enableBloodmoonTracker>Enable the bloodmoon tracker alert.</Bloodmoon_enableBloodmoonTracker>
+	<Bloodmoon_enableBloodmoonTransforming>Enable pawns with dormant lycanthropy transforming at the start of a bloodmoon.</Bloodmoon_enableBloodmoonTransforming>
 	
-	<Bloodmoon_default>Reset to default values</Bloodmoon_default>
-	<Bloodmoon_classic>Use classic settings</Bloodmoon_classic>
-	<Bloodmoon_classicTooltip>Change the current settings to something closer to the classic MorrowRim - Bloodmoon experience.\n\nBloodmoon are frequent, and Hircine's hounds are endless.</Bloodmoon_classicTooltip>
-
 	<!-- Pages -->
 	
 	<Bloodmoon_PageBasic>Basic Settings</Bloodmoon_PageBasic>
-	<Bloodmoon_PageBloodmoon>Bloodmoon Balance Settings</Bloodmoon_PageBloodmoon>
-	<Bloodmoon_PageLycanthropy>Lycanthropy Settings</Bloodmoon_PageLycanthropy>
+	<Bloodmoon_PagePresets>Settings Presets</Bloodmoon_PagePresets>
+	<Bloodmoon_PageWerewolves>Werewolf Packs</Bloodmoon_PageWerewolves>
+	<Bloodmoon_PageBloodmoon>During Bloodmoon</Bloodmoon_PageBloodmoon>
+	<Bloodmoon_PageLycanthropy>Lycanthropy and Gifts</Bloodmoon_PageLycanthropy>
+	<Bloodmoon_PageIncidents>Incidents and Quests</Bloodmoon_PageIncidents>
+	
+	<!-- Resets -->
+	
+	<Bloodmoon_default>Reset all settings</Bloodmoon_default>
+	<Bloodmoon_default_page>Reset page settings</Bloodmoon_default_page>
+	
+	<!-- Presets -->
+	
+	<Bloodmoon_classic>Use classic settings</Bloodmoon_classic>
+	<Bloodmoon_classicTooltip>Change the current settings to something closer to the classic MorrowRim - Bloodmoon experience.\n\nBloodmoon are frequent, and Hircine's hounds are endless.</Bloodmoon_classicTooltip>
 	
 	<!-- Messages -->
 	
@@ -68,7 +82,10 @@
 	<Bloodmoon_houndsFactionNotFound>The Hounds of Hircine faction was not found, preventing the {0}. Please generate the missing faction using the Vanilla Expanded Framework.</Bloodmoon_houndsFactionNotFound>
 
 	<Bloodmoon_LetterLabelstrengthScaling>Hounds strengthened</Bloodmoon_LetterLabelstrengthScaling>
-	<Bloodmoon_strengthScalingMessage>Hircine has strengthened his hounds to {0}%. They will now be a greater threat when next encountered.</Bloodmoon_strengthScalingMessage>
+	<Bloodmoon_strengthScalingMessage>Hircine has strengthened his hounds to {0}% additional strength. They will now be a greater threat when next encountered.</Bloodmoon_strengthScalingMessage>
+	
+	<Bloodmoon_LetterLabelstrengthWeakened>Werewolf lord slain</Bloodmoon_LetterLabelstrengthWeakened>
+	<Bloodmoon_strengthWeakenedMessage>The death of the werewolf lord has weakened Hircine's hounds. They are now at {0}% additional strength.</Bloodmoon_strengthWeakenedMessage>
 
 	<Bloodmoon_bloodmoonDescription>During the bloodmoon avatars of Hircine may appear around the map. Hunting these can grant your colonists permanent buffs. Beware though, as during a bloodmoon you will not always be the hunter.\n\nThe bloodmoon rising will activate any cases of dormant lycanthropy, permanently turning the victim into a rabid werewolf.\n\nThe current strength scaling for werewolves is {0}%</Bloodmoon_bloodmoonDescription>
 	
@@ -76,6 +93,6 @@
 
 	<Bloodmoon_Alert_TrackerLabel>Bloodmoon tracker</Bloodmoon_Alert_TrackerLabel>
 	<Bloodmoon_Alert_BloodmoonTrackerDescription>Next bloodmoon expected in {0} days.</Bloodmoon_Alert_BloodmoonTrackerDescription>
-	<Bloodmoon_Alert_WerewolfTrackerDescription>Hircine's Hounds will grow stronger with each bloodmoon you survive, gaining increased resistances and capacities.\n\nThis strength increase not only affects the werewolves encountered during bloodmoon, but also the werewolves encountered in pack hunt quests.\n\nCurrent strength is {0}%</Bloodmoon_Alert_WerewolfTrackerDescription>
-	
+	<Bloodmoon_Alert_WerewolfTrackerDescription>Hircine's Hounds will grow stronger with each bloodmoon you survive, gaining increased resistances and capacities.\n\nThis strength increase not only affects the werewolves encountered during bloodmoon, but also the werewolves encountered in pack hunt quests, and in hunting quests.\n\nThe strength can be reduced by successfully hunting werewolf lords.\n\nCurrent strength is {0}%</Bloodmoon_Alert_WerewolfTrackerDescription>
+
 </LanguageData>

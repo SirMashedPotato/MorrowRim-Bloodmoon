@@ -14,13 +14,13 @@ namespace MorrowRim_Bloodmoon
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return base.CanFireNowSub(parms) && ModSettings_Utility.EnableBloodmoonAmbushes() && Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.MorrowRim_Bloodmoon);
+            return base.CanFireNowSub(parms) && Bloodmoon_ModSettings.EnableBloodmoonAmbushes && Find.World.gameConditionManager.ConditionIsActive(GameConditionDefOf.MorrowRim_Bloodmoon);
         }
 
         protected override List<Pawn> GeneratePawns(IncidentParms parms)
         {
 
-            int num = GenMath.RoundRandom(Mathf.Clamp((parms.points / 40) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
+            int num = GenMath.RoundRandom(Mathf.Clamp((parms.points / 40) * Bloodmoon_ModSettings.RaidModifier, Bloodmoon_ModSettings.MinWerewolfNum, Bloodmoon_ModSettings.MaxWerewolfNum));
 
             List<Pawn> list = new List<Pawn>();
             Faction faction = FactionUtility.DefaultFactionFrom(FactionDefOf.MorrowRim_HoundsOfHircine);
@@ -30,11 +30,11 @@ namespace MorrowRim_Bloodmoon
                 pawn.SetFaction(faction);
 
                 //settings checks
-                if (ModSettings_Utility.GetBloodStrength() != 0f)
+                if (BloodmoonWorldComp.GetBloodStrength() != 0f)
                 {
-                    pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = ModSettings_Utility.GetBloodStrength();
+                    pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = BloodmoonWorldComp.GetBloodStrength();
                 }
-                if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.GiftedWerewolfChance())))
+                if (Rand.Chance(Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.ChanceOfGiftedWerewolf)))
                 {
                     pawn.health.AddHediff(Utility.ChoosesRandomGift()).Severity = 1f;
                 }

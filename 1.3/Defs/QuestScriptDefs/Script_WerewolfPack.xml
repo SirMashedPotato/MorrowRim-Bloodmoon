@@ -9,17 +9,26 @@
 		<expireDaysRange>2~4</expireDaysRange>
 		<!--<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">Raided_BanditCamp</successHistoryEvent>-->
 		<questNameRules>
+		  <include>
+			<li>TribalWordUtility</li>
+		  </include>
 		  <rulesStrings>
-			<li>questName->[asker_nameDef]'s [werewolf] [pack]</li>
-			<li>questName->[asker_nameDef] and the [werewolf] [pack]</li>
+			<li>questName(asker_factionLeader==True)->[asker_nameDef]'s [werewolf] [pack]</li>
+			<li>questName(asker_factionLeader==True)->[asker_nameDef] and the [werewolf] [pack]</li>
+			<li>questName(askerIsNull==true)->The [Color] [TerrainFeature] [location]</li>
 			<li>werewolf->Werewolf</li>
+			<li>werewolf->Hound</li>
 			<li>pack->Pack</li>
 			<li>location->Hunting Grounds</li>
 		  </rulesStrings>
 		</questNameRules>
 		<questDescriptionRules>
 		  <rulesStrings>
-			<li>questDescription->[asker_nameFull], [asker_faction_leaderTitle] of [asker_faction_name], has sent us a message. Apparently, a pack of werewolves has been attacking nearby settlements, and need to be dealt with while their location is known.
+			<!-- No asker -->
+			<li>questDescription(askerIsNull==true)->We have learnt of a werewolf pack, not far from [map_definite]. It is highly likely that this pack has been attacking nearby settlements and outposts. As such, the locals will likely rewards us for eliminating the pack.</li>
+
+			<!-- Faction leader asker -->
+			<li>questDescription(asker_factionLeader==True)->[asker_nameFull] has sent us a message. Apparently, a pack of werewolves have been attacking nearby settlements, and need to be dealt with while their location is known.
 	\n[asker_nameDef] is asking us to deal with the pack, which means eliminating all of the werewolves at the site. Due to the urgency of the situation, [asker_nameDef] refuses to give any details on the size of the pack.</li>
 		  </rulesStrings>
 		</questDescriptionRules>
@@ -38,11 +47,24 @@
 			</li>
 			<li Class="QuestNode_GetMap" />
 
-			<li Class="QuestNode_GetPawn">
-			  <storeAs>asker</storeAs>
-			  <mustBeFactionLeader>true</mustBeFactionLeader>
-			  <allowPermanentEnemyFaction>false</allowPermanentEnemyFaction>
-			  <hostileWeight>0.15</hostileWeight>
+			<li Class="QuestNode_IsSet">
+			  <name>asker</name>
+			  <elseNode Class="QuestNode_RandomNode">
+				<nodes>
+				  <li Class="QuestNode_Set">
+					<name>askerIsNull</name>
+					<value>true</value>
+					<selectionWeight>0.4</selectionWeight>
+				  </li>
+				  <li Class="QuestNode_GetPawn">
+					<storeAs>asker</storeAs>
+					<mustBeFactionLeader>true</mustBeFactionLeader>
+					<mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+					<hostileWeight>0.15</hostileWeight>
+					<selectionWeight>0.6</selectionWeight>
+				  </li>
+				</nodes>
+			  </elseNode>
 			</li>
 
 			<li Class="QuestNode_GetSiteTile">
@@ -137,13 +159,13 @@
 
 				  <li Class="QuestNode_GiveRewards">
 					<parms>
-					  <allowGoodwill>true</allowGoodwill>
+					  <allowGoodwill>false</allowGoodwill>
 					  <allowRoyalFavor>true</allowRoyalFavor>
 					  <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
 					</parms>
 					<addCampLootReward>true</addCampLootReward>
 					<customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
-					<customLetterText TKey="LetterTextPaymentArrived">You have defeated the werewolf pack!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+					<customLetterText TKey="LetterTextPaymentArrived">You have defeated the werewolf pack!\n\nPayment has arrived.</customLetterText>
 					<nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
 					  <letterDef>ChoosePawn</letterDef>
 					  <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>

@@ -13,10 +13,12 @@ namespace MorrowRim_Bloodmoon
         }
         public static ThingDef MorrowRim_Werewolf;
         public static ThingDef MorrowRim_AvatarOfHircine;
+        public static ThingDef MorrowRim_WerewolfLord;
 
         public static ThingDef MorrowRim_TotemGuile;
         public static ThingDef MorrowRim_TotemSight;
         public static ThingDef MorrowRim_TotemSpeed;
         public static ThingDef MorrowRim_TotemStrength;
+        public static ThingDef MorrowRim_TotemWerewolfLord;
     }
 }

@@ -11,7 +11,7 @@ namespace MorrowRim_Bloodmoon
 
         public static void Preset_Classic(Bloodmoon_ModSettings settings)
         {
-            Bloodmoon_ModSettings.resetSettings(settings);
+            Bloodmoon_ModSettings.ResetSettings();
 
             settings.raidModifier = 1f;
             settings.minTicksPerEvent = 10000;

@@ -56,9 +56,12 @@
     <Compile Include="Comps\CompTargetEffect_Lycanthropy.cs" />
     <Compile Include="DamageWorkers\Gas_Wolfsbane.cs" />
     <Compile Include="DefOf\GameConditionDefOf.cs" />
+    <Compile Include="IncidentWorkers\HuntQuest\IncidentWorker_GiveQuest.cs" />
     <Compile Include="Lord\Trigger_BloodmoonEnds.cs" />
-    <Compile Include="QuestSites\GenStep_WerewolfPack.cs" />
-    <Compile Include="HediffComps\HediffCompProperties_HircineMarked.cs" />
+    <Compile Include="QuestSites\GenStep\GenStep_HuntingSite.cs" />
+    <Compile Include="QuestSites\GenStep\GenStep_WerewolfLord.cs" />
+    <Compile Include="QuestSites\GenStep\GenStep_WerewolfPack.cs" />
+    <Compile Include="HediffComps\Props\HediffCompProperties_HircineMarked.cs" />
     <Compile Include="DamageWorkers\DamageWorker_HunterStab.cs" />
     <Compile Include="DefOf\DutyDefOf.cs" />
     <Compile Include="HediffComps\HediffComp_HircineMarked.cs" />
@@ -67,10 +70,12 @@
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropicPurification.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_LycanthropicAssimilation.cs" />
     <Compile Include="DefOf\RecordDefOf.cs" />
-    <Compile Include="QuestSites\SitePartWorker_WerewolfPack.cs" />
+    <Compile Include="QuestSites\SitePartWorker\SitePartWorker_HuntingSite.cs" />
+    <Compile Include="QuestSites\SitePartWorker\SitePartWorker_WerewolfLord.cs" />
+    <Compile Include="QuestSites\SitePartWorker\SitePartWorker_WerewolfPack.cs" />
     <Compile Include="Settings\PresetSettings.cs" />
-    <Compile Include="Workers\IncidentWorker_Ambush_Bloodmoon.cs" />
-    <Compile Include="Workers\IncidentWorker_MakeGameConditionRogue.cs" />
+    <Compile Include="IncidentWorkers\Bloodmoon\IncidentWorker_Ambush_Bloodmoon.cs" />
+    <Compile Include="IncidentWorkers\Bloodmoon\IncidentWorker_MakeGameConditionRogue.cs" />
     <Compile Include="Lord\LordJob_HuntColony.cs" />
     <Compile Include="Lord\LordToil_HuntColony.cs" />
     <Compile Include="Utility\Bloodmoon_Utility.cs" />
@@ -80,21 +85,20 @@
     <Compile Include="Comps\Comp_UseEffect_Totem.cs" />
     <Compile Include="DamageWorkers\DamageWorker_WerewolfBite.cs" />
     <Compile Include="DamageWorkers\DamageWorker_WerewolfScratch.cs" />
-    <Compile Include="Workers\DeathActionWorker_AvatarOfHircine.cs" />
+    <Compile Include="DeathActionWorkers\DeathActionWorker_AvatarOfHircine.cs" />
     <Compile Include="DefOf\HediffDefOf.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="DefOf\FactionDefOf.cs" />
-    <Compile Include="GameCondition_Bloodmoon.cs" />
-    <Compile Include="HediffComps\HediffCompProperties_SaniesLupus.cs" />
+    <Compile Include="GameCondition\GameCondition_Bloodmoon.cs" />
+    <Compile Include="HediffComps\Props\HediffCompProperties_SaniesLupus.cs" />
     <Compile Include="HediffComps\HediffComp_SaniesLupus.cs" />
     <Compile Include="DefOf\PawnKindDefOf.cs" />
     <Compile Include="DefOf\IncidentDefOf.cs" />
-    <Compile Include="Workers\IncidentWorker_MakeGameCondition.cs" />
+    <Compile Include="IncidentWorkers\Bloodmoon\IncidentWorker_MakeGameCondition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DefOf\StorytellerDefOf.cs" />
-    <Compile Include="Utility\ModSettings_Utility.cs" />
     <Compile Include="Utility\Utility.cs" />
-    <Compile Include="WorldComponent_BloodmoonTracker.cs" />
+    <Compile Include="WorldComponent\WorldComponent_BloodmoonTracker.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

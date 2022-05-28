@@ -39,11 +39,11 @@ namespace MorrowRim_Bloodmoon
 					pawn.SetFaction(faction);
 					GenSpawn.Spawn(pawn, loc, map, Rot4.Random, WipeMode.Vanish, false);
 
-					if (ModSettings_Utility.GetBloodStrength() != 0f)
+					if (BloodmoonWorldComp.GetBloodStrength() != 0f)
 					{
-						pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = ModSettings_Utility.GetBloodStrength();
+						pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = BloodmoonWorldComp.GetBloodStrength();
 					}
-					if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.GiftedWerewolfChance())))
+					if (Rand.Chance(Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.ChanceOfGiftedWerewolf)))
 					{
 						pawn.health.AddHediff(Utility.ChoosesRandomGift()).Severity = 1f;
 					}

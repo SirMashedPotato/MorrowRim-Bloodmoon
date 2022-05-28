@@ -24,9 +24,9 @@ namespace MorrowRim_Bloodmoon
             newPawn.Name = target.Name;
             Faction faction = FactionUtility.DefaultFactionFrom(FactionDefOf.MorrowRim_HoundsOfHircine);
             List<Pawn> list = new List<Pawn>{newPawn};
-            if (ModSettings_Utility.SettingToFloat(ModSettings_Utility.WerewolfStrength_int()) != 0f)
+            if (Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.WerewolfStrength) != 0f)
             {
-                newPawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = ModSettings_Utility.SettingToFloat(ModSettings_Utility.WerewolfStrength_int());
+                newPawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.WerewolfStrength);
             }
             LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, true, true), newPawn.Map, list);
             target.Corpse.Destroy();
@@ -48,7 +48,7 @@ namespace MorrowRim_Bloodmoon
                 return;
             }
 
-            int num = GenMath.RoundRandom(Mathf.Clamp((StorytellerUtility.DefaultThreatPointsNow(map) / 30) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
+            int num = GenMath.RoundRandom(Mathf.Clamp((StorytellerUtility.DefaultThreatPointsNow(map) / 30) * Bloodmoon_ModSettings.RaidModifier, Bloodmoon_ModSettings.MinWerewolfNum, Bloodmoon_ModSettings.MaxWerewolfNum));
             IntVec3 invalid = IntVec3.Invalid;
             if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, map, 10f, out invalid))
             {
@@ -69,11 +69,11 @@ namespace MorrowRim_Bloodmoon
                 if (pawnKind == PawnKindDefOf.MorrowRim_Werewolf)
                 {
                     //settings checks
-                    if (ModSettings_Utility.GetBloodStrength() != 0f)
+                    if (BloodmoonWorldComp.GetBloodStrength() != 0f)
                     {
-                        pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = ModSettings_Utility.GetBloodStrength();
+                        pawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = BloodmoonWorldComp.GetBloodStrength();
                     }
-                    if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.GiftedWerewolfChance())))
+                    if (Rand.Chance(Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.ChanceOfGiftedWerewolf)))
                     {
                     pawn.health.AddHediff(Utility.ChoosesRandomGift()).Severity = 1f;
                     }
@@ -86,12 +86,12 @@ namespace MorrowRim_Bloodmoon
             }
 
             //send message
-            if (ModSettings_Utility.EnableMessages())
+            if (Bloodmoon_ModSettings.EnableMessages)
             {
                 Messages.Message("Bloodmoon_werewolvesAppear".Translate(), list, MessageTypeDefOf.NegativeEvent, true);
             }
             //send letter
-            if (ModSettings_Utility.EnableLetters())
+            if (Bloodmoon_ModSettings.EnableLetters)
             {
                 Find.LetterStack.ReceiveLetter("Bloodmoon_LetterLabelwerewolvesAppear".Translate(), "Bloodmoon_werewolvesAppear".Translate(), LetterDefOf.ThreatBig, list);
             }
@@ -142,7 +142,7 @@ namespace MorrowRim_Bloodmoon
         public static void DoLootDrops(Map map)
         {
             IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.ResourcePodCrash.category, map);
-            int num = ModSettings_Utility.NumberOfLootDrops();
+            int num = Rand.RangeInclusive(Bloodmoon_ModSettings.MinNumberOfLootDrops, Bloodmoon_ModSettings.MaxNumberOfLootDrops);
             for (int i = 0; i != num; i++)
             {
                 IncidentDef incidentDef = IncidentDefOf.ResourcePodCrash;
@@ -156,7 +156,7 @@ namespace MorrowRim_Bloodmoon
                 pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.MorrowRim_DormantSaniesLupinus) == null &&
                 pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.MorrowRim_SaniesLupinus) == null
                 //other mods
-                && pawn.RaceProps.FleshType.defName != "MorrowRim_FleshGolem" && !pawn.def.defName.Contains("Android")
+                && pawn.RaceProps.FleshType.defName != "ESCP_FleshSload" && !pawn.def.defName.Contains("Android")
                 && !pawn.def.defName.Contains("android"))
             {
                 /* mod specific checks */
@@ -164,7 +164,7 @@ namespace MorrowRim_Bloodmoon
                 {
                     return false;
                 }
-                return Rand.Chance(ModSettings_Utility.InfectionChance_Float());
+                return Rand.Chance(Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.InfectionChance));
             }
             return false;
         }

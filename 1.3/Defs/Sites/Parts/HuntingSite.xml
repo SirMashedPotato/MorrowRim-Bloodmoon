@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SitePartDef>
+		<defName>MorrowRim_BloodmoonHuntingSite</defName>
+		<label>great beast</label>
+		<description>A site where where a great beast has been located. Successfully hunting it will surely prove ourselves to Hircine.</description>
+		<workerClass>MorrowRim_Bloodmoon.SitePartWorker_HuntingSite</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/MorrowRim_HircineHunt</expandingIconTexture>
+		<handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+		<tags>
+		  <li>MorrowRim_BloodmoonHuntingSite</li>
+		</tags>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>MorrowRim_BloodmoonHuntingSite</defName>
+		<linkWithSite>MorrowRim_BloodmoonHuntingSite</linkWithSite>
+		<order>500</order>
+		<genStep Class="MorrowRim_Bloodmoon.GenStep_HuntingSite">
+		</genStep>
+	</GenStepDef>
+
+</Defs>

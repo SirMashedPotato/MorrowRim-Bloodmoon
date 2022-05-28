@@ -3,7 +3,7 @@
 
 	<!-- Totems -->
 
-	  <ThingDef ParentName="ResourceBase" Name="MorrowRim_HircineTotemBase" Abstract="True">
+	<ThingDef ParentName="ResourceBase" Name="MorrowRim_HircineTotemBase" Abstract="True">
 		<thingClass>ThingWithComps</thingClass>
 		<techLevel>Medieval</techLevel>
 		<description>An artifact earned during a bloodmoon, proof of a worthy hunter. Can be activated to permanently increase the corresponding gift of Hircine by 10%, up to the maximum of 100%</description>
@@ -126,5 +126,36 @@
 			</li>
 		</comps>
 	  </ThingDef>
+	  
+	  <!-- -->
+	  
+	<ThingDef ParentName="ResourceBase">
+		<techLevel>Medieval</techLevel>
+		<defName>MorrowRim_TotemWerewolfLord</defName>
+		<label>werewolf lord totem</label>
+		<description>A totem obtained by successfully hunting one of Hircine's lords. Can be used to make a trophy at the sculpting table.</description>
+		<graphicData>
+		  <texPath>Things/Item/Artifact/MorrowRim_WerewolfLordTotem</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+		  <li>Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>Artifact</li>
+		</tradeTags>
+		<statBases>
+		  <Beauty>10</Beauty>
+		  <MarketValue>500</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		  <Mass>1</Mass>
+		</statBases>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
   
 </Defs>

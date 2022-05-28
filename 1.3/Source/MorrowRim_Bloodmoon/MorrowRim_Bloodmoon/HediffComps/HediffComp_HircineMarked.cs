@@ -2,6 +2,7 @@
 using RimWorld;
 using UnityEngine;
 using System.Collections.Generic;
+using RimWorld.Planet;
 
 namespace MorrowRim_Bloodmoon
 {
@@ -16,21 +17,42 @@ namespace MorrowRim_Bloodmoon
 			}
 		}
 
+        public Site site;
+
+        public override void CompExposeData()
+        {
+            base.CompExposeData();
+            Scribe_Deep.Look(ref site, "site");
+        }
+
         public override void Notify_PawnKilled()
         {
             base.Notify_PawnKilled();
             Pawn pawn = parent.pawn;
             FleckMaker.AttachedOverlay(pawn, FleckDefOf.PsycastAreaEffect, Vector3.zero, 1f, -1f);
-            IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.ResourcePodCrash.category, pawn.Map);
-            IncidentDef incidentDef = IncidentDefOf.ResourcePodCrash;
-            incidentDef.Worker.TryExecute(incidentParms);
+            if (Props.sendRewards)
+            {
+                for(int i = 0; i < Props.numRewards; i++)
+                {
+                    IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.ResourcePodCrash.category, pawn.Map);
+                    IncidentDef incidentDef = IncidentDefOf.ResourcePodCrash;
+                    incidentDef.Worker.TryExecute(incidentParms);
+                }
+            }
+            if (Props.questEnd && site != null)
+            {
+                QuestUtility.SendQuestTargetSignals(site.questTags, "GreatBeastSlain", this.Named("SUBJECT"));
+            }
         }
 
         public override void CompPostPostRemoved()
         {
             Pawn pawn = parent.pawn;
             base.CompPostPostRemoved();
-            Messages.Message("Bloodmoon_animalLostMarked".Translate(pawn), pawn, MessageTypeDefOf.NeutralEvent, true);
+            if (Props.displayMessage)
+            {
+                Messages.Message("Bloodmoon_animalLostMarked".Translate(pawn), pawn, MessageTypeDefOf.NeutralEvent, true);
+            }
         }
 
         private int ticks = 0;

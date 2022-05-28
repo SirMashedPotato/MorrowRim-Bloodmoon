@@ -6,11 +6,11 @@ using RimWorld;
 
 namespace MorrowRim_Bloodmoon
 {
-	class IncidentWorker_MakeGameConditionRogue : IncidentWorker
+    class IncidentWorker_MakeGameCondition : IncidentWorker
 	{
 		protected override bool CanFireNowSub(IncidentParms parms)
 		{
-			if (!base.CanFireNowSub(parms) || !ModSettings_Utility.EnableRogueBloodMoon() || FiredTooRecently_Setting(parms.target) || FiredTooEarly_Setting() || !Utility.HoundsFactionFound(def.label))
+			if (!base.CanFireNowSub(parms) || !Utility.HircineIncidentCheck() || FiredTooRecently_Setting(parms.target) || FiredTooEarly_Setting() || !Utility.HoundsFactionFound(def.label))
 			{
 				return false;
 			}
@@ -36,11 +36,11 @@ namespace MorrowRim_Bloodmoon
 		}
 
 		public bool FiredTooRecently_Setting(IIncidentTarget target)
-		{
+        {
 			Dictionary<IncidentDef, int> lastFireTicks = target.StoryState.lastFireTicks;
 			int ticksGame = Find.TickManager.TicksGame;
 			int num;
-			if (lastFireTicks.TryGetValue(this.def, out num) && (float)(ticksGame - num) / 60000f < ModSettings_Utility.IntervalRogue())
+			if (lastFireTicks.TryGetValue(this.def, out num) && (float)(ticksGame - num) / 60000f < Bloodmoon_ModSettings.IncidentIntervalCycle)
 			{
 				return true;
 			}
@@ -49,7 +49,7 @@ namespace MorrowRim_Bloodmoon
 			{
 				for (int i = 0; i < refireCheckIncidents.Count; i++)
 				{
-					if (lastFireTicks.TryGetValue(refireCheckIncidents[i], out num) && (float)(ticksGame - num) / 60000f < ModSettings_Utility.IntervalRogue())
+					if (lastFireTicks.TryGetValue(refireCheckIncidents[i], out num) && (float)(ticksGame - num) / 60000f < Bloodmoon_ModSettings.IncidentIntervalCycle)
 					{
 						return true;
 					}
@@ -59,9 +59,9 @@ namespace MorrowRim_Bloodmoon
 		}
 
 		public bool FiredTooEarly_Setting()
-		{
-			return GenDate.DaysPassedSinceSettle < ModSettings_Utility.MinimumDaysRogue();
-		}
+        {
+			return GenDate.DaysPassedSinceSettle < Bloodmoon_ModSettings.IncidentMinimumDaysCycle;
+        }
 
 		protected override bool TryExecuteWorker(IncidentParms parms)
 		{

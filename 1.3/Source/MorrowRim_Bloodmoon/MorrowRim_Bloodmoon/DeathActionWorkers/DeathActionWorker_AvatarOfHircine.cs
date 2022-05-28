@@ -32,6 +32,12 @@ namespace MorrowRim_Bloodmoon
                 GenSpawn.Spawn(ThingDefOf.MorrowRim_TotemSight, corpse.Position, corpse.Map);
                 gift = true;
             }
+            if (pawn.def == ThingDefOf.MorrowRim_WerewolfLord)
+            {
+                GenSpawn.Spawn(ThingDefOf.MorrowRim_TotemWerewolfLord, corpse.Position, corpse.Map);
+                gift = true;
+                BloodmoonWorldComp.DecreaseStrength();
+            }
 
             if (gift)
             {

@@ -26,7 +26,7 @@ namespace MorrowRim_Bloodmoon
 
         public static bool CheckStoryteller()
         {
-            return Current.Game.storyteller.def == StorytellerDefOf.MorrowRim_Hircine || ModSettings_Utility.EnableBloodMoonForAll();
+            return Current.Game.storyteller.def == StorytellerDefOf.MorrowRim_Hircine || Bloodmoon_ModSettings.EnableBloodmoonCycleForAll;
         }
 
         public static bool HircineIncidentCheck()
@@ -102,7 +102,7 @@ namespace MorrowRim_Bloodmoon
             }
             var qual = ingested.TryGetComp<CompQuality>();
             float q = (float)qc;
-            if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.ElixirFailChance()) - (q * (ModSettings_Utility.SettingToFloat(ModSettings_Utility.ElixirFailChance() / 10)))))
+            if (Rand.Chance(Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.ElixirFailChance) - (q * (Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.ElixirFailChance / 10)))))
             {
                 return false;
             }

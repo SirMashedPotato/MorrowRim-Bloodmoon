@@ -3,7 +3,7 @@
 
 	<SitePartDef>
 		<defName>MorrowRim_BloodmoonWerewolfPack</defName>
-		<label>werewolf pack</label>
+		<label>Werewolf pack</label>
 		<description>A werewolf pack has been terrorising nearby settlements, and has been tracked to this location. It will eventually move on.</description>
 		<workerClass>MorrowRim_Bloodmoon.SitePartWorker_WerewolfPack</workerClass>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
@@ -11,6 +11,7 @@
 		<handlesWorldObjectTimeoutInspectString>false</handlesWorldObjectTimeoutInspectString>
 		<tags>
 		  <li>MorrowRim_BloodmoonWerewolfPack</li>
+		  <li>MorrowRim_BloodmoonHuntingSiteThreat</li>
 		</tags>
 		<approachOrderString>Attack {0}</approachOrderString>
 		<approachingReportString>Attacking {0}</approachingReportString>

@@ -13,6 +13,6 @@ namespace MorrowRim_Bloodmoon
         }
         public static PawnKindDef MorrowRim_Werewolf;
         public static PawnKindDef MorrowRim_AvatarOfHircine;
-        //public static PawnKindDef MorrowRim_Draugr;
+        public static PawnKindDef MorrowRim_WerewolfLord;
     }
 }

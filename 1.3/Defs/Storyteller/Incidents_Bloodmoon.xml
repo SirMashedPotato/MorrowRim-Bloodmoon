@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<IncidentCategoryDef>
+		<defName>Hircine_Bloodmoon</defName>
+	</IncidentCategoryDef>
+
 	<!-- Bloodmoons -->
 
 	<IncidentDef>
@@ -79,22 +83,6 @@
 		<letterLabel>Caravan ambushed (werewolves)</letterLabel>
 		<letterDef>ThreatBig</letterDef>
 		<tale>CaravanAmbushedByManhunter</tale>
-		<!--
-		<mtbDaysByBiome>
-		  <TemperateForest>20</TemperateForest>
-		  <BorealForest>20</BorealForest>
-		  <TropicalRainforest>20</TropicalRainforest>
-		  <AridShrubland>20</AridShrubland>
-		  <Desert>30</Desert>
-		  <Tundra>30</Tundra>
-		  <TropicalSwamp>30</TropicalSwamp>
-		  <TemperateSwamp>30</TemperateSwamp>
-		  <ColdBog>35</ColdBog>
-		  <ExtremeDesert>35</ExtremeDesert>
-		  <IceSheet>40</IceSheet>
-		  <SeaIce>60</SeaIce>
-		</mtbDaysByBiome>
-		-->
 	</IncidentDef>
 	
 </Defs>

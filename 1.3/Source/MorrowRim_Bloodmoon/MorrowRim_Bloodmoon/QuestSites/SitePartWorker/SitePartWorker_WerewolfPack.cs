@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using UnityEngine;
@@ -15,7 +13,7 @@ namespace MorrowRim_Bloodmoon
 
         public override bool IsAvailable()
         {
-            return base.IsAvailable() && ModSettings_Utility.EnableWerewolfPack() && Utility.HoundsFactionFound(def.label);
+            return base.IsAvailable() && Bloodmoon_ModSettings.EnableWerewolfPack && Utility.HoundsFactionFound(def.label);
         }
 
         public override void Init(Site site, SitePart sitePart)
@@ -53,7 +51,7 @@ namespace MorrowRim_Bloodmoon
 
 		protected int GetEnemiesCount(SitePartParams parms)
 		{
-			return GenMath.RoundRandom(Mathf.Clamp((parms.threatPoints / 20) * ModSettings_Utility.RaidModifier(), ModSettings_Utility.MinWerewolfNum(), ModSettings_Utility.MaxWerewolfNum()));
+			return GenMath.RoundRandom(Mathf.Clamp((parms.threatPoints / 20) * Bloodmoon_ModSettings.RaidModifier, Bloodmoon_ModSettings.MinWerewolfNum, Bloodmoon_ModSettings.MaxWerewolfNum));
 		}
 
 		protected string GetEnemiesLabel(Site site, int enemiesCount)

@@ -26,9 +26,9 @@ namespace MorrowRim_Bloodmoon
         {
 			get
             {
-                if (ModSettings_Utility.EnableStrengthScaling())
+                if (Bloodmoon_ModSettings.EnableStrengthScaling)
                 {
-					return "Bloodmoon_bloodmoonDescription".Translate(ModSettings_Utility.GetBloodStrength() * 100f);
+					return "Bloodmoon_bloodmoonDescription".Translate(BloodmoonWorldComp.GetBloodStrength() * 100f);
 				}
 				return def.description;
 			}
@@ -70,8 +70,11 @@ namespace MorrowRim_Bloodmoon
 			//do one off events
 			if (!bloodmoonBegun && currentTicks >= this.TransitionTicks)
 			{
-				ActivateLycanthropy();
-				foreach(Map map in AffectedMaps)
+                if (Bloodmoon_ModSettings.EnableBloodmoonTransforming)
+                {
+					ActivateLycanthropy();
+				}
+				foreach (Map map in AffectedMaps)
 				{
 					Bloodmoon_Utility.SpawnAvatarOfHircine(map);
 				}
@@ -84,7 +87,7 @@ namespace MorrowRim_Bloodmoon
                 {
 					Bloodmoon_Utility.DoBloodmoonRaid(this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).RandomElement(), PawnKindDefOf.MorrowRim_Werewolf);
 				}
-				else if(CaravanUtility.PlayerHasAnyCaravan() && ModSettings_Utility.EnableBloodmoonAmbushes())
+				else if(CaravanUtility.PlayerHasAnyCaravan() && Bloodmoon_ModSettings.EnableBloodmoonAmbushes)
                 {
 					Caravan caravan = Find.WorldObjects.Caravans.RandomElement();
 					if (caravan != null)
@@ -96,18 +99,18 @@ namespace MorrowRim_Bloodmoon
 				}
 				
 
-				if (Rand.Chance(ModSettings_Utility.SettingToFloat(ModSettings_Utility.ExtraAvatarChance())))
+				if (Rand.Chance(Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.ExtraAvatarChance)))
 				{
 					Bloodmoon_Utility.SpawnAvatarOfHircine(this.AffectedMaps.RandomElement());
 				}
 				currentTicks = 0;
-				ticksPerEvent = ModSettings_Utility.NextTicksPerEvent();
+				ticksPerEvent = Rand.RangeInclusive(Bloodmoon_ModSettings.MinTicksPerEvent, Bloodmoon_ModSettings.MaxTicksPerEvent);
 			}
-			if (ModSettings_Utility.AnimalMarking() && markedTicks >= ticksPerMark)
+			if (Bloodmoon_ModSettings.AnimalMarking && markedTicks >= ticksPerMark)
 			{
 				Bloodmoon_Utility.AttemptToMarkAnimal(this.AffectedMaps.RandomElement());
 				markedTicks = 0;
-				ticksPerMark = ModSettings_Utility.NextTicksPerMark();
+				ticksPerMark = Rand.RangeInclusive(Bloodmoon_ModSettings.MinTicksPerMark, Bloodmoon_ModSettings.MaxTicksPerMark);
 
 			}
 			markedTicks++;
@@ -125,7 +128,7 @@ namespace MorrowRim_Bloodmoon
 					Bloodmoon_Utility.ClearMarksOnMap(map);
 
 				}
-				if (ModSettings_Utility.EnableLootDrops())
+				if (Bloodmoon_ModSettings.EnableLootDrops)
 				{
 					Map target = this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).RandomElement();
 					if (target != null)
@@ -134,7 +137,7 @@ namespace MorrowRim_Bloodmoon
 					}
 				}
 			}
-            if (ModSettings_Utility.EnableStrengthScaling() && this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).Any())
+            if (Bloodmoon_ModSettings.EnableStrengthScaling && this.AffectedMaps.Where(x => x != null && x.mapPawns != null && x.mapPawns.AnyColonistSpawned).Any())
             {
 				BloodmoonWorldComp.IncrementStrength();
 			}

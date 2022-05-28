@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+		<defName>MorrowRim_Bloodmoon_DisabledQuestAnimals</defName>
+		<disabledFromQuestsPawns>
+			<li>MorrowRim_AvatarOfHircine</li>
+			<li>MorrowRim_Werewolf</li>
+			<li>MorrowRim_WerewolfLord</li>
+		</disabledFromQuestsPawns>
+	</AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+</Defs>

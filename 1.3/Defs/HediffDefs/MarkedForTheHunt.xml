@@ -11,9 +11,8 @@
 			<severityPerDay>-2.5</severityPerDay>
 			<showHoursToRecover>true</showHoursToRecover>
 		  </li>
-		  <li Class="MorrowRim_Bloodmoon.HediffCompProperties_HircineMarked">
-			
-		  </li>
+		  <li Class="MorrowRim_Bloodmoon.HediffCompProperties_HircineMarked"/>
+		  <li Class="HediffCompProperties_DisappearsOnDeath"/>
 		</comps>
 		<stages>
 			<li>
@@ -36,6 +35,60 @@
 					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 					<Flammability>-0.15</Flammability>
 					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="MorrowRim_GiftsBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defName>MorrowRim_HircineGreatBeast</defName>
+		<label>Great Beast</label>
+		<description>A truly exceptional specimen, far stronger than any others of it's kind. Hircine will bestow a gift upon you if this animal is successfully slain.</description>
+		<comps>
+		  <li Class="MorrowRim_Bloodmoon.HediffCompProperties_HircineMarked">
+			<displayMessage>false</displayMessage>
+			<questEnd>true</questEnd>
+			<numRewards>2</numRewards>
+		  </li>
+		  <li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+				<capMods>
+				  <li>
+					<capacity>Sight</capacity>
+					<offset>0.50</offset>
+				  </li>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.50</offset>
+				  </li>
+				  <li>
+					<capacity>Manipulation</capacity>
+					<offset>0.50</offset>
+				  </li>
+				</capMods>
+				<statOffsets>
+					<ToxicSensitivity>-0.5</ToxicSensitivity>
+					<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+					<Flammability>-0.15</Flammability>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="MorrowRim_GiftsBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defName>MorrowRim_HircineBattleScar</defName>
+		<label>Battle scar</label>
+		<description>A scar obtained in battle, proof of victory.</description>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.02</IncomingDamageFactor>
 				</statOffsets>
 			</li>
 		</stages>
