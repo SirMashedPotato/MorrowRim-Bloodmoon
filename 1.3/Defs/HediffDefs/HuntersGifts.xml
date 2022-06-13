@@ -5,7 +5,6 @@
 		<label>gift of Hircine</label>
 		<defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
-		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 	

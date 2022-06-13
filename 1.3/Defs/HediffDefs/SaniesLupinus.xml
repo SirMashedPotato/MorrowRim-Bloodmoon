@@ -133,7 +133,7 @@
 		<description>Dormant lycanthropy assimilated into the body, providing an increase to certain stats and capacities. Reinfection of Sanies Lupinus will cause the assimilated lycanthropy to return to its dormant state.</description>
 		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
-		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<isBad>false</isBad>
 		<stages>
 			<li>
 				<statOffsets>
