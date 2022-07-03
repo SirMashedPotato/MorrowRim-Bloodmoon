@@ -10,7 +10,7 @@ namespace MorrowRim_Bloodmoon
 {
     class Bloodmoon_Utility
     {
-        public static Pawn ActivateLycanthropy(Pawn target)
+        public static Pawn ActivateLycanthropy(Pawn target, bool canLeave = true)
         {
             //do things to old pawn
             target.DropAndForbidEverything();
@@ -28,7 +28,7 @@ namespace MorrowRim_Bloodmoon
             {
                 newPawn.health.AddHediff(HediffDefOf.MorrowRim_BloodOfHircine).Severity = Bloodmoon_ModSettings.SettingToFloat(Bloodmoon_ModSettings.WerewolfStrength);
             }
-            LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, true, true), newPawn.Map, list);
+            LordMaker.MakeNewLord(faction, new LordJob_HuntColony(faction, canLeave, true), newPawn.Map, list);
             target.Corpse.Destroy();
             return newPawn;
         }

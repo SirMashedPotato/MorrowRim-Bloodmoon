@@ -13,7 +13,7 @@ namespace MorrowRim_Bloodmoon
 			{
 				return;
 			}
-			Bloodmoon_Utility.ActivateLycanthropy(pawn);
+			Bloodmoon_Utility.ActivateLycanthropy(pawn, false);
 			Find.BattleLog.Add(new BattleLogEntry_ItemUsed(user, target, this.parent.def, RulePackDefOf.Event_ItemUsed));
 			
 		}
