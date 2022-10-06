@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef ParentName="Arrow">
+		<defName>MorrowRim_ArrowHunters</defName>
+		<workerClass>MorrowRim_Bloodmoon.DamageWorker_HunterStab</workerClass>
+		<hediff>Stab</hediff>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>MorrowRim_StabHunters</defName>
+		<label>stab</label>
+		<workerClass>MorrowRim_Bloodmoon.DamageWorker_HunterStab</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been stabbed to death.</deathMessage>
+		<hediff>Stab</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+		<overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>MorrowRim_BulletHunters</defName>
+		<label>bullet</label>
+		<workerClass>MorrowRim_Bloodmoon.DamageWorker_HunterStab</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been shot to death.</deathMessage>
+		<hediff>Gunshot</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Bullet</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	</DamageDef>
+
+</Defs>

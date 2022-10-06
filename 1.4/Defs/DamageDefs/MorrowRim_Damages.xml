@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Werewolf damages -->
+	
+	<DamageDef ParentName="Bite">
+		<defName>MorrowRim_WerewolfBite</defName>
+		<label>werewolf bite</label>
+		<workerClass>MorrowRim_Bloodmoon.DamageWorker_WerewolfBite</workerClass>
+	</DamageDef>
+	
+	<DamageDef ParentName="Scratch">
+		<defName>MorrowRim_WerewolfScratch</defName>
+		<label>werewolf scratch</label>
+		<workerClass>MorrowRim_Bloodmoon.DamageWorker_WerewolfScratch</workerClass>
+	</DamageDef>
+	
+</Defs>

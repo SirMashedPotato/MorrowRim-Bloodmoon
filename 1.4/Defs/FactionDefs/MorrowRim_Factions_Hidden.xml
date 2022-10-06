@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<FactionDef>
+		<defName>MorrowRim_HoundsOfHircine</defName>
+		<label>hounds of Hircine</label>
+		<pawnSingular>werewolf</pawnSingular>
+		<pawnsPlural>werewolves</pawnsPlural>
+		<fixedName>hounds of Hircine</fixedName>
+		<factionIconPath>World/WorldObjects/Expanding/Sites/MorrowRim_HoundsOfHircine</factionIconPath>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 0)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<raidLootValueFromPointsCurve>
+			<points>
+				<li>(0,     0)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<techLevel>Animal</techLevel>
+		<permanentEnemy>true</permanentEnemy>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>1000</configurationListOrderPriority>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-100~100</allowedArrivalTemperatureRange>
+	</FactionDef>
+</Defs>

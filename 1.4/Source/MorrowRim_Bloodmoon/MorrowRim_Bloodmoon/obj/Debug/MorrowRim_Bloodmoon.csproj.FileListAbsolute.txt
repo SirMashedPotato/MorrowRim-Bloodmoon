@@ -1,0 +1,16 @@
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\Assemblies\MorrowRim_Bloodmoon.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\1.3\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\1.3\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\1.3\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.dll
+C:\Users\andre\Desktop\Rimworld\MorrowRim\. Factions\MorrowRim - Bloodmoon\1.3\Assemblies\MorrowRim_Bloodmoon.dll
+J:\Modding\Github\MorrowRim-Bloodmoon\1.3\Assemblies\MorrowRim_Bloodmoon.dll
+J:\Modding\Github\MorrowRim-Bloodmoon\1.3\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csproj.CoreCompileInputs.cache
+J:\Modding\Github\MorrowRim-Bloodmoon\1.3\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.dll
+J:\Modding\Github\MorrowRim-Bloodmoon\1.3\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csproj.AssemblyReference.cache
+J:\Modding\Github\MorrowRim-Bloodmoon\1.4\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csproj.AssemblyReference.cache
+J:\Modding\Github\MorrowRim-Bloodmoon\1.4\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.csproj.CoreCompileInputs.cache
+J:\Modding\Github\MorrowRim-Bloodmoon\1.4\Source\MorrowRim_Bloodmoon\MorrowRim_Bloodmoon\obj\Debug\MorrowRim_Bloodmoon.dll
+J:\Modding\Github\MorrowRim-Bloodmoon\1.4\Assemblies\MorrowRim_Bloodmoon.dll

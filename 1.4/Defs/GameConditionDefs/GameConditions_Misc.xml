@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GameConditionDef>
+    <defName>MorrowRim_Bloodmoon</defName>
+    <conditionClass>MorrowRim_Bloodmoon.GameCondition_Bloodmoon</conditionClass>
+    <label>bloodmoon</label>
+    <description>During the bloodmoon avatars of Hircine may appear around the map. Hunting these can grant your colonists permanent buffs. Beware though, as during a bloodmoon you will not always be the hunter.\n\nThe bloodmoon rising will acticate any cases of dormant lycanthropy, permanently turning the victim into a rabid werewolf.</description>
+	<descriptionFuture>the blood moon will soon rise for [gameConditionDuration_duration]</descriptionFuture>
+	<endMessage>The hunt comes to an end.</endMessage>
+    <letterText>The bloodmoon rises, the horn calls, howls can be heard in the distance. The hunt begins.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <canBePermanent>true</canBePermanent>
+	<exclusiveConditions>
+      <li>Eclipse</li>
+    </exclusiveConditions>
+  </GameConditionDef>
+
+</Defs>

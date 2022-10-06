@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SitePartDef>
+		<defName>MorrowRim_BloodmoonWerewolfLord</defName>
+		<label>Werewolf Lord</label>
+		<description>A werewolf lord has been sighted here, and is likely accompanied by a pack. Successfully hunting the lord will weaken Hircine's hounds, though the beast will eventually move on if left undisturbed.</description>
+		<workerClass>MorrowRim_Bloodmoon.SitePartWorker_WerewolfLord</workerClass>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/MorrowRim_WerewolfLord</expandingIconTexture>
+		<handlesWorldObjectTimeoutInspectString>false</handlesWorldObjectTimeoutInspectString>
+		<tags>
+		  <li>MorrowRim_BloodmoonWerewolfLord</li>
+		</tags>
+		<approachOrderString>Attack {0}</approachOrderString>
+		<approachingReportString>Attacking {0}</approachingReportString>
+		<arrivedLetter>The werewolf lord has sensed your pawns, and is beginning a counter-attack.</arrivedLetter>
+		<arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+		<wantsThreatPoints>true</wantsThreatPoints>
+		<minThreatPoints>300</minThreatPoints>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>MorrowRim_BloodmoonWerewolfLord</defName>
+		<linkWithSite>MorrowRim_BloodmoonWerewolfLord</linkWithSite>
+		<order>500</order>
+		<genStep Class="MorrowRim_Bloodmoon.GenStep_WerewolfLord">
+		</genStep>
+	</GenStepDef>
+
+</Defs>

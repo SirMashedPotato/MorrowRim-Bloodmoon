@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>MorrowRim_Bloodmoon</incident>
+				<minDaysPassed>1</minDaysPassed>
+				<onDays>1</onDays>
+				<offDays>1</offDays>
+				<minSpacingDays>0.1</minSpacingDays>
+				<numIncidentsRange>1~1</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>	
+
+</Patch>

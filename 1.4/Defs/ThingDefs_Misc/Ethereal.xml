@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef>
+		<defName>MorrowRim_Gas_Wolfsbane</defName>
+		<thingClass>MorrowRim_Bloodmoon.Gas_Wolfsbane</thingClass>
+		<label>wolfsbane cloud</label>
+		<category>Gas</category>
+		<altitudeLayer>Gas</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<graphicClass>Graphic_Gas</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<texPath>Things/Gas/Puff</texPath>
+			<drawSize>2.2</drawSize>
+			<color>(111,80,151,50)</color>
+		</graphicData>
+		<gas>
+			<expireSeconds>10~16</expireSeconds>
+			<rotationSpeed>10</rotationSpeed>
+		</gas>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+	<HediffDef ParentName="InfectionBase">
+		<defName>MorrowRim_SaniesLupinus</defName>
+		<label>sanies lupinus</label>
+		<description>An infectious disease solely contracted from a werewolf. The disease causes nearly imperceptible changes in behaviour as it takes hold. If left untreated it will eventually transition into dormant lycanthropy, until the next blood moon.</description>
+		<descriptionHyperlinks>
+			<HediffDef>MorrowRim_DormantSaniesLupinus</HediffDef>
+			<ThingDef>MorrowRim_Werewolf</ThingDef>
+		</descriptionHyperlinks>
+		<makesSickThought>true</makesSickThought>
+		<taleOnVisible>MorrowRim_SaniesLupinusRevealed</taleOnVisible>
+		<maxSeverity>1.0</maxSeverity>
+		<tendable>true</tendable>
+		<comps>
+		  <li Class="HediffCompProperties_TendDuration">
+			<baseTendDurationHours>12</baseTendDurationHours>
+			<severityPerDayTended>-0.1573</severityPerDayTended>
+		  </li>
+		  <li Class="HediffCompProperties_Immunizable">
+			<severityPerDayNotImmune>0.2888</severityPerDayNotImmune>
+			<immunityPerDaySick>0.22</immunityPerDaySick>
+			<severityPerDayImmune>-0.4947</severityPerDayImmune>
+			<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+		  </li>
+		  <li Class="MorrowRim_Bloodmoon.HediffCompProperties_SaniesLupus"/>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.10</minSeverity>
+				<statOffsets>
+					<MaxNutrition>-0.05</MaxNutrition>
+				</statOffsets>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.30</minSeverity>
+				<statOffsets>
+					<MaxNutrition>-0.1</MaxNutrition>
+					<MentalBreakThreshold>0.02</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<label>greater</label>
+				<minSeverity>0.70</minSeverity>
+				<statOffsets>
+					<MaxNutrition>-0.15</MaxNutrition>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<HediffDef>
+		<defName>MorrowRim_DormantSaniesLupinus</defName>
+		<label>dormant lycanthropy</label>
+		<description>Lycanthropy is a condition caused by untreated Sanies Lupinus. During the next blood moon the victim will violently transform into a werewolf, becoming a servant of Hircine.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_Werewolf</ThingDef>
+			<GameConditionDef>MorrowRim_Bloodmoon</GameConditionDef>
+		</descriptionHyperlinks>
+		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<stages>
+			<li>
+				<statOffsets>
+					<MaxNutrition>-0.2</MaxNutrition>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+					<PsychicSensitivity>0.05</PsychicSensitivity>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>MorrowRim_LycanthropicUnbinding</defName>
+		<label>lycanthropic unbinding</label>
+		<description>Caused by the separation of the dormant werewolf from its host.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1.0, 0.4, 0.4)</defaultLabelColor>
+		<makesSickThought>true</makesSickThought>
+		<lethalSeverity>1</lethalSeverity>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<stages>
+		  <li>
+			<minSeverity>0.0</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>BloodFiltration</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>BloodPumping</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Metabolism</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Sight</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Hearing</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>MorrowRim_AssimilatedLycanthropy</defName>
+		<label>assimilated lycanthropy</label>
+		<description>Dormant lycanthropy assimilated into the body, providing an increase to certain stats and capacities. Reinfection of Sanies Lupinus will cause the assimilated lycanthropy to return to its dormant state.</description>
+		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
+		<makesSickThought>false</makesSickThought>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<MaxNutrition>-0.1</MaxNutrition>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+					<PsychicSensitivity>0.05</PsychicSensitivity>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+					<ToxicEnvironmentResistance>-0.25</ToxicEnvironmentResistance>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

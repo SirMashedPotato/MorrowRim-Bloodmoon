@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<QuestScriptDef>
+		<defName>MorrowRim_WerewolfPackSite</defName>
+		<rootSelectionWeight>0.4</rootSelectionWeight>
+		<rootMinPoints>350</rootMinPoints>
+		<canGiveRoyalFavor>true</canGiveRoyalFavor>
+		<expireDaysRange>2~4</expireDaysRange>
+		<!--<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">Raided_BanditCamp</successHistoryEvent>-->
+		<questNameRules>
+		  <include>
+			<li>TribalWordUtility</li>
+		  </include>
+		  <rulesStrings>
+			<li>questName(asker_factionLeader==True)->[asker_nameDef]'s [werewolf] [pack]</li>
+			<li>questName(asker_factionLeader==True)->[asker_nameDef] and the [werewolf] [pack]</li>
+			<li>questName(askerIsNull==true)->The [Color] [TerrainFeature] [location]</li>
+			<li>werewolf->Werewolf</li>
+			<li>werewolf->Hound</li>
+			<li>pack->Pack</li>
+			<li>location->Hunting Grounds</li>
+		  </rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+		  <rulesStrings>
+			<!-- No asker -->
+			<li>questDescription(askerIsNull==true)->We have learnt of a werewolf pack, not far from [map_definite]. It is highly likely that this pack has been attacking nearby settlements and outposts. As such, the locals will likely rewards us for eliminating the pack.</li>
+
+			<!-- Faction leader asker -->
+			<li>questDescription(asker_factionLeader==True)->[asker_nameFull] has sent us a message. Apparently, a pack of werewolves have been attacking nearby settlements, and need to be dealt with while their location is known.
+	\n[asker_nameDef] is asking us to deal with the pack, which means eliminating all of the werewolves at the site. Due to the urgency of the situation, [asker_nameDef] refuses to give any details on the size of the pack.</li>
+		  </rulesStrings>
+		</questDescriptionRules>
+		
+		<root Class="QuestNode_Sequence">
+		  <nodes>
+			<li Class="QuestNode_SubScript">
+			  <def>Util_RandomizePointsChallengeRating</def>
+			  <parms>
+				<pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+				<pointsFactorThreeStar>2</pointsFactorThreeStar>
+			  </parms>
+			</li>
+			<li Class="QuestNode_SubScript">
+			  <def>Util_AdjustPointsForDistantFight</def>
+			</li>
+			<li Class="QuestNode_GetMap" />
+
+			<li Class="QuestNode_IsSet">
+			  <name>asker</name>
+			  <elseNode Class="QuestNode_RandomNode">
+				<nodes>
+				  <li Class="QuestNode_Set">
+					<name>askerIsNull</name>
+					<value>true</value>
+					<selectionWeight>0.4</selectionWeight>
+				  </li>
+				  <li Class="QuestNode_GetPawn">
+					<storeAs>asker</storeAs>
+					<mustBeFactionLeader>true</mustBeFactionLeader>
+					<mustBeNonHostileToPlayer>true</mustBeNonHostileToPlayer>
+					<hostileWeight>0.15</hostileWeight>
+					<selectionWeight>0.6</selectionWeight>
+				  </li>
+				</nodes>
+			  </elseNode>
+			</li>
+
+			<li Class="QuestNode_GetSiteTile">
+			  <storeAs>siteTile</storeAs>
+			  <preferCloserTiles>true</preferCloserTiles>
+			</li>
+
+			<li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+			  <storeAs>sitePartDefs</storeAs>
+			  <storeFactionAs>siteFaction</storeFactionAs>
+			  <sitePartsTags>
+				<li><tag>MorrowRim_BloodmoonWerewolfPack</tag></li>
+			  </sitePartsTags>
+			</li>
+
+			<li Class="QuestNode_GetDefaultSitePartsParams">
+			  <tile>$siteTile</tile>
+			  <faction>$siteFaction</faction>
+			  <sitePartDefs>$sitePartDefs</sitePartDefs>
+			  <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+			</li>
+			
+			<li Class="QuestNode_GetSiteThreatPoints">
+			  <storeAs>sitePoints</storeAs>
+			  <sitePartsParams>$sitePartsParams</sitePartsParams>
+			</li>
+			<li Class="QuestNode_SubScript">
+			  <def>Util_GetDefaultRewardValueFromPoints</def>
+			  <parms>
+				<!-- Use the actual threat points generated (some site parts define a minimum threshold) -->
+				<points>$sitePoints</points>
+			  </parms>
+			</li>
+
+			<!-- Inflate reward value. Since we're basing the reward value on the threat points generated, we need to do this
+				 even though the threat points was deflated from the input points already. -->
+			<li Class="QuestNode_Multiply">
+				<value1>$rewardValue</value1>
+				<value2>1.75</value2>
+				<storeAs>rewardValue</storeAs>
+			</li>
+
+			<li Class="QuestNode_SubScript">
+			  <def>Util_GenerateSite</def>
+			  <parms>
+				<hiddenSitePartsPossible>false</hiddenSitePartsPossible>
+			  </parms>
+			</li>
+			
+			<li Class="QuestNode_SpawnWorldObjects">
+			  <worldObjects>$site</worldObjects>
+			</li>
+
+			<li Class="QuestNode_WorldObjectTimeout">
+			  <worldObject>$site</worldObject>
+			  <isQuestTimeout>true</isQuestTimeout>
+			  <delayTicks>$(randInt(6,14)*60000)</delayTicks>
+			  <inSignalDisable>site.MapGenerated</inSignalDisable>
+			  <node Class="QuestNode_Sequence">
+				<nodes>
+				  <li Class="QuestNode_Letter">
+					<label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+					<text TKey="LetterTextQuestExpired">The werewolves have moved on to new hunting grounds. The quest [resolvedQuestName] has expired.</text>
+				  </li>
+				  <li Class="QuestNode_End">
+					<outcome>Fail</outcome>
+				  </li>
+				</nodes>
+			  </node>
+			</li>
+
+			<!-- If we enter and leave, the map is destroyed. Fail the quest. -->
+			<li Class="QuestNode_Signal">
+			  <inSignal>site.Destroyed</inSignal>
+			  <node Class="QuestNode_Sequence">
+				<nodes>
+				  <li Class="QuestNode_Letter">
+					<label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
+					<text TKey="LetterTextQuestFailed">After being discovered, the werewolf pack has dispersed, and is likely seeking a new hunting grounds. The quest [resolvedQuestName] has ended.</text>
+				  </li>
+				  <li Class="QuestNode_End">
+					<outcome>Fail</outcome>
+				  </li>
+				</nodes>
+			  </node>
+			</li>
+
+			<li Class="QuestNode_Signal">
+			  <inSignal>site.AllEnemiesDefeated</inSignal>
+			  <node Class="QuestNode_Sequence">
+				<nodes>
+
+				  <li Class="QuestNode_GiveRewards">
+					<parms>
+					  <allowGoodwill>false</allowGoodwill>
+					  <allowRoyalFavor>true</allowRoyalFavor>
+					  <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+					</parms>
+					<addCampLootReward>true</addCampLootReward>
+					<customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+					<customLetterText TKey="LetterTextPaymentArrived">You have defeated the werewolf pack!\n\nPayment has arrived.</customLetterText>
+					<nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+					  <letterDef>ChoosePawn</letterDef>
+					  <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+					  <text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
+					  <useColonistsOnMap>$site</useColonistsOnMap>
+					  <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+					</nodeIfChosenPawnSignalUsed>
+				  </li>
+				</nodes>
+			  </node>
+			</li>
+			<li Class="QuestNode_End">
+			  <inSignal>site.AllEnemiesDefeated</inSignal>
+			  <outcome>Success</outcome>
+			</li>
+		  </nodes>
+		</root>
+	</QuestScriptDef>
+
+</Defs>

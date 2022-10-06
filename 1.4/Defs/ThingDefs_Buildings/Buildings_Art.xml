@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="SculptureBase" Name="MorrwoRim_WerewolfTrophyBase">
+		<defName>MorrowRim_WerewolfTrophy</defName>
+		<label>werewolf trophy</label>
+		<description>The head of a werewolf, mounted on a pole. Proof of a victorious hunt.</description>
+		<graphicData>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <texPath>Things/Building/Art/MorrowRim_WerewolfTrophy</texPath>
+		  <drawSize>(1.5,1.5)</drawSize>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <MaxHitPoints>90</MaxHitPoints>
+		  <Mass>3</Mass>
+		  <Beauty>40</Beauty>
+		  <WorkToMake>8000</WorkToMake>
+		</statBases>
+		<thingSetMakerTags Inherit="False">
+		</thingSetMakerTags>
+		<stuffCategories>
+		  <li>Metallic</li>
+		  <li>Woody</li>
+		  <li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<costList>
+			  <Corpse_MorrowRim_Werewolf>1</Corpse_MorrowRim_Werewolf>
+		</costList>
+		<researchPrerequisites>
+		</researchPrerequisites>
+		<comps Inherit="False">
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		  <li Class="CompProperties_Art">
+			<nameMaker>NamerArtSculpture</nameMaker>
+			<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+			<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+		  </li>
+		  <li Class="CompProperties_MeditationFocus">
+			<statDef>MeditationFocusStrength</statDef>
+			<focusTypes>
+			  <li>Morbid</li>
+			</focusTypes>
+			<offsets>
+			  <li Class="FocusStrengthOffset_Quality">
+				<curve>
+				  <points>
+					<li>(0,0.12)</li> <!-- awful -->
+					<li>(1,0.16)</li> <!-- poor -->
+					<li>(2,0.20)</li> <!-- normal -->
+					<li>(3,0.22)</li> <!-- good -->
+					<li>(4,0.24)</li> <!-- excellent -->
+					<li>(5,0.26)</li> <!-- masterwork -->
+					<li>(6,0.28)</li> <!-- legendary -->
+				  </points>
+				</curve>
+			  </li>
+			  <li Class="FocusStrengthOffset_BuildingDefsWithQuality">
+				<defs>
+				  <li>MorrowRim_WerewolfTrophy</li>
+				  <li>MorrowRim_WerewolfLordTrophy</li>
+				</defs>
+				<radius>9.9</radius>
+				<maxBuildings>8</maxBuildings>
+				<focusPerQuality>
+				  <points>
+					<li>(0,0.0)</li> <!-- awful -->
+					<li>(1,0.0)</li> <!-- poor -->
+					<li>(2,0.01)</li> <!-- normal -->
+					<li>(3,0.01)</li> <!-- good -->
+					<li>(4,0.01)</li> <!-- excellent -->
+					<li>(5,0.02)</li> <!-- masterwork -->
+					<li>(6,0.02)</li> <!-- legendary -->
+				  </points>
+				</focusPerQuality>
+				<explanationKey>MeditationFocusPerSculpture</explanationKey>
+				<explanationKeyAbstract>MeditationFocusPerSculptureAbstract</explanationKeyAbstract>
+			  </li>
+			</offsets>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MorrwoRim_WerewolfTrophyBase">
+		<defName>MorrowRim_WerewolfLordTrophy</defName>
+		<label>werewolf lord trophy</label>
+		<description>The head of a werewolf lord, mounted on a pole. Proof of an accomplished hunter.</description>
+		<graphicData>
+		  <texPath>Things/Building/Art/MorrowRim_WerewolfLordTrophy</texPath>
+		</graphicData>
+		<statBases>
+		  <Beauty>100</Beauty>
+		</statBases>
+		<costList Inherit="False">
+			  <MorrowRim_TotemWerewolfLord>1</MorrowRim_TotemWerewolfLord>
+		</costList>
+	</ThingDef>
+
+</Defs>
