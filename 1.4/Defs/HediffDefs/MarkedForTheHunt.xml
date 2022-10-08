@@ -72,7 +72,6 @@
 				</capMods>
 				<statOffsets>
 					<ToxicResistance>0.5</ToxicResistance>
-					<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 					<Flammability>-0.15</Flammability>

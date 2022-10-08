@@ -142,7 +142,6 @@
 					<PsychicSensitivity>0.05</PsychicSensitivity>
 					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
 					<ToxicResistance>0.25</ToxicResistance>
-					<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 				</statOffsets>
 				<capMods>
 					<li>
