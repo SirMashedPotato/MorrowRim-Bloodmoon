@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Werewolves don't flee when fired upon:</label>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MorrowRim_Werewolf" or defName="MorrowRim_WerewolfLord"]/comps</xpath>
+				<value>
+					<li Class="AnimalBehaviours.CompProperties_DoesntFlee"/>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
