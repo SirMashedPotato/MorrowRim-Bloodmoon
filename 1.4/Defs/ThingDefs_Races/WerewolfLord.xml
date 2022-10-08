@@ -16,7 +16,8 @@
 			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
 			<ComfyTemperatureMax>100</ComfyTemperatureMax>
 			<PsychicSensitivity>3.0</PsychicSensitivity>
-			<ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
+			<ToxicResistance>0.4</ToxicResistance>
+			<ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
 		</statBases>
 		<uiIconScale>1.15</uiIconScale>
 		<tools>

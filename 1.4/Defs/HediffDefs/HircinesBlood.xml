@@ -129,7 +129,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.1</ToxicEnvironmentResistance>
+					<ToxicResistance>0.1</ToxicResistance>
+					<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
 					<Flammability>-0.3</Flammability>
@@ -149,7 +150,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.15</ToxicEnvironmentResistance>
+					<ToxicResistance>0.15</ToxicResistance>
+					<ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 					<Flammability>-0.35</Flammability>
@@ -169,7 +171,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.2</ToxicEnvironmentResistance>
+					<ToxicResistance>0.2</ToxicResistance>
+					<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
 					<Flammability>-0.4</Flammability>
@@ -189,7 +192,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.25</ToxicEnvironmentResistance>
+					<ToxicResistance>0.25</ToxicResistance>
+					<ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 					<Flammability>-0.45</Flammability>
@@ -209,7 +213,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.3</ToxicEnvironmentResistance>
+					<ToxicResistance>0.3</ToxicResistance>
+					<ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 					<Flammability>-0.5</Flammability>
@@ -229,7 +234,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.35</ToxicEnvironmentResistance>
+					<ToxicResistance>0.35</ToxicResistance>
+					<ToxicEnvironmentResistance>0.35</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
 					<Flammability>-0.55</Flammability>
@@ -249,7 +255,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.4</ToxicEnvironmentResistance>
+					<ToxicResistance>0.4</ToxicResistance>
+					<ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
 					<Flammability>-0.6</Flammability>
@@ -269,7 +276,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.45</ToxicEnvironmentResistance>
+					<ToxicResistance>0.45</ToxicResistance>
+					<ToxicEnvironmentResistance>0.45</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 					<Flammability>-0.65</Flammability>
@@ -289,7 +297,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.5</ToxicEnvironmentResistance>
+					<ToxicResistance>0.5</ToxicResistance>
+					<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.7</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
 					<Flammability>-0.7</Flammability>
@@ -309,7 +318,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.55</ToxicEnvironmentResistance>
+					<ToxicResistance>0.55</ToxicResistance>
+					<ToxicEnvironmentResistance>0.55</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
 					<Flammability>-0.75</Flammability>
@@ -329,7 +339,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.6</ToxicEnvironmentResistance>
+					<ToxicResistance>0.6</ToxicResistance>
+					<ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
 					<Flammability>-0.8</Flammability>
@@ -349,7 +360,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.65</ToxicEnvironmentResistance>
+					<ToxicResistance>0.65</ToxicResistance>
+					<ToxicEnvironmentResistance>0.65</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.85</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
 					<Flammability>-0.85</Flammability>
@@ -369,7 +381,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.7</ToxicEnvironmentResistance>
+					<ToxicResistance>0.7</ToxicResistance>
+					<ToxicEnvironmentResistance>0.7</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.9</ArmorRating_Sharp>
 					<Flammability>-0.9</Flammability>
@@ -389,7 +402,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.75</ToxicEnvironmentResistance>
+					<ToxicResistance>0.75</ToxicResistance>
+					<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>0.95</ArmorRating_Blunt>
 					<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
 					<Flammability>-0.95</Flammability>
@@ -409,7 +423,8 @@
 				  </li>
 				</capMods>
 				<statOffsets>
-					<ToxicEnvironmentResistance>-0.8</ToxicEnvironmentResistance>
+					<ToxicResistance>0.8</ToxicResistance>
+					<ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
 					<ArmorRating_Blunt>1</ArmorRating_Blunt>
 					<ArmorRating_Sharp>1</ArmorRating_Sharp>
 					<Flammability>-1</Flammability>
