@@ -8,7 +8,10 @@
 		<fixedName>hounds of Hircine</fixedName>
 		<factionIconPath>World/WorldObjects/Expanding/Sites/MorrowRim_HoundsOfHircine</factionIconPath>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>2000</configurationListOrderPriority>
+		<displayInFactionSelection>false</displayInFactionSelection>
+		<canMakeRandomly>false</canMakeRandomly>
 		<raidCommonalityFromPointsCurve>
 			<points>
 				<li>(0, 0)</li>
@@ -26,8 +29,6 @@
 		<techLevel>Animal</techLevel>
 		<permanentEnemy>true</permanentEnemy>
 		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
-		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority>1000</configurationListOrderPriority>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<allowedArrivalTemperatureRange>-100~100</allowedArrivalTemperatureRange>
 	</FactionDef>
