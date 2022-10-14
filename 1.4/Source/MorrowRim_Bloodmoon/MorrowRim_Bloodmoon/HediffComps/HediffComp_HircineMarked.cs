@@ -22,7 +22,7 @@ namespace MorrowRim_Bloodmoon
         public override void CompExposeData()
         {
             base.CompExposeData();
-            Scribe_Deep.Look(ref site, "site");
+            Scribe_References.Look(ref site, "markedAnimal_site");
         }
 
         public override void Notify_PawnKilled()
