@@ -92,7 +92,7 @@
 	<!-- Alerts -->
 
 	<Bloodmoon_Alert_TrackerLabel>Bloodmoon tracker</Bloodmoon_Alert_TrackerLabel>
-	<Bloodmoon_Alert_BloodmoonTrackerDescription>Next bloodmoon expected in {0} days.</Bloodmoon_Alert_BloodmoonTrackerDescription>
+	<Bloodmoon_Alert_BloodmoonTrackerDescription>Bloodmoons usually occur on a consistent cycle, allowing the brave hunters that dare face their challenges time to prepare.\n\nNext bloodmoon expected in {0} days.</Bloodmoon_Alert_BloodmoonTrackerDescription>
 	<Bloodmoon_Alert_WerewolfTrackerDescription>Hircine's Hounds will grow stronger with each bloodmoon you survive, gaining increased resistances and capacities.\n\nThis strength increase not only affects the werewolves encountered during bloodmoon, but also the werewolves encountered in pack hunt quests, and in hunting quests.\n\nThe strength can be reduced by successfully hunting werewolf lords.\n\nCurrent strength is {0}%</Bloodmoon_Alert_WerewolfTrackerDescription>
 
 </LanguageData>

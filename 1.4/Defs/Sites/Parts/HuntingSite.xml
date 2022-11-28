@@ -8,7 +8,7 @@
 		<workerClass>MorrowRim_Bloodmoon.SitePartWorker_HuntingSite</workerClass>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>World/WorldObjects/MorrowRim_HircineHunt</expandingIconTexture>
-		<handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+		<handlesWorldObjectTimeoutInspectString>false</handlesWorldObjectTimeoutInspectString>
 		<tags>
 		  <li>MorrowRim_BloodmoonHuntingSite</li>
 		</tags>
