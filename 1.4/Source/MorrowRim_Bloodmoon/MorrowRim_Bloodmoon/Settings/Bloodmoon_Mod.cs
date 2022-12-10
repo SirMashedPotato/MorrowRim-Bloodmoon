@@ -331,7 +331,7 @@ namespace MorrowRim_Bloodmoon
             listing_Standard.Gap();
 
             listing_Standard.Label("Bloodmoon_huntersGiftMaximum".Translate() + " (" + (settings.huntersGiftMaximum * 100) + "%)");
-            settings.huntersGiftMaximum = (float)Math.Round(listing_Standard.Slider(settings.huntersGiftMaximum, 0.05f, 1f) * 10) / 10;
+            settings.huntersGiftMaximum = (float)Math.Round(listing_Standard.Slider(settings.huntersGiftMaximum, 0f, 1f) * 10) / 10;
             listing_Standard.Gap();
 
             listing_Standard.GapLine();

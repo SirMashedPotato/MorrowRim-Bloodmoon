@@ -28,7 +28,7 @@
 		<comps>
 		  <li Class="CompProperties_Usable">
 			<useJob>UseArtifact</useJob>
-			<useLabel>Activate totem</useLabel>
+			<useLabel>Activate {0}</useLabel>
 		  </li>
 		  <li>
 			<compClass>CompColorable</compClass>

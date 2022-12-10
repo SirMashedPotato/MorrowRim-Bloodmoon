@@ -23,7 +23,7 @@ namespace MorrowRim_Bloodmoon
 			{
 				Hediff hediff = usedBy.health.hediffSet.GetFirstHediffOfDef(Props.hediffToApply);
 
-				if (hediff.Severity + Bloodmoon_ModSettings.HuntersGiftBuildup >= Bloodmoon_ModSettings.HuntersGiftMaximum)
+				if (hediff.Severity + Bloodmoon_ModSettings.HuntersGiftBuildup >= Bloodmoon_ModSettings.HuntersGiftMaximum && Bloodmoon_ModSettings.HuntersGiftMaximum > 0f)
                 {
 					hediff.Severity = Bloodmoon_ModSettings.HuntersGiftMaximum;
 				} 
@@ -38,7 +38,7 @@ namespace MorrowRim_Bloodmoon
         public override bool CanBeUsedBy(Pawn p, out string failReason)
         {
 			Hediff h = p.health.hediffSet.GetFirstHediffOfDef(Props.hediffToApply);
-			if (h != null && h.Severity >= Bloodmoon_ModSettings.HuntersGiftMaximum)
+			if (h != null && Bloodmoon_ModSettings.HuntersGiftMaximum > 0f && h.Severity >= Bloodmoon_ModSettings.HuntersGiftMaximum)
             {
 				failReason = "Bloodmoon_capacityMaxed".Translate(p.Name, h.Label);
 				return false;
