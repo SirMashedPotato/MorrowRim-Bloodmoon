@@ -16,7 +16,7 @@
 		<statBases>
 		  <MaxHitPoints>90</MaxHitPoints>
 		  <Mass>3</Mass>
-		  <Beauty>40</Beauty>
+		  <Beauty>100</Beauty>
 		  <WorkToMake>8000</WorkToMake>
 		</statBases>
 		<thingSetMakerTags Inherit="False">
@@ -94,7 +94,7 @@
 		  <texPath>Things/Building/Art/MorrowRim_WerewolfLordTrophy</texPath>
 		</graphicData>
 		<statBases>
-		  <Beauty>100</Beauty>
+		  <Beauty>200</Beauty>
 		</statBases>
 		<costList Inherit="False">
 			  <MorrowRim_TotemWerewolfLord>1</MorrowRim_TotemWerewolfLord>
