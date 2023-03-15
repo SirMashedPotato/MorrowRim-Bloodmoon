@@ -43,7 +43,7 @@
 	<Bloodmoon_huntersGiftMaximum>The maximum buildup for hunters gifts obtained through a totem.</Bloodmoon_huntersGiftMaximum>
 	<Bloodmoon_huntersGiftBuildup>The percentage buildup towards a hunters gift obtained from a single totem.</Bloodmoon_huntersGiftBuildup>
 	
-	<Bloodmoon_enableStrengthScaling>Enable the strength of werewolves increasing with each subsequent bloodmoon.</Bloodmoon_enableStrengthScaling>
+	<Bloodmoon_enableStrengthScaling>Enable the strength of werewolves increasing with each subsequent bloodmoon. [Hircine Exclusive]</Bloodmoon_enableStrengthScaling>
 	<Bloodmoon_enableStrengthScalingTooltip>Each time a bloodmoon, from any source, ends, the strength of new werewolves will be permanently increased by 10%, up to a maximum of 100%.\n\nThe strength modifier setting sets the initial value if it is above 0%\n\nThis setting is not retroactive, enabling it after surviving several bloodmoons will start werewolves at the default value.</Bloodmoon_enableStrengthScalingTooltip>
 	
 	<Bloodmoon_enableBloodmoonAmbushes>Enable werewolf caravan ambushes during a bloodmoon.</Bloodmoon_enableBloodmoonAmbushes>

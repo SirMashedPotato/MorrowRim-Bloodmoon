@@ -29,7 +29,7 @@ namespace MorrowRim_Bloodmoon
                 description += "Bloodmoon_Alert_WerewolfTrackerDescription".Translate(BloodmoonWorldComp.GetBloodStrength() * 100);
                 flag = true;
             }
-            if (Utility.CheckStoryteller())
+            if (Utility.HircineIncidentCheck())
             {
                 if (flag)
                 {

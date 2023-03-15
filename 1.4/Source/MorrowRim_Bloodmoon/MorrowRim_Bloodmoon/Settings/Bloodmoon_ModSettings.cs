@@ -24,7 +24,7 @@ namespace MorrowRim_Bloodmoon
         /* Bloodmoon */
         //misc enables
         public static bool EnableBloodmoonAmbushes => _instance.enableBloodmoonAmbushes;
-        public static bool EnableStrengthScaling => _instance.enableStrengthScaling;
+        public static bool EnableStrengthScaling => _instance.enableStrengthScaling && Utility.CheckStoryteller();
         public static bool EnableBloodmoonTransforming => _instance.enableBloodmoonTransforming;
 
         //messages

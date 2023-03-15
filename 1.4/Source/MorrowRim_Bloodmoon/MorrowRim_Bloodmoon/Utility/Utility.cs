@@ -26,12 +26,12 @@ namespace MorrowRim_Bloodmoon
 
         public static bool CheckStoryteller()
         {
-            return Current.Game.storyteller.def == StorytellerDefOf.MorrowRim_Hircine || Bloodmoon_ModSettings.EnableBloodmoonCycleForAll;
+            return Current.Game.storyteller.def == StorytellerDefOf.MorrowRim_Hircine;
         }
 
         public static bool HircineIncidentCheck()
         {
-            return CheckStoryteller();
+            return CheckStoryteller() || Bloodmoon_ModSettings.EnableBloodmoonCycleForAll;
         }
 
         public static IEnumerable<Pawn> GetWerewolvesOnMap(Map map)
