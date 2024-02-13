@@ -13,6 +13,7 @@
 		<taleOnVisible>MorrowRim_SaniesLupinusRevealed</taleOnVisible>
 		<maxSeverity>1.0</maxSeverity>
 		<tendable>true</tendable>
+		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
 		  <li Class="HediffCompProperties_TendDuration">
 			<baseTendDurationHours>12</baseTendDurationHours>
@@ -64,6 +65,7 @@
 		<defaultLabelColor>(0.4, 0.8, 0.6)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
 		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<scenarioCanAdd>true</scenarioCanAdd>
 		<stages>
 			<li>
 				<statOffsets>
